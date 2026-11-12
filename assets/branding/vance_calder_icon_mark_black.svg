@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <!-- Mask for C passing behind Left Stem of V -->
+    <mask id="mask-left-stem-black">
+      <rect width="512" height="512" fill="white" />
+      <!-- Cutout gap around V left stem -->
+      <polygon points="120,78 200,78 272,434 220,434" fill="black" stroke="black" stroke-width="12" stroke-linejoin="round" />
+    </mask>
+
+    <!-- Mask for V right stem passing behind C top arm -->
+    <mask id="mask-right-stem-black">
+      <rect width="512" height="512" fill="white" />
+      <!-- Cutout gap around C top arm -->
+      <path d="M 230 110 C 310 110, 375 145, 385 200 C 375 220, 335 220, 330 185 C 315 150, 260 145, 230 145 Z" fill="black" stroke="black" stroke-width="12" />
+    </mask>
+
+    <!-- Mask for C passing behind Right Stem of V at lower intersection -->
+    <mask id="mask-lower-c-black">
+      <rect width="512" height="512" fill="white" />
+      <!-- Cutout gap around V right stem lower part -->
+      <polygon points="230,340 375,100 415,100 280,434" fill="black" stroke="black" stroke-width="12" stroke-linejoin="round" />
+    </mask>
+  </defs>
+
+  <!-- 1. LETTER 'C' (Back portions & Interlocking flow) -->
+  <g mask="url(#mask-left-stem-black)">
+    <g mask="url(#mask-lower-c-black)">
+      <path d="
+        M 345 155
+        C 330 135, 295 110, 240 110
+        C 150 110, 95 180, 95 256
+        C 95 332, 150 402, 240 402
+        C 300 402, 340 370, 360 345
+        L 338 322
+        C 320 345, 285 366, 240 366
+        C 172 366, 134 314, 134 256
+        C 134 198, 172 146, 240 146
+        C 278 146, 310 164, 328 185
+        Z" 
+        fill="#000000" />
+    </g>
+  </g>
+
+  <!-- 2. LETTER 'V' Left Stem (Main heavy stroke - in front of C left curve) -->
+  <polygon points="112,88 198,88 198,98 174,102 242,416 230,424 150,102 126,98 112,98" fill="#000000" />
+  <path d="M 112 88 L 198 88 L 198 97 C 182 98, 175 104, 170 122 L 236 422 L 256 422 L 180 122 C 175 104, 168 98, 150 97 Z" fill="#000000" />
+
+  <!-- 3. LETTER 'V' Right Stem (Ascending lighter stroke - masked where top arm of C passes over) -->
+  <g mask="url(#mask-right-stem-black)">
+    <path d="M 236 422 L 366 122 C 372 106, 376 99, 360 97 L 360 88 L 416 88 L 416 97 C 398 99, 392 108, 384 126 L 256 422 Z" fill="#000000" />
+  </g>
+
+  <!-- 4. Top Arm of 'C' (Passes IN FRONT of V right stem to complete the interlock) -->
+  <path d="
+    M 285 110
+    C 315 110, 355 125, 376 160
+    C 382 170, 385 182, 382 192
+    C 378 200, 368 206, 358 202
+    C 350 198, 345 188, 344 178
+    C 340 162, 325 146, 295 146
+    L 285 146
+    Z" 
+    fill="#000000" />
+
+  <!-- Lower Terminal of 'C' (Refined flourishing end) -->
+  <path d="
+    M 360 345
+    C 365 340, 372 328, 368 318
+    C 364 310, 354 306, 345 310
+    C 338 314, 335 322, 338 330
+    L 338 322
+    Z" 
+    fill="#000000" />
+
+  <!-- Central Base Crest / Apex Keystone Accent -->
+  <polygon points="246,422 256,422 251,432" fill="#000000" />
+</svg>

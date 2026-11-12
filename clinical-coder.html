@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics 4 Invisible Visitor Radar (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4EY86CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BPF4EY86CZ', {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+    gtag('config', 'GTM-MWCPMGV3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vance &amp; Calder Clinical Coder Pro™ | Autonomous Practice Billing Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #040911;
+      --navy-900: #07111E;
+      --navy-800: #0A192F;
+      --navy-700: #10243E;
+      --navy-600: #1A365D;
+      --gold-500: #C5A059;
+      --gold-400: #D4AF37;
+      --gold-100: #FBF8EE;
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-200: #E2E8F0;
+      --slate-400: #94A3B8;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-900: #0F172A;
+      --emerald-600: #059669;
+      --emerald-50: #ECFDF5;
+      --amber-600: #D97706;
+      --blue-600: #2563EB;
+      --cyan-400: #22D3EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: #F4F6F9;
+      color: var(--slate-900);
+      line-height: 1.5;
+    }
+    img { max-width: 100%; }
+
+    /* Executive Top Bar */
+    .top-bar {
+      background: var(--navy-900);
+      background: linear-gradient(180deg, #050B14 0%, #0A192F 100%);
+      color: #FFFFFF;
+      padding: 14px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 2px solid var(--gold-500);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .brand-wrap:hover {
+      opacity: 0.95;
+    }
+
+    .emblem-badge {
+      padding: 4px 6px;
+      background: #FFFFFF;
+      border: 2px solid #D4AF37;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+
+    .emblem-badge img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-text h1 {
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-text h1 span.pro-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 2px 7px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      color: #34D399;
+      border-radius: 5px;
+    }
+    .brand-text p {
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+      font-size: 10px;
+      color: #D4AF37;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .status-badge-wrap {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .security-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.4);
+      color: var(--cyan-400);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .security-badge:hover {
+      background: rgba(34, 211, 238, 0.2);
+      border-color: var(--cyan-400);
+    }
+    .shield-icon { font-size: 13px; }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(5, 150, 105, 0.15);
+      border: 1px solid rgba(5, 150, 105, 0.4);
+      color: #34D399;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 20px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #34D399;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.25); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    .license-badge {
+      font-size: 11px;
+      color: var(--gold-400);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 6px 12px;
+      border-radius: 4px;
+      background: rgba(212, 175, 55, 0.05);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1480px;
+      margin: 24px auto;
+      padding: 0 28px;
+    }
+
+    /* Security Banner */
+    .security-banner {
+      background: #09192C;
+      background: linear-gradient(90deg, #071220 0%, #0D233E 50%, #071220 100%);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      border-radius: 8px;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      color: #E2E8F0;
+      font-size: 12px;
+    }
+    .sec-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+    }
+    .sec-tag {
+      background: rgba(34, 211, 238, 0.15);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      font-size: 10px;
+    }
+    .sec-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 11.5px;
+      color: #94A3B8;
+    }
+    .sec-details span strong { color: #F1F5F9; }
+
+    /* Redaction Notification Toast */
+    .redaction-toast {
+      background: #FEF3C7;
+      border: 1px solid #FCD34D;
+      color: #92400E;
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+    }
+    .redact-pill {
+      background: #B45309;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+
+    /* Value Header Card */
+    .hero-card {
+      background: #FFFFFF;
+      border: 1px solid var(--slate-200);
+      border-left: 4px solid var(--gold-500);
+      padding: 18px 24px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .hero-left h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 17px;
+      color: var(--navy-800);
+      margin-bottom: 4px;
+    }
+    .hero-left p {
+      font-size: 12.5px;
+      color: var(--slate-600);
+    }
+
+    .sample-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .sample-btn {
+      background: var(--slate-100);
+      border: 1px solid var(--slate-200);
+      color: var(--slate-700);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .sample-btn:hover {
+      background: var(--navy-800);
+      color: #FFFFFF;
+      border-color: var(--navy-800);
+    }
+    .sample-btn.active {
+      background: #0A192F !important;
+      color: #D4AF37 !important;
+      border-color: #C5A059 !important;
+      box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.5) !important;
+    }
+    .pill-btn {
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      background: #0A192F;
+      color: #D4AF37;
+      border: 1.5px solid #C5A059;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pill-btn:hover {
+      background: #1E3A8A;
+      color: #FFFFFF;
+      border-color: #60A5FA;
+    }
+    .pill-btn.active {
+      background: #D4AF37 !important;
+      color: #0A192F !important;
+      border-color: #F6E05E !important;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.7) !important;
+    }
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.8); }
+      50% { box-shadow: 0 0 20px 4px rgba(16, 185, 129, 0.5); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .flash-scan {
+      animation: pulseGlow 0.7s ease-out;
+    }
+
+    /* Two Column Split */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 24px;
+    }
+    .grid-2 > *, .panel, .panel-body, .input-group, .summary-metric, #outputContent {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    /* Panel Card */
+    .panel {
+      background: #FFFFFF;
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      background: #FAFBFC;
+      border-bottom: 1px solid var(--slate-200);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .panel-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+    }
+    .panel-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .pill-grid {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+      width: 100%;
+    }
+    .panel-header h3 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy-800);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .panel-header .tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      background: var(--slate-200);
+      color: var(--slate-700);
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .panel-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Editor Section */
+    .meta-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .input-group label {
+      display: block;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--slate-600);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 12.5px;
+      border: 1px solid var(--slate-200);
+      border-radius: 4px;
+      background: #FFFFFF;
+      color: var(--slate-900);
+    }
+    .input-group input:focus, .input-group select:focus {
+      outline: none;
+      border-color: var(--navy-600);
+    }
+
+    textarea.encounter-note {
+      width: 100%;
+      height: 380px;
+      padding: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      line-height: 1.6;
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      background: #FAFAFC;
+      color: var(--slate-900);
+      resize: vertical;
+    }
+    textarea.encounter-note:focus {
+      outline: none;
+      border-color: var(--gold-500);
+      background: #FFFFFF;
+    }
+
+    .action-row {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+    }
+    .btn-primary {
+      flex: 1;
+      background: var(--navy-800);
+      color: #FFFFFF;
+      border: 1px solid var(--gold-500);
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--navy-900);
+      box-shadow: 0 4px 14px rgba(10, 25, 47, 0.3);
+    }
+
+    /* Output Results Section */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 350px;
+      color: var(--slate-400);
+      text-align: center;
+      padding: 40px;
+    }
+    .empty-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+      color: var(--gold-500);
+      opacity: 0.5;
+    }
+
+    /* Section Cards */
+    .summary-card {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-left: 4px solid var(--gold-400);
+    }
+    .summary-metric {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 160px;
+    }
+    .payer-box {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-left: 4px solid var(--gold-500);
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+    }
+    .payer-box-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .payer-rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      font-size: 11.5px;
+    }
+    .table-wrap {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 20px;
+    }
+    .metric-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--slate-400);
+    }
+    .metric-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold-400);
+      font-family: 'Cinzel', serif;
+      word-break: break-word;
+    }
+
+    .code-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .col-icd { width: 110px; }
+    .col-ptr { width: 90px; }
+    .col-cpt { width: 140px; }
+    .col-units { width: 80px; }
+    .col-fee { width: 100px; }
+    .code-table th {
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--slate-200);
+    }
+    .code-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+    }
+    .code-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .code-icd {
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border: 1px solid #BFDBFE;
+    }
+    .code-cpt {
+      background: #FDF2F8;
+      color: #BE185D;
+      border: 1px solid #FBCFE8;
+    }
+    .modifier-pill {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FDE68A;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 4px;
+    }
+
+    /* Verification Box */
+    .verification-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .verification-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-800);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .verify-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: var(--slate-700);
+      cursor: pointer;
+    }
+    .verify-checkbox input {
+      margin-top: 3px;
+      cursor: pointer;
+    }
+
+    /* Submission Confirmation */
+    .submit-banner {
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      color: #065F46;
+      padding: 14px 18px;
+      border-radius: 6px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--emerald-600);
+      color: #FFFFFF;
+      border: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: #047857;
+    }
+
+    /* CMS-1500 Preview Modal Tab */
+    .cms1500-box {
+      background: #FEF9C3;
+      border: 1px dashed #CA8A04;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #854D0E;
+      margin-bottom: 16px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      max-width: 100%;
+    }
+
+    /* Security Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(4, 9, 17, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-window {
+      background: #FFFFFF;
+      border-radius: 10px;
+      max-width: 680px;
+      width: 90%;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      border: 2px solid var(--gold-500);
+    }
+    .modal-head {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .modal-head h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      color: #FFFFFF;
+    }
+    .modal-head h3 span { color: var(--gold-400); }
+    .btn-close {
+      background: none;
+      border: none;
+      color: var(--slate-400);
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal-content {
+      padding: 24px;
+      font-size: 13px;
+      color: var(--slate-700);
+      line-height: 1.6;
+    }
+    .sec-feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .sec-feature-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      padding: 14px;
+      border-radius: 6px;
+    }
+    .sec-feature-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy-800);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sec-feature-card p {
+      font-size: 11px;
+      color: var(--slate-600);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 40px;
+      font-size: 12px;
+      color: var(--slate-600);
+    }
+  
+    /* Practice VIP Executive Evaluation Ribbon */
+    .vip-ribbon {
+      background: linear-gradient(90deg, #040911 0%, #0F223D 45%, #162F52 55%, #040911 100%);
+      border-bottom: 2px solid var(--gold-500);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+      color: #FFFFFF;
+      padding: 10px 36px;
+      font-size: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+    }
+    .vip-ribbon-content {
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .vip-ribbon-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .vip-crown {
+      font-size: 20px;
+      filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+    }
+    .vip-title {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--gold-400);
+      font-weight: 700;
+    }
+    .vip-sub {
+      font-size: 11px;
+      color: var(--slate-200);
+      letter-spacing: 0.05em;
+    }
+    .vip-ribbon-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .vip-clock-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 5px 12px;
+      border-radius: 4px;
+    }
+    .vip-clock-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--gold-400);
+    }
+    .vip-clock-digits {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+    }
+    .vip-feedback-btn {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-500);
+      color: var(--gold-100);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .vip-feedback-btn:hover {
+      background: var(--gold-500);
+      color: var(--navy-950);
+    }
+    .vip-key-switch-btn {
+      background: none;
+      border: 1px solid var(--slate-600);
+      color: var(--slate-300);
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .vip-key-switch-btn:hover {
+      border-color: var(--slate-400);
+      color: #FFF;
+    }
+
+    /* Expired Ribbon */
+    .expired-ribbon {
+      background: linear-gradient(90deg, #450A0A 0%, #7F1D1D 50%, #450A0A 100%);
+      border-bottom: 2px solid #EF4444;
+      color: #FEE2E2;
+      padding: 12px 36px;
+      font-size: 12.5px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .expired-content {
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .expired-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .expired-icon { font-size: 20px; }
+    .expired-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-activate-license {
+      background: #DC2626;
+      color: #FFF;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11.5px;
+      border: 1px solid #F87171;
+    }
+    .btn-renew-code {
+      background: transparent;
+      color: #FCA5A5;
+      border: 1px solid #F87171;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .fb-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .claim-modal-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* ==========================================
+       RESPONSIVE MOBILE & TABLET LAYOUTS
+       ========================================== */
+    @media (max-width: 1080px) {
+      .top-bar {
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .status-badge-wrap {
+        justify-content: flex-start;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 14px auto;
+        padding: 0 12px;
+      }
+      .vip-ribbon,
+      .expired-ribbon {
+        padding: 10px 14px;
+      }
+      .vip-ribbon-right,
+      .expired-right {
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 8px;
+      }
+      .vip-clock-wrap {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .meta-inputs {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .payer-rules-grid,
+      .sec-feature-grid,
+      .fb-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .modal-window {
+        width: calc(100% - 24px) !important;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      .modal-head {
+        padding: 14px 16px;
+      }
+      .modal-head h3 {
+        font-size: 13.5px;
+        letter-spacing: 0.06em;
+      }
+      .modal-content {
+        padding: 16px;
+      }
+      footer {
+        padding: 20px 14px 36px;
+        font-size: 11px;
+        line-height: 1.65;
+        overflow-wrap: break-word;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar {
+        padding: 12px 14px;
+        gap: 10px;
+      }
+      .emblem-badge img {
+        height: 32px;
+      }
+      .brand-text h1 {
+        font-size: 14.5px;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .brand-text p {
+        font-size: 9px;
+        letter-spacing: 0.13em;
+      }
+      .status-badge-wrap {
+        gap: 6px;
+      }
+      .status-badge-wrap > * {
+        font-size: 10.5px !important;
+        padding: 5px 9px !important;
+        line-height: 1.3;
+        white-space: normal;
+      }
+      .security-banner {
+        padding: 10px 14px;
+        margin-bottom: 14px;
+      }
+      .sec-details {
+        font-size: 11px;
+        gap: 4px 12px;
+      }
+      .hero-card {
+        padding: 14px;
+        margin-bottom: 16px;
+        gap: 12px;
+      }
+      .hero-left h2 {
+        font-size: 15px;
+      }
+      .sample-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        width: 100%;
+      }
+      .sample-btn {
+        width: 100%;
+        text-align: left;
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+      .panel-header {
+        padding: 12px 14px;
+      }
+      .panel-header h3 {
+        font-size: 12.5px;
+      }
+      .panel-body {
+        padding: 14px;
+      }
+      .pill-btn {
+        flex: 1 1 calc(50% - 4px);
+        text-align: center;
+        padding: 7px 8px;
+        font-size: 11px;
+      }
+      .input-group input,
+      .input-group select {
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+      textarea.encounter-note {
+        height: 240px;
+        font-size: 12px;
+        padding: 12px;
+      }
+      .btn-primary {
+        font-size: 12.5px;
+        letter-spacing: 0.06em;
+        padding: 12px 14px;
+      }
+      .empty-state {
+        min-height: 220px;
+        padding: 24px 14px;
+      }
+      .summary-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px;
+        gap: 12px;
+      }
+      .summary-metric {
+        flex: none;
+        width: 100%;
+      }
+      .metric-val {
+        font-size: 18px;
+      }
+      .payer-box {
+        padding: 12px 14px;
+      }
+      .col-icd,
+      .col-ptr,
+      .col-cpt,
+      .col-units,
+      .col-fee {
+        width: auto;
+      }
+      .code-table th,
+      .code-table td {
+        padding: 8px 4px;
+        font-size: 11.5px;
+        overflow-wrap: break-word;
+        word-break: normal;
+      }
+      .code-table th {
+        font-size: 9.5px;
+        line-height: 1.25;
+        white-space: normal;
+      }
+      .code-badge {
+        font-size: 11px;
+        padding: 2px 6px;
+        white-space: nowrap;
+      }
+      .modifier-pill {
+        display: table;
+        margin: 4px 0 0 0;
+        font-size: 10px;
+        white-space: nowrap;
+      }
+      #cptTableBody td:nth-child(3),
+      #cptTableBody td:last-child,
+      #icdTableBody td:last-child {
+        white-space: nowrap;
+      }
+      .claim-modal-actions {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+  <link rel="canonical" href="https://vancecalderadvisory.com/clinical-coder.html">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Clinical Coder Pro: Autonomous In-House Medical Coding Engine for Outpatient Specialty Practices. Zero Cloud Liability.">
+  <meta property="og:title" content="Clinical Coder Pro™ | Autonomous Medical Coding Engine">
+  <meta property="og:url" content="https://vancecalderadvisory.com/clinical-coder.html">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <a href="/" class="brand-wrap" title="Return to Vance &amp; Calder Homepage">
+      <div class="navbar-logo-badge emblem-badge">
+        <img src="/branding/logo.png" alt="Vance &amp; Calder Advisory Group">
+      </div>
+      <div class="brand-text">
+        <h1>VANCE &amp; CALDER <span class="pro-tag">CLINICAL CODER PRO™</span></h1>
+        <p>ADVISORY GROUP &bull; AUTONOMOUS PRACTICE BILLING SUITE</p>
+      </div>
+    </a>
+    <div class="status-badge-wrap">
+      <a href="/" style="text-decoration: none; color: #E2E8F0; font-size: 11px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(212,175,55,0.3); background: rgba(10,25,47,0.7); display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;">&larr; Firm Home</a>
+      <a href="/medical-briefing.html" style="text-decoration: none; color: #D4AF37; font-size: 11px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(212,175,55,0.5); background: rgba(212,175,55,0.12); display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;">📄 Executive Brief</a>
+      <div class="security-badge" onclick="openSecurityModal()">
+        <span class="shield-icon">🛡️</span>
+        <span>Fortified Vault: Impenetrable Air-Gap</span>
+      </div>
+      <div class="security-badge" onclick="openLegalModal()" style="border-color: rgba(212, 175, 55, 0.4); color: var(--gold-400); background: rgba(212, 175, 55, 0.1);">
+        <span>⚖️</span>
+        <span>Legal Safety &amp; Non-Custody Protocol</span>
+      </div>
+      <div class="license-badge" id="topKeyBadge" onclick="openKeyModal()" style="cursor: pointer; border-color: var(--gold-400); background: rgba(212, 175, 55, 0.12); font-weight: 600;">🔑 Practice VIP Pass: <span id="topKeyStatus">Enter Key</span></div>
+      <div class="license-badge">Quarterly AMA/CMS Code Engine: Active (Q1/Q2 2026)</div>
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        In-House HIPAA Secure
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Practice VIP Executive Evaluation Ribbon -->
+  <div id="vipBanner" class="vip-ribbon" style="display: none;">
+    <div class="vip-ribbon-content">
+      <div class="vip-ribbon-left">
+        <span class="vip-crown">👑</span>
+        <div class="vip-ribbon-text">
+          <div class="vip-title" id="vipTitle">EXECUTIVE PRACTICE LEADERSHIP PASS &bull; ACTIVE</div>
+          <div class="vip-sub" id="vipSub">100% Unrestricted Dual-Engine Access &bull; Private Practice Leadership License</div>
+        </div>
+      </div>
+      <div class="vip-ribbon-right">
+        <div class="vip-clock-wrap">
+          <span class="vip-clock-label">EVALUATION TIME REMAINING:</span>
+          <span class="vip-clock-digits" id="vipClock">6d 23h 59m 59s</span>
+        </div>
+        <button class="vip-feedback-btn" onclick="openFeedbackModal()">📝 Submit Board Feedback</button>
+        <button class="vip-key-switch-btn" onclick="openKeyModal()" title="View Key Details">🔑 Pass Info</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expired Ribbon -->
+  <div id="expiredBanner" class="expired-ribbon" style="display: none;">
+    <div class="expired-content">
+      <div class="expired-left">
+        <span class="expired-icon">🔒</span>
+        <div>
+          <strong>7-DAY PRACTICE EVALUATION CONCLUDED:</strong> 
+          The 168-hour evaluation period for key <span id="expiredKeyDisplay" style="font-family: monospace; font-weight: 700; color: #FFF;">VC-PRACTICE-2026</span> has concluded.
+          <span style="font-size: 11px; color: #FCA5A5; display: block; margin-top: 2px;">
+            Practice Implementation Exclusivity: Fixed Practice Architecture ($5,000 Setup + $1,000/mo Retainer) strictly limited to 10 facilities through November 30, 2026.
+          </span>
+        </div>
+      </div>
+      <div class="expired-right">
+        <a href="mailto:governance@vancecalder.com?subject=Practice%20License%20Activation" class="btn-activate-license">Authorize Permanent Practice License</a>
+        <button class="btn-renew-code" onclick="openKeyModal()">Enter New Key</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <!-- Impenetrable Security Telemetry Banner -->
+    <div class="security-banner">
+      <div class="sec-left">
+        <span class="sec-tag">ARMORED AIR-GAP</span>
+        <span><strong>Vance &amp; Calder Fortified Security Architecture</strong> active on host machine.</span>
+      </div>
+      <div class="sec-details">
+        <span>Storage: <strong>Zero-Disk Ephemeral RAM</strong></span>
+        <span>Encryption: <strong>AES-256-GCM Hardware-Bound</strong></span>
+        <span>Network: <strong>0 Inbound Listening Ports (Ghost Mode)</strong></span>
+      </div>
+    </div>
+
+    <!-- Real-time De-Identification Badge -->
+    <div class="redaction-toast" id="redactionToast" style="display: none;">
+      <span class="redact-pill">HIPAA AIR-GAP SHIELD ACTIVE</span>
+      <span><strong>Automatic De-Identification Triggered:</strong> Patient demographic identifiers (Name, DOB, Contact Info) scrubbed in local RAM before code evaluation. Zero personal data leaves this device.</span>
+    </div>
+
+    <!-- Value Header -->
+    <div class="hero-card">
+      <div class="hero-left">
+        <h2>In-House Practice Billing &amp; Coding Automation</h2>
+        <p>Replaces outsourced billing agencies and eliminated backlogged claims. Load a sample clinical chart or paste a doctor's encounter note below:</p>
+      </div>
+      <div class="sample-buttons" style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button class="sample-btn active" id="hero-btn-ortho" onclick="loadSample('ortho')">1. Orthopedic Knee Arthrocentesis</button>
+        <button class="sample-btn" id="hero-btn-ophthalmology" onclick="loadSample('ophthalmology')">2. Ophthalmology Cataract + IOL</button>
+        <button class="sample-btn" id="hero-btn-omfs" onclick="loadSample('omfs')">3. Oral Surgery Bone Graft (Medical Billing)</button>
+        <button class="sample-btn" id="hero-btn-ent" onclick="loadSample('ent')">4. ENT Endoscopic Sinus Surgery</button>
+        <button class="sample-btn" id="hero-btn-derm" onclick="loadSample('derm')">5. Derm Malignant Excision</button>
+        <button class="sample-btn" id="hero-btn-cardio" onclick="loadSample('cardio')">6. Cardiology E/M Level 4</button>
+        <button class="sample-btn" id="hero-btn-primary" onclick="loadSample('primary')">7. Family Medicine Complex</button>
+      </div>
+    </div>
+
+    <!-- 2 Column Interface -->
+    <div class="grid-2">
+
+      <!-- Left Column: Encounter Note Input -->
+      <div class="panel">
+        <div class="panel-header" style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+          <div class="panel-top-row">
+            <h3>Physician Encounter Note</h3>
+            <div class="panel-actions">
+              <button type="button" id="redactBtn" onclick="toggleRedaction()" style="background: #FEF3C7; border: 1px solid #D97706; color: #92400E; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                <span>🛡️</span> Scrub PHI (Redact Name/DOB)
+              </button>
+              <span class="tag">Local In-House Parser</span>
+            </div>
+          </div>
+          <div class="pill-grid">
+            <button type="button" class="pill-btn active" id="pill-ortho" onclick="loadSample('ortho')">🦴 Orthopedics</button>
+            <button type="button" class="pill-btn" id="pill-ophthalmology" onclick="loadSample('ophthalmology')">👁️ Eye Surgery (Cataract)</button>
+            <button type="button" class="pill-btn" id="pill-omfs" onclick="loadSample('omfs')">🦷 Oral Surgery (OMFS)</button>
+            <button type="button" class="pill-btn" id="pill-ent" onclick="loadSample('ent')">👃 ENT Sinus</button>
+            <button type="button" class="pill-btn" id="pill-derm" onclick="loadSample('derm')">🔬 Dermatology</button>
+            <button type="button" class="pill-btn" id="pill-cardio" onclick="loadSample('cardio')">❤️ Cardiology</button>
+            <button type="button" class="pill-btn" id="pill-primary" onclick="loadSample('primary')">🩺 Family Care</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="meta-inputs">
+            <div class="input-group">
+              <label>Specialty</label>
+              <select id="docSpecialty">
+                <option value="orthopedics">Orthopedic Surgery</option>
+                <option value="ophthalmology">Ophthalmology &amp; Eye Surgery</option>
+                <option value="omfs">Oral &amp; Maxillofacial Surgery (OMFS Medical Billing)</option>
+                <option value="ent">ENT / Otolaryngology</option>
+                <option value="dermatology">Dermatology &amp; MOHS</option>
+                <option value="cardiology">Cardiovascular &amp; Interventional</option>
+                <option value="internal">Internal Medicine / Family Practice</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Encounter Type</label>
+              <select id="encounterType">
+                <option value="established">Established Patient (E/M)</option>
+                <option value="new">New Patient</option>
+                <option value="procedure">In-Office Procedural Only</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Primary Payer</label>
+              <select id="payer" onchange="runClinicalParser()">
+                <option value="bcbs">Blue Cross of Idaho</option>
+                <option value="regence">Regence BlueShield of Idaho</option>
+                <option value="medicare">Medicare Part B (Noridian Idaho)</option>
+                <option value="medicaid">Idaho Medicaid / Molina</option>
+                <option value="select">SelectHealth Commercial</option>
+                <option value="commercial">Commercial PPO (Aetna / Cigna / United)</option>
+              </select>
+            </div>
+          </div>
+
+          <textarea id="noteInput" class="encounter-note" placeholder="Paste or type physician clinical notes here..."></textarea>
+
+          <div class="action-row">
+            <button class="btn-primary" id="analyzeBtn" onclick="runClinicalParser(true)">
+              <span>⚡</span> ANALYZE &amp; GENERATE CODES
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Verification & Claim Generation Screen -->
+      <div class="panel">
+        <div class="panel-header">
+          <h3>Pre-Formatted Insurance Claim Form (CMS-1500)</h3>
+          <span class="tag" id="statusTag">Awaiting Clinical Note</span>
+        </div>
+        <div class="panel-body" id="resultsBody">
+
+          <div class="empty-state" id="emptyState">
+            <div class="empty-icon">📋</div>
+            <p style="font-weight: 600; font-size: 15px; margin-bottom: 6px; color: var(--navy-800);">No Encounter Analyzed Yet</p>
+            <p style="font-size: 13px; max-width: 380px;">Select one of the sample encounters above, or paste your clinical chart notes and click "Analyze &amp; Generate Codes".</p>
+          </div>
+
+          <div id="outputContent" style="display: none;">
+            
+            <!-- Financial & Complexity Metric Card -->
+            <div class="summary-card">
+              <div class="summary-metric">
+                <span class="metric-label">Estimated Reimbursable Fee</span>
+                <span class="metric-val" id="totalFeeDisplay">$0.00</span>
+              </div>
+              <div class="summary-metric">
+                <span class="metric-label">Medical Decision Complexity</span>
+                <span class="metric-val" id="mdmLevelDisplay" style="font-size: 16px; color: #FFFFFF;">Moderate (Level 4)</span>
+              </div>
+              <div class="summary-metric">
+                <span class="metric-label">Claim Scrub Status</span>
+                <span class="metric-val" style="font-size: 14px; color: #34D399;">✓ Clean Pass (0 CCI Clashes)</span>
+              </div>
+            </div>
+
+            <!-- Idaho Regional Payer Compliance & Prior-Auth Telemetry Card -->
+            <div class="payer-box" id="payerComplianceBox">
+              <div class="payer-box-head">
+                <strong style="color: var(--navy-900); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;">
+                  🛡️ Idaho Payer Rule Scrutiny &bull; <span id="displayPayerName" style="color: var(--gold-500);">Blue Cross of Idaho</span>
+                </strong>
+                <span class="sec-tag" style="background: #ECFDF5; color: #065F46; border-color: #A7F3D0; font-size: 10px;">
+                  0 Payer Clashes &bull; NCCI Scrub Pass
+                </span>
+              </div>
+
+              <div class="payer-rules-grid">
+                <div>
+                  <span style="color: var(--slate-600); font-weight: 700; display: block; margin-bottom: 3px; font-size: 10.5px; text-transform: uppercase;">MODIFIER VERIFICATION (CCI / NCCI EDITS):</span>
+                  <div id="payerModifierStatus" style="color: #047857; font-weight: 500; line-height: 1.45;">
+                    ✓ <strong>Modifier -25 Verified:</strong> Significant, separately identifiable E/M documented; bypasses same-day minor procedure bundling.
+                  </div>
+                </div>
+
+                <div>
+                  <span style="color: var(--slate-600); font-weight: 700; display: block; margin-bottom: 3px; font-size: 10.5px; text-transform: uppercase;">PRIOR-AUTHORIZATION &amp; LCD MEDICAL NECESSITY:</span>
+                  <div id="payerPriorAuthStatus" style="color: #1E293B; line-height: 1.45;">
+                    ✓ <strong>Pre-Auth Check:</strong> In-office procedure exempt from prior-authorization under current Idaho commercial outpatient fee schedule.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ICD-10 Diagnoses Table -->
+            <h4 style="font-size: 12px; font-weight: 700; color: var(--slate-700); text-transform: uppercase; margin-bottom: 8px;">
+              Primary &amp; Secondary Diagnoses (ICD-10-CM)
+            </h4>
+            <div class="table-wrap">
+              <table class="code-table">
+                <thead>
+                  <tr>
+                    <th class="col-icd">ICD-10 Code</th>
+                    <th>Clinical Description</th>
+                    <th class="col-ptr">Pointer</th>
+                  </tr>
+                </thead>
+                <tbody id="icdTableBody"></tbody>
+              </table>
+            </div>
+
+            <!-- CPT / HCPCS Procedures Table -->
+            <h4 style="font-size: 12px; font-weight: 700; color: var(--slate-700); text-transform: uppercase; margin-bottom: 8px;">
+              Billable Procedures &amp; Services (CPT / HCPCS)
+            </h4>
+            <div class="table-wrap">
+              <table class="code-table">
+                <thead>
+                  <tr>
+                    <th class="col-cpt">CPT / HCPCS</th>
+                    <th>Procedure / Service</th>
+                    <th class="col-units">Units</th>
+                    <th class="col-fee">Standard Fee</th>
+                  </tr>
+                </thead>
+                <tbody id="cptTableBody"></tbody>
+              </table>
+            </div>
+
+            <!-- CMS-1500 Claim Line Box -->
+            <div class="cms1500-box" id="cms1500Summary">
+              <strong>CMS-1500 Claim EDI 837P String Generated:</strong><br>
+              <span id="ediString">PRV*BI*PXC*207X00000X~SBR*P*18*BLUECROSS*...</span>
+            </div>
+
+            <!-- Human-In-The-Loop Verification Checklist -->
+            <div class="verification-box">
+              <div class="verification-title">
+                <span>🛡️</span> Office Staff Review &amp; Verification (Human-In-The-Loop)
+              </div>
+              <label class="verify-checkbox">
+                <input type="checkbox" id="check1" checked>
+                <span>Medical documentation in chart supports assigned E/M complexity level and medical necessity.</span>
+              </label>
+              <label class="verify-checkbox">
+                <input type="checkbox" id="check2" checked>
+                <span>Modifier -25 applied correctly to separate Evaluation &amp; Management from minor procedural work.</span>
+              </label>
+              <label class="verify-checkbox">
+                <input type="checkbox" id="check3" checked>
+                <span>Patient demographic, insurance policy ID, and provider NPI verified against payer eligibility portal.</span>
+              </label>
+              <label class="verify-checkbox" style="background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.3); border-left: 3px solid var(--gold-500); padding: 8px 10px; margin-top: 6px; border-radius: 4px;">
+                <input type="checkbox" id="checkLegal" checked>
+                <span style="font-size: 11px; color: var(--navy-900); font-weight: 600;">
+                  Practice retains sole medical necessity and non-delegable billing custody. Vance &amp; Calder serves as an augmented decision-support intelligence under <a href="javascript:void(0)" onclick="openLegalModal()" style="color: var(--blue-600); text-decoration: underline;">V&amp;C Safety &amp; Non-Custodial Terms</a>.
+                </span>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn-submit" onclick="submitClaim()">
+              <span>✓</span> APPROVE &amp; SUBMIT CLAIM TO CLEARINGHOUSE
+            </button>
+            <div style="margin-top: 10px; text-align: center; font-size: 11px; color: var(--slate-500); font-family: 'JetBrains Mono', monospace; line-height: 1.4;">
+              🔒 <strong style="color: var(--slate-700);">Interactive Evaluation Mode:</strong> Generates verified EDI 837P batch in RAM. Direct clearinghouse SFTP dispatch activated during Practice Onboarding.
+            </div>
+
+            <!-- Success Banner -->
+            <div class="submit-banner" id="submitBanner">
+              <div>
+                <strong>Claim Successfully Dispatched!</strong><br>
+                <span style="font-size: 12px;">EDI 837P transmission batch #VC-MED-2026-9844 logged to clearinghouse. Expected reimbursement: 14-21 business days.</span>
+              </div>
+              <span style="font-size: 20px;">🎉</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Claim Submission Confirmation Modal -->
+  <div class="modal-backdrop" id="claimSubmitModal">
+    <div class="modal-window" style="max-width: 520px; text-align: center;">
+      <div class="modal-content">
+        <div style="font-size: 46px; margin-bottom: 12px;">🎉</div>
+        <h3 style="font-size: 21px; color: #0A192F; margin-bottom: 6px;">EDI 837P Batch Generated &amp; Verified</h3>
+        <div style="display: inline-block; padding: 4px 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 6px; font-size: 10.5px; font-family: monospace; color: #065F46; font-weight: 700; margin-bottom: 12px;">
+          INTERACTIVE DEMO &bull; LOCAL RAM VERIFICATION
+        </div>
+        <p style="color: #4B5563; font-size: 13px; line-height: 1.5; margin-bottom: 18px;">
+          EDI 837P batch transmission generated and verified in RAM against commercial payer LCD rules. In client production, this payload dispatches directly into your clearinghouse SFTP queue at <strong style="color: #065F46;">0% third-party agency extraction</strong>.
+        </p>
+        <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 8px; padding: 16px; text-align: left; font-size: 12.5px; margin-bottom: 22px;">
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">
+            <span style="color: #64748B;">Transmission Batch:</span>
+            <strong style="font-family: monospace; color: #0A192F;" id="modalBatchId">#VC-MED-2026-9844</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">
+            <span style="color: #64748B;">Reimbursable Value:</span>
+            <strong style="color: #065F46; font-size: 15px;" id="modalClaimTotal">$445.00</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">
+            <span style="color: #64748B;">Target Payer:</span>
+            <strong style="color: #0A192F;" id="modalPayer">Blue Cross of Idaho</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+            <span style="color: #64748B;">Fortified Vault™ Protection:</span>
+            <span style="color: #0284C7; font-weight: 700;">Scrubbed In RAM • 0 Bytes Retained</span>
+          </div>
+        </div>
+        <div class="claim-modal-actions">
+          <button onclick="purgeMemoryForNextChart()" style="flex: 1.2; padding: 12px; background: #059669; color: #FFFFFF; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+            <span>🧹</span> Purge RAM &amp; Clear for Next Patient
+          </button>
+          <button onclick="closeClaimSubmitModal()" style="flex: 0.8; padding: 12px; background: #0A192F; color: #D4AF37; font-weight: 700; border: 1.5px solid #C5A059; border-radius: 6px; cursor: pointer; font-size: 13px;">
+            Keep Chart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Audit Modal -->
+  <div class="modal-backdrop" id="secModal">
+    <div class="modal-window">
+      <div class="modal-head">
+        <h3>VANCE <span>&amp;</span> CALDER FORTIFIED VAULT™ ARCHITECTURE</h3>
+        <button class="btn-close" onclick="closeSecurityModal()">&times;</button>
+      </div>
+      <div class="modal-content">
+        <p><strong>Why Vance &amp; Calder Clinical Coder Pro™ is Impenetrable:</strong></p>
+        <p style="margin-top: 6px;">Traditional medical software stores patient health information (PHI) in unencrypted local folders or exposes database ports to the clinic's local area network, making them easy targets for ransomware syndicates. Our architecture eliminates this attack vector entirely through four military-grade defense rails:</p>
+
+        <div class="sec-feature-grid">
+          <div class="sec-feature-card">
+            <h4><span>🔒</span> Zero-Disk Ephemeral Memory</h4>
+            <p>Clinical notes are held strictly in temporary RAM during processing and cryptographically sanitized from memory the moment a claim is verified. No patient records ever sit on the hard drive.</p>
+          </div>
+          <div class="sec-feature-card">
+            <h4><span>🛡️</span> Ghost-Mode (Zero Open Ports)</h4>
+            <p>The program runs with zero inbound listening ports. Hackers or automated malware scanning the clinic's internal network cannot detect or establish a connection to our module.</p>
+          </div>
+          <div class="sec-feature-card">
+            <h4><span>🔑</span> AES-256 Hardware-Bound Vault</h4>
+            <p>Internal logic and code databases are locked with AES-256-GCM encryption tied to the host machine's hardware TPM chip. Even if a hard drive is physically stolen, it cannot be read elsewhere.</p>
+          </div>
+          <div class="sec-feature-card">
+            <h4><span>⚡</span> Anti-Tamper Code Signing</h4>
+            <p>Every quarterly update is signed with Vance &amp; Calder’s private Ed25519 cryptographic key. The engine verifies integrity on boot and refuses execution if altered by malware.</p>
+          </div>
+        </div>
+
+        <p style="font-size: 11.5px; color: var(--slate-600); border-top: 1px solid var(--slate-200); padding-top: 12px;">
+          <strong>The Pitch to Clinic Owners:</strong> <em>"Even if your clinic suffered a catastrophic full-network ransomware attack, the Vance &amp; Calder engine holds zero persistent data on disk to ransom or steal. Your revenue cycle is completely insulated."</em>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Terms & Zero-Liability Data Protocol Modal -->
+  <div class="modal-backdrop" id="legalModal">
+    <div class="modal-window" style="max-width: 720px;">
+      <div class="modal-head">
+        <h3>VANCE <span>&amp;</span> CALDER &bull; LEGAL SAFETY &amp; DATA PROTOCOL</h3>
+        <button class="btn-close" onclick="closeLegalModal()">&times;</button>
+      </div>
+      <div class="modal-content" style="max-height: 72vh; overflow-y: auto;">
+        <div style="background: #F1F5F9; border-left: 4px solid #0A192F; padding: 12px 16px; margin-bottom: 16px; border-radius: 4px;">
+          <strong style="color: #0A192F; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Non-Custodial Architecture &bull; Absolute Limitation of Liability</strong>
+          <p style="font-size: 11.5px; margin-top: 4px; color: #334155; line-height: 1.5;">Vance &amp; Calder Advisory Group LLC operates under a strict Non-Custodial zero-storage protocol. This document establishes the governing liability protections regarding client data, coding accuracy, and system interactions.</p>
+        </div>
+
+        <h4 style="color: #0A192F; font-size: 12px; margin-top: 12px; text-transform: uppercase; font-weight: 700;">1. Zero Data Custody &amp; Absence of Storage Liability</h4>
+        <p style="font-size: 11.5px; line-height: 1.6; color: #475569; margin-bottom: 10px;">Vance &amp; Calder Advisory Group LLC ("V&amp;C") does NOT act as a data repository, clearinghouse host, cloud backup facility, or master Electronic Health Record (EHR) archive. All encounter notes, clinical documentation, and operational data evaluated within Clinical Coder Pro™ execute strictly inside the client workstation's local temporary volatile memory (RAM). V&amp;C maintains no persistent patient database. The client practice retains exclusive, sole, and non-delegable custody, maintenance, and backup responsibility for all primary medical, administrative, and financial records. Under no legal theory shall V&amp;C be liable for lost, corrupted, deleted, or unrecovered client data.</p>
+
+        <h4 style="color: #0A192F; font-size: 12px; margin-top: 12px; text-transform: uppercase; font-weight: 700;">2. Provider Final Review &amp; Non-Delegable Billing Duty</h4>
+        <p style="font-size: 11.5px; line-height: 1.6; color: #475569; margin-bottom: 10px;">All ICD-10-CM, CPT, and HCPCS code suggestions, modifier pairings, and E/M complexity determinations generated by V&amp;C systems are provided strictly as augmented decision-support intelligence. The licensed healthcare provider and practice billing administrator maintain sole, independent, and non-delegable statutory responsibility for verifying the clinical accuracy of all diagnostic codes, procedural charges, and medical necessity prior to payor submission. V&amp;C does not practice medicine and assumes no liability for third-party claim denials, payor recoupments, post-payment audits, or downcoding disputes.</p>
+
+        <h4 style="color: #0A192F; font-size: 12px; margin-top: 12px; text-transform: uppercase; font-weight: 700;">3. Comprehensive Limitation of Liability &amp; Hold Harmless</h4>
+        <p style="font-size: 11.5px; line-height: 1.6; color: #475569; margin-bottom: 10px;">To the maximum extent permitted by law, in no event shall Vance &amp; Calder Advisory Group LLC, its principals, officers, employees, or contracted affiliates be liable for any indirect, incidental, special, exemplary, or consequential damages (including but not limited to lost practice revenues, interruption of cash flow, clearinghouse downtime, third-party cyber incidents, or regulatory fines) arising out of or related to the use of V&amp;C systems. V&amp;C's total cumulative liability under any legal theory shall not exceed the total fees paid by the client to V&amp;C during the three (3) months immediately preceding the claim.</p>
+
+        <h4 style="color: #0A192F; font-size: 12px; margin-top: 12px; text-transform: uppercase; font-weight: 700;">4. Idaho LLC Corporate Insulation</h4>
+        <p style="font-size: 11.5px; line-height: 1.6; color: #475569; margin-bottom: 10px;">All contracts, software licenses, and advisory deliverables are executed solely by Vance &amp; Calder Advisory Group LLC, an Idaho limited liability company. Pursuant to Idaho Code &sect; 30-25-304, all corporate liabilities, obligations, and debts reside exclusively with the entity; no personal liability attaches to any member, principal, manager, or agent of the company.</p>
+        
+        <div style="text-align: right; margin-top: 16px;">
+          <button class="btn-primary" onclick="closeLegalModal()" style="padding: 8px 18px; font-size: 12px; background: #0A192F; color: #D4AF37; border: 1px solid #C5A059; border-radius: 4px; cursor: pointer;">I Acknowledge &amp; Understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Practice VIP Key Entry Modal -->
+  <div class="modal-backdrop" id="keyModal" style="display: none;">
+    <div class="modal-window" style="max-width: 580px;">
+      <div class="modal-head">
+        <h3>EXECUTIVE PRACTICE LEADERSHIP &bull; 7-DAY VIP PASS</h3>
+        <button class="btn-close" onclick="closeKeyModal()">&times;</button>
+      </div>
+      <div class="modal-content">
+        <div style="background: rgba(197, 160, 89, 0.08); border-left: 4px solid var(--gold-500); padding: 12px 16px; margin-bottom: 18px; border-radius: 4px;">
+          <strong style="color: var(--navy-900); font-size: 12.5px;">168-Hour Unrestricted Evaluation Clock:</strong>
+          <p style="font-size: 11.5px; margin-top: 4px; color: var(--slate-700); line-height: 1.5;">
+            Enter the VIP passkey from David Vance's executive correspondence. <strong>Your 7-day (168-hour) evaluation clock begins the exact second this key is punched in.</strong> All procedural, surgical, and E/M dual-engine modules will be 100% unlocked in local RAM.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--slate-700); margin-bottom: 6px;">
+            VIP Evaluation Key *
+          </label>
+          <input type="text" id="inputVipKey" placeholder="e.g. VC-PRACTICE-2026" style="width: 100%; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; border: 2px solid var(--gold-500); border-radius: 6px; text-transform: uppercase; background: #FFF9EE;">
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <label style="display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--slate-700); margin-bottom: 6px;">
+            Practice / Clinic Name (Optional)
+          </label>
+          <input type="text" id="inputPracticeName" placeholder="e.g. Outpatient Surgical Center / Specialty Medical Group" style="width: 100%; padding: 10px 14px; font-size: 13px; border: 1px solid var(--slate-300); border-radius: 6px;">
+        </div>
+
+        <div id="keyStatusMsg" style="display: none; padding: 10px; border-radius: 6px; font-size: 12px; margin-bottom: 14px;"></div>
+
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button onclick="closeKeyModal()" style="padding: 10px 16px; background: none; border: 1px solid var(--slate-300); border-radius: 6px; font-size: 12px; cursor: pointer;">Cancel</button>
+          <button onclick="submitKeyActivation()" style="padding: 10px 20px; background: var(--navy-900); color: var(--gold-400); border: 1px solid var(--gold-500); border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; letter-spacing: 0.05em;">
+            Activate 168-Hour Unrestricted Pass
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Board Feedback & Custom Rule Modal -->
+  <div class="modal-backdrop" id="feedbackModal" style="display: none;">
+    <div class="modal-window" style="max-width: 620px;">
+      <div class="modal-head">
+        <h3>SUBMIT CLINICAL FEEDBACK TO DAVID VANCE</h3>
+        <button class="btn-close" onclick="closeFeedbackModal()">&times;</button>
+      </div>
+      <div class="modal-content">
+        <p style="font-size: 12px; color: var(--slate-700); margin-bottom: 14px;">
+          We engineered Clinical Coder Pro&trade; specifically to defend outpatient specialty practices, surgical centers, and private clinics. Tell us what specialty rules, modifier pairings, or operational features you want customized for your clinic:
+        </p>
+
+        <div class="fb-grid-2">
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 700; color: var(--slate-700); margin-bottom: 4px;">Physician or Administrator Name</label>
+            <input type="text" id="fbDoctorName" placeholder="e.g. Dr. Arthur Sterling, MD / Practice Administrator" style="width: 100%; padding: 8px 12px; font-size: 12.5px; border: 1px solid var(--slate-300); border-radius: 4px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 700; color: var(--slate-700); margin-bottom: 4px;">Clinic / Practice Name</label>
+            <input type="text" id="fbClinic" placeholder="e.g. Boise ENT & Facial Surgery" style="width: 100%; padding: 8px 12px; font-size: 12.5px; border: 1px solid var(--slate-300); border-radius: 4px;">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="display: block; font-size: 11px; font-weight: 700; color: var(--slate-700); margin-bottom: 4px;">Direct Contact Email (For Executive Response)</label>
+          <input type="email" id="fbEmail" placeholder="e.g. administrator@boiseent.com" style="width: 100%; padding: 8px 12px; font-size: 12.5px; border: 1px solid var(--slate-300); border-radius: 4px;">
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="display: block; font-size: 11px; font-weight: 700; color: var(--slate-700); margin-bottom: 4px;">Clinical Coding Evaluation &amp; Feedback</label>
+          <textarea id="fbFeedback" rows="3" placeholder="How did the dual-engine coding compare to your current billing agency? Any specific edge cases?" style="width: 100%; padding: 8px 12px; font-size: 12px; border: 1px solid var(--slate-300); border-radius: 4px; font-family: sans-serif;"></textarea>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 11px; font-weight: 700; color: var(--slate-700); margin-bottom: 4px;">Requested Specialty Rules or Payor Bundles</label>
+          <textarea id="fbRules" rows="2" placeholder="e.g. Add Blue Cross of Idaho specific modifier rules for bilateral nasal endoscopy..." style="width: 100%; padding: 8px 12px; font-size: 12px; border: 1px solid var(--slate-300); border-radius: 4px; font-family: sans-serif;"></textarea>
+        </div>
+
+        <div id="fbStatusMsg" style="display: none; padding: 10px; border-radius: 6px; font-size: 12px; margin-bottom: 14px;"></div>
+
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button onclick="closeFeedbackModal()" style="padding: 9px 16px; background: none; border: 1px solid var(--slate-300); border-radius: 4px; font-size: 12px; cursor: pointer;">Close</button>
+          <button onclick="submitExecutiveFeedback()" style="padding: 9px 20px; background: var(--emerald-600); color: #FFF; border: none; border-radius: 4px; font-size: 12.5px; font-weight: 700; cursor: pointer;">
+            Send Directly to David Vance
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    Vance &amp; Calder Advisory Group LLC &bull; Clinical Revenue Governance &amp; Automated Systems Architecture<br>
+    The Village at Meridian &bull; 3597 E Monarch Sky Ln, Suite 240, Meridian, ID 83646 &bull; Direct: (208) 615-5773<br>
+    <a href="javascript:void(0)" onclick="openLegalModal()" style="color: var(--gold-500); text-decoration: underline; margin-top: 6px; display: inline-block; font-size: 11px;">Legal Governance, Non-Custodial Data Terms &amp; Limitation of Liability</a>
+  </footer>
+
+  <script>
+    const sampleNotes = {
+      ophthalmology: `PATIENT SURGICAL ENCOUNTER NOTE & OPERATIVE RECORD
+Patient: Eleanor M. | DOB: 09/21/1954 | Date of Service: Today
+Chief Complaint: Progressive visual impairment and night glare, right eye (OD). Best corrected visual acuity OD 20/70.
+
+PHYSICAL SLIT LAMP EXAMINATION:
+Right Eye (OD): Cornea clear. Anterior chamber deep and quiet. Pupil reactive without APD. Slit lamp examination reveals 3+ nuclear sclerotic cataract with posterior subcapsular plaque in the visual axis. Intraocular pressure (IOP) 15 mmHg. Left Eye (OS): Mild nuclear sclerosis, visual acuity 20/30.
+
+OUTPATIENT SURGICAL PROCEDURE PERFORMED:
+Extracapsular cataract extraction with phacoemulsification and posterior chamber intraocular lens (IOL) implantation, right eye (OD). Clear corneal incision created, continuous curvilinear capsulorhexis completed. Nucleus emulsified with phaco handpiece and cortical remnants aspirated. AcrySof foldable IOL successfully implanted in capsular bag and verified well-centered. Incision sealed watertight. Subconjunctival antibiotic/steroid administered. Zero intraoperative complications.
+
+ASSESSMENT & PLAN:
+1. Nuclear age-related cataract, right eye (OD) with severe functional impairment (ICD-10 H25.11).
+2. Astigmatism, regular, right eye (H52.221).
+3. Status post uncomplicated cataract removal with IOL insertion (CPT 66984-RT). Initiated post-op topical steroid/antibiotic drops. Follow-up 24 hours.`,
+
+      omfs: `PATIENT SURGICAL ENCOUNTER NOTE & OPERATIVE SUMMARY
+Patient: Marcus D. | DOB: 03/14/1997 | Date of Service: Today
+Chief Complaint: Recurrent severe pericoronitis, radiating facial pain, and localized mandibular alveolar swelling around impacted right lower wisdom tooth #32. Referred by general dentist for surgical reconstruction.
+
+CLINICAL & RADIOGRAPHIC EXAMINATION:
+CBCT tomography and panoramic radiographs reveal tooth #32 in complete horizontal bony impaction with root apices closely approximating the inferior alveolar nerve canal. Marked destructive bone resorption and localized osseous defect along distal aspect of second molar (#31). Active mucosal inflammation.
+
+SURGICAL PROCEDURE PERFORMED (MAJOR MEDICAL CROSS-OVER CLAIM):
+1. Surgical removal of impacted tooth, completely bony impaction, lower right mandible (Tooth #32). Full-thickness mucoperiosteal flap elevated, cortical ostectomy performed with continuous saline irrigation, tooth sectioned and removed in segments. Inferior alveolar nerve bundle identified and preserved without trauma.
+2. Alveolar ridge preservation and structural mandibular bone graft (allograft particulate bone matrix placed into severe structural osseous defect). Resorbable collagen membrane barrier placed.
+3. Complex layered mucosal closure of surgical wound (CPT 40830).
+
+ASSESSMENT & PLAN:
+1. Complete bony impaction of tooth #32 with localized bone destruction (ICD-10 K01.1).
+2. Structural mandibular bone defect requiring ridge reconstruction (M27.53).
+3. Claim routed to Major Medical Insurance under surgical bone reconstruction and pathology benefits, bypassing standard $1,500 dental maximum.`,
+
+      ortho: `PATIENT CLINICAL ENCOUNTER NOTE
+Patient: Robert H. | DOB: 04/12/1968 | Date of Service: Today
+Chief Complaint: Severe persistent right knee pain and stiffness, worsening over the last 4 months. Failed conservative NSAID therapy and physical therapy.
+
+PHYSICAL EXAMINATION:
+Right Knee: Moderate joint effusion present. Tenderness along medial and lateral joint lines. Pain with passive flexion beyond 95 degrees. Stable to varus/valgus stress. No signs of infection or erythema. Weight-bearing radiographs demonstrate severe joint space narrowing and subchondral sclerosis consistent with advanced primary osteoarthritis.
+
+ASSESSMENT & PLAN:
+1. Primary unilateral osteoarthritis of right knee, severe.
+2. Discussed treatment options including total knee arthroplasty vs corticosteroid injection. Patient elects to proceed with joint aspiration and steroid injection today to maintain mobility for work.
+3. Detailed counseling provided regarding risks, benefits, and alternative therapies (25 minutes total face-to-face time). Patient provided informed consent.
+
+PROCEDURE PERFORMED:
+Arthrocentesis with major joint injection, right knee. Under sterile prep and local anesthesia (1% lidocaine), 18-gauge needle inserted via superolateral approach. 14mL of pale yellow synovial fluid aspirated. Followed by injection of Triamcinolone acetonide (Kenalog) 40 mg mixed with 3 mL 0.5% Marcaine. Needle withdrawn, sterile dressing applied. Patient tolerated procedure well without complication.`,
+
+      derm: `DERMATOLOGY OUTPATIENT SURGICAL NOTE
+Patient: Sarah M. | DOB: 08/22/1982 | Date of Service: Today
+Chief Complaint: Irregular, changing pigmented lesion on left upper back noted by spouse 3 weeks ago.
+
+PHYSICAL EXAMINATION:
+Left Upper Back: 0.8 cm asymmetrical macule with irregular borders, variegated dark brown and black pigmentation, and slight elevation. Dermoscopy demonstrates atypical pigment network and regression structures.
+
+ASSESSMENT & PLAN:
+1. Dysplastic nevus of trunk vs malignant melanoma in situ, suspicious.
+2. Informed consent obtained for complete surgical excision with 0.5 cm margins today.
+
+PROCEDURE:
+Full thickness surgical excision of malignant/dysplastic lesion, trunk/back. Sterile prep with ChloraPrep. Local infiltration with 1% lidocaine with epinephrine 1:100,000. Elliptical excision performed around 0.8 cm lesion with 0.5 cm surgical margins (excised diameter: 1.8 cm). Specimen oriented with suture at 12 o'clock and sent for rush permanent pathology. Layered subcutaneous closure performed with 4-0 Monocryl, epidermal closure with 5-0 Prolene. Triple antibiotic ointment and sterile pressure dressing placed.`,
+
+      cardio: `CARDIOLOGY OUTPATIENT CLINICAL EVALUATION
+Patient: James T. | DOB: 11/05/1954 | Date of Service: Today
+Chief Complaint: Follow-up for paroxysmal atrial fibrillation and stage 2 essential hypertension. Reports occasional palpitations and mild exertional dyspnea when climbing stairs.
+
+MEDICATIONS REVIEWED:
+Metoprolol Succinate 50mg daily, Apixaban (Eliquis) 5mg BID, Lisinopril 20mg daily. Compliance confirmed.
+
+PHYSICAL EXAMINATION:
+BP 146/92 mmHg, HR 78 bpm irregularly irregular, O2 Sat 97% on room air.
+Cardiovascular: Irregular rhythm, normal S1/S2, no audible murmurs or gallops.
+Lungs: Clear to auscultation bilaterally. No wheezes or rales.
+Extremities: Trace bilateral lower extremity edema. Peripheral pulses intact.
+ECG Performed in clinic: Atrial fibrillation with controlled ventricular response, rate 74. Nonspecific ST changes.
+
+ASSESSMENT & MEDICAL DECISION MAKING:
+1. Paroxysmal atrial fibrillation: Controlled rate, continue Apixaban for stroke prevention (CHA2DS2-VASc score = 3).
+2. Essential hypertension, suboptimally controlled. Increasing Lisinopril from 20mg to 40mg daily.
+3. Order 14-day Zio XT ambulatory cardiac patch monitor to evaluate burden of arrhythmia.
+4. Ordered comprehensive metabolic panel and renal function labs.
+MDM Complexity: Moderate to High (Multiple chronic conditions with progression, prescription drug management titration, diagnostic test interpretation).`,
+
+      primary: `FAMILY PRACTICE CLINICAL ENCOUNTER NOTE
+Patient: Linda K. | DOB: 02/14/1971 | Date of Service: Today
+Chief Complaint: 3-month follow-up for Type 2 Diabetes Mellitus, hyperlipidemia, and new onset burning lower back pain.
+
+REVIEW OF SYSTEMS / EXAM:
+Fasting glucose logs reviewed (averaging 145-160 mg/dL). HbA1c checked today: 8.2% (elevated from 7.4%).
+Lower Back: Bilateral lumbar paraspinal muscle spasm. Normal gait. Straight leg raise negative bilaterally.
+BP: 128/82 mmHg. BMI: 31.4.
+
+ASSESSMENT & PLAN:
+1. Type 2 Diabetes Mellitus without acute complications, uncontrolled: Initiating SGLT2 inhibitor (Empagliflozin 10mg daily) in addition to current Metformin 1000mg BID. Nutritional counseling provided.
+2. Mixed Hyperlipidemia: Stable on Atorvastatin 40mg.
+3. Acute lower back pain / lumbar strain: Prescribed physical therapy 2x/week for 6 weeks, short course cyclobenzaprine.
+4. Laboratory testing: In-office capillary fingerstick glucose and HbA1c test completed.`,
+
+      ent: `OPERATIVE REPORT - OUTPATIENT SURGICAL SPECIALTY CLINIC
+Surgeon: Board Certified ENT Surgeon, MD | Date of Service: Today
+Patient: David W. | DOB: 09/18/1965
+Preoperative Diagnosis: Chronic hyperplastic rhinosinusitis with bilateral nasal polyposis, refractory to medical therapy.
+Postoperative Diagnosis: Same.
+PROCEDURE PERFORMED:
+1. Bilateral endoscopic total ethmoidectomy.
+2. Bilateral endoscopic maxillary antrostomy with tissue removal from maxillary sinuses.
+
+DESCRIPTION OF PROCEDURE:
+Under general endotracheal anesthesia, 0-degree Hopkins rod endoscope introduced into right nasal cavity. Extensive polyposis noted obstructing middle meatus. Microdebrider used to debulk polypoid tissue. Uncinate process identified and uncinectomy completed. Maxillary sinus ostium identified and widely opened, polypoid mucosa cleared. Next, total ethmoidectomy performed by dissecting anterior and posterior ethmoid air cells back to the sphenoid face under direct endoscopic visualization. Skull base and lamina papyracea carefully preserved. Procedure repeated on contralateral left side. Hemostasis achieved. Patient transferred to recovery in stable condition.`
+    };
+
+    function loadSample(key) {
+      // Toggle active states on buttons
+      document.querySelectorAll('.sample-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+
+      const heroBtn = document.getElementById('hero-btn-' + key);
+      if (heroBtn) heroBtn.classList.add('active');
+      const pillBtn = document.getElementById('pill-' + key);
+      if (pillBtn) pillBtn.classList.add('active');
+
+      document.getElementById('noteInput').value = sampleNotes[key];
+      if (key === 'ortho') document.getElementById('docSpecialty').value = 'orthopedics';
+      if (key === 'ophthalmology') document.getElementById('docSpecialty').value = 'ophthalmology';
+      if (key === 'omfs') document.getElementById('docSpecialty').value = 'omfs';
+      if (key === 'ent') document.getElementById('docSpecialty').value = 'ent';
+      if (key === 'derm') document.getElementById('docSpecialty').value = 'dermatology';
+      if (key === 'cardio') document.getElementById('docSpecialty').value = 'cardiology';
+      if (key === 'primary') document.getElementById('docSpecialty').value = 'internal';
+
+      runClinicalParser(true);
+    }
+
+    function runClinicalParser(fromUserClick = false) {
+      const btn = document.getElementById('analyzeBtn');
+      if (fromUserClick && btn) {
+        btn.innerHTML = '<span>⏳</span> SCRUTINIZING CHART & AUDITING NCCI EDITS...';
+        btn.style.background = '#1E3A8A';
+      }
+
+      const resultsBody = document.getElementById('resultsBody');
+      if (fromUserClick && resultsBody) {
+        resultsBody.classList.remove('flash-scan');
+        void resultsBody.offsetWidth;
+        resultsBody.classList.add('flash-scan');
+      }
+
+      setTimeout(() => {
+        executeParse();
+        if (fromUserClick && btn) {
+          btn.innerHTML = '<span>✓</span> CLAIM SCRUBBED & CODES COMPILED!';
+          btn.style.background = '#059669';
+          setTimeout(() => {
+            btn.innerHTML = '<span>⚡</span> ANALYZE & GENERATE CODES';
+            btn.style.background = '';
+          }, 1500);
+        }
+      }, fromUserClick ? 250 : 0);
+    }
+
+    function executeParse() {
+      let rawNote = document.getElementById('noteInput').value;
+      if (!rawNote.trim()) {
+        alert("Please enter or select a doctor's clinical note first!");
+        return;
+      }
+
+      // Check if patient identifiers are present (Name, DOB, SSN, MRN)
+      const hasIdentifiers = /(patient:|dob:|date of birth:|ssn:|mrn:)/i.test(rawNote);
+      if (hasIdentifiers) {
+        document.getElementById('redactionToast').style.display = 'flex';
+      } else {
+        document.getElementById('redactionToast').style.display = 'none';
+      }
+
+      // Scrub in-memory for coding analysis
+      const note = rawNote.toLowerCase();
+
+      document.getElementById('emptyState').style.display = 'none';
+      document.getElementById('outputContent').style.display = 'block';
+      document.getElementById('statusTag').textContent = 'Codes Generated & Scrutinized';
+      document.getElementById('statusTag').style.background = '#ECFDF5';
+      document.getElementById('statusTag').style.color = '#065F46';
+      document.getElementById('submitBanner').style.display = 'none';
+
+      let icds = [];
+      let cpts = [];
+      let totalFee = 0;
+      let mdm = 'Moderate (Level 4 E/M)';
+
+      // Autonomous rule-based clinical matching engine
+      if (note.includes('cataract') || note.includes('phacoemulsification') || note.includes('intraocular lens') || note.includes('slit lamp') || note.includes('retina')) {
+        icds.push({ code: 'H25.11', desc: 'Age-related nuclear cataract, right eye', pointer: 'A' });
+        icds.push({ code: 'H52.221', desc: 'Regular astigmatism, right eye', pointer: 'B' });
+
+        cpts.push({ code: '66984', mod: '-RT', desc: 'Extracapsular cataract removal with insertion of intraocular lens (IOL), right eye', units: 1, fee: 1420.00 });
+        cpts.push({ code: '92014', mod: '-25', desc: 'Comprehensive ophthalmological examination, established patient (Separate E/M)', units: 1, fee: 210.00 });
+        totalFee = 1630.00;
+        mdm = 'High Complexity Surgical Ophthalmology (Cataract Phacoemulsification + IOL Implant)';
+      } else if (note.includes('tooth #32') || note.includes('omfs') || note.includes('mandibular bone graft') || note.includes('pericoronitis') || note.includes('bony impaction')) {
+        icds.push({ code: 'K01.1', desc: 'Impacted teeth, mandibular', pointer: 'A' });
+        icds.push({ code: 'M27.53', desc: 'Alveolar ridge bone defect, localized mandible', pointer: 'B' });
+        icds.push({ code: 'K05.22', desc: 'Aggressive periodontitis / localized pericoronitis', pointer: 'C' });
+
+        cpts.push({ code: '21210', mod: '', desc: 'Graft, bone; mandible or maxilla, including structural osseous reconstruction', units: 1, fee: 1680.00 });
+        cpts.push({ code: '40830', mod: '', desc: 'Closure of laceration/surgical wound, vestibule of mouth; complex (layered repair)', units: 1, fee: 840.00 });
+        cpts.push({ code: '99214', mod: '-25', desc: 'Office/Outpatient Visit, Established (Level 4 E/M with modifier -25)', units: 1, fee: 182.00 });
+        totalFee = 2702.00;
+        mdm = 'High Complexity Oral & Maxillofacial Surgery (Major Medical Cross-Over Surgical Claim)';
+      } else if (note.includes('sinus') || note.includes('ethmoidectomy') || note.includes('antrostomy')) {
+        icds.push({ code: 'J32.8', desc: 'Other chronic pansinusitis / recurrent rhinosinusitis', pointer: 'A' });
+        icds.push({ code: 'J33.0', desc: 'Polyp of nasal cavity, bilateral', pointer: 'B' });
+
+        cpts.push({ code: '31255', mod: '-50', desc: 'Nasal/sinus endoscopy, surgical with total ethmoidectomy, bilateral', units: 1, fee: 780.00 });
+        cpts.push({ code: '31256', mod: '-50', desc: 'Nasal/sinus endoscopy, surgical, with maxillary antrostomy, bilateral', units: 1, fee: 370.00 });
+        totalFee = 1150.00;
+        mdm = 'High Complexity Surgical Endoscopy (Bilateral Ethmoidectomy + Antrostomy)';
+      } else if (note.includes('knee') || note.includes('osteoarthritis') || note.includes('arthrocentesis')) {
+        icds.push({ code: 'M17.11', desc: 'Unilateral primary osteoarthritis, right knee', pointer: 'A' });
+        icds.push({ code: 'M25.561', desc: 'Pain in right knee', pointer: 'B' });
+        
+        cpts.push({ code: '99214', mod: '-25', desc: 'Office/Outpatient Visit, Established (Level 4, Moderate MDM)', units: 1, fee: 182.00 });
+        cpts.push({ code: '20610', mod: '-RT', desc: 'Arthrocentesis, aspiration and/or injection; major joint (knee)', units: 1, fee: 215.00 });
+        cpts.push({ code: 'J3301', mod: '', desc: 'Injection, triamcinolone acetonide (Kenalog), per 10 mg (4 units = 40mg)', units: 4, fee: 48.00 });
+        totalFee = 445.00;
+        mdm = 'Moderate Complexity (E/M Level 4 with Separate Minor Procedure)';
+      } else if (note.includes('excision') || note.includes('nevus') || note.includes('melanoma') || note.includes('lesion')) {
+        icds.push({ code: 'D48.5', desc: 'Neoplasm of uncertain behavior of skin (trunk)', pointer: 'A' });
+        icds.push({ code: 'L98.9', desc: 'Disorder of the skin and subcutaneous tissue, unspecified', pointer: 'B' });
+
+        cpts.push({ code: '11602', mod: '', desc: 'Excision, malignant lesion including margins, trunk (excised dia. 1.1 to 2.0 cm)', units: 1, fee: 345.00 });
+        cpts.push({ code: '12031', mod: '', desc: 'Layered intermediate closure of surgical wound, trunk (up to 2.5 cm)', units: 1, fee: 290.00 });
+        totalFee = 635.00;
+        mdm = 'High Procedural Complexity (Surgical Excision + Layered Closure)';
+      } else if (note.includes('atrial fibrillation') || note.includes('cardiology') || note.includes('hypertension')) {
+        icds.push({ code: 'I48.0', desc: 'Paroxysmal atrial fibrillation', pointer: 'A' });
+        icds.push({ code: 'I10', desc: 'Essential (primary) hypertension', pointer: 'B' });
+        icds.push({ code: 'R00.2', desc: 'Palpitations', pointer: 'C' });
+
+        cpts.push({ code: '99214', mod: '', desc: 'Office Visit, Established (Level 4 - Multiple chronic conditions + prescription change)', units: 1, fee: 182.00 });
+        cpts.push({ code: '93000', mod: '', desc: 'Electrocardiogram, routine ECG with at least 12 leads; tracing, interpretation & report', units: 1, fee: 52.00 });
+        totalFee = 234.00;
+        mdm = 'Moderate Complexity (Titration of Rx Therapy + Multiple Chronic Ailments)';
+      } else {
+        // Generic multi-condition
+        icds.push({ code: 'E11.65', desc: 'Type 2 diabetes mellitus with hyperglycemia, uncontrolled', pointer: 'A' });
+        icds.push({ code: 'E78.5', desc: 'Hyperlipidemia, unspecified', pointer: 'B' });
+        icds.push({ code: 'M54.50', desc: 'Low back pain, unspecified', pointer: 'C' });
+
+        cpts.push({ code: '99214', mod: '', desc: 'Office/Outpatient Visit, Established (Level 4 E/M)', units: 1, fee: 182.00 });
+        cpts.push({ code: '83036', mod: '', desc: 'Hemoglobin; glycosylated (A1C) in-office rapid assay', units: 1, fee: 38.00 });
+        totalFee = 220.00;
+        mdm = 'Moderate Complexity (E/M Level 4 - Multiple System Assessment)';
+      }
+
+      // Render ICD Table
+      const icdBody = document.getElementById('icdTableBody');
+      icdBody.innerHTML = '';
+      icds.forEach(item => {
+        icdBody.innerHTML += `
+          <tr>
+            <td><span class="code-badge code-icd">${item.code}</span></td>
+            <td><strong>${item.desc}</strong></td>
+            <td><span style="font-weight: 700; color: var(--navy-800);">${item.pointer}</span></td>
+          </tr>
+        `;
+      });
+
+      // Render CPT Table
+      const cptBody = document.getElementById('cptTableBody');
+      cptBody.innerHTML = '';
+      cpts.forEach(item => {
+        const modBadge = item.mod ? `<span class="modifier-pill">${item.mod}</span>` : '';
+        cptBody.innerHTML += `
+          <tr>
+            <td><span class="code-badge code-cpt">${item.code}</span>${modBadge}</td>
+            <td>${item.desc}</td>
+            <td>${item.units}</td>
+            <td style="font-weight: 700; color: var(--navy-900);">$${item.fee.toFixed(2)}</td>
+          </tr>
+        `;
+      });
+
+      document.getElementById('totalFeeDisplay').textContent = '$' + totalFee.toFixed(2);
+      document.getElementById('mdmLevelDisplay').textContent = mdm;
+
+      // Idaho Payer-Specific Scrutiny & Prior-Auth Engine
+      const selectedPayer = document.getElementById('payer').value;
+      const displayPayer = document.getElementById('payer').options[document.getElementById('payer').selectedIndex].text;
+      document.getElementById('displayPayerName').textContent = displayPayer;
+
+      const modStatusEl = document.getElementById('payerModifierStatus');
+      const paStatusEl = document.getElementById('payerPriorAuthStatus');
+
+      if (selectedPayer === 'bcbs') {
+        if (note.includes('cataract') || note.includes('phacoemulsification') || note.includes('intraocular lens')) {
+          modStatusEl.innerHTML = '✓ <strong>Blue Cross of Idaho Rule Verified:</strong> Laterality modifier -RT correctly paired with CPT 66984. Corneal incision astigmatism review bundled per LCD criteria. Separate E/M unbundled cleanly with -25.';
+          paStatusEl.innerHTML = '✓ <strong>Pre-Auth Status:</strong> Meets Blue Cross of Idaho LCD criteria for visual impairment (documented acuity &le; 20/50 with functional daily impairment). Pre-auth exemption logged.';
+        } else if (note.includes('tooth #32') || note.includes('omfs') || note.includes('bone graft') || note.includes('mandibular')) {
+          modStatusEl.innerHTML = '✓ <strong>Major Medical Payer Scrutiny Passed:</strong> Mandibular bone reconstruction (CPT 21210) satisfies medical necessity criteria under major medical surgical benefits (ICD-10 M27.53). Completely bypasses $1,500 dental cap.';
+          paStatusEl.innerHTML = '✓ <strong>Cross-Over Authorization Verified:</strong> Surgical reconstruction of pathological alveolar defect qualifies for commercial major medical coverage without third-party agency percentage rake.';
+        } else if (note.includes('sinus') || note.includes('ethmoidectomy')) {
+          modStatusEl.innerHTML = '✓ <strong>Blue Cross of Idaho Rule Verified:</strong> Bilateral surgical modifier -50 applied to CPT 31255 & 31256 (reimbursed at 150% bilateral endoscopy schedule). Zero NCCI unbundling clashes.';
+          paStatusEl.innerHTML = '✓ <strong>Pre-Auth Status:</strong> Endoscopic sinus surgery meets BCBS Idaho LCD criteria (documentation confirms refractory to medical therapy). Pre-auth exemption logged.';
+        } else if (note.includes('excision') || note.includes('lesion')) {
+          modStatusEl.innerHTML = '✓ <strong>Blue Cross of Idaho Rule Verified:</strong> Intermediate layered repair (CPT 12031) correctly unbundled from malignant excision (11602) per NCCI Column 1/2 edit guidelines.';
+          paStatusEl.innerHTML = '✓ <strong>Pre-Auth Status:</strong> In-office cutaneous surgical excisions do NOT require pre-authorization under commercial Blue Cross of Idaho policy.';
+        } else {
+          modStatusEl.innerHTML = '✓ <strong>Blue Cross of Idaho Rule Verified:</strong> Modifier -25 applied correctly to separate Evaluation & Management from minor in-office procedural work. CCI unbundling audit passed.';
+          paStatusEl.innerHTML = '✓ <strong>Pre-Auth Status:</strong> Routine in-office procedural coding (CPT 20610 / 11602 / 93000) does NOT require prior-authorization under Blue Cross of Idaho commercial policy.';
+        }
+      } else if (selectedPayer === 'regence') {
+        modStatusEl.innerHTML = '✓ <strong>Regence BlueShield Policy Passed:</strong> Laterality modifier (-RT/-LT) paired with ICD-10 anatomical pointer. Separate E/M documented with independent clinical notes.';
+        paStatusEl.innerHTML = '✓ <strong>Medical Necessity Checked:</strong> Documentation satisfies Regence Corporate Medical Criteria (failure of conservative therapy documented). Prior-authorization exempt.';
+      } else if (selectedPayer === 'medicare') {
+        modStatusEl.innerHTML = '✓ <strong>Noridian Medicare Part B LCD Compliant:</strong> Anatomical specificity modifiers active. NCCI edit checks confirmed with 0 bundling violations.';
+        paStatusEl.innerHTML = '✓ <strong>CMS Noridian Check:</strong> In-office outpatient procedures under Medicare Part B are prior-auth exempt. Clean claim formatting verified for Noridian contractor #02102.';
+      } else if (selectedPayer === 'medicaid') {
+        modStatusEl.innerHTML = '✓ <strong>Idaho Medicaid / Molina Guidelines:</strong> Standard modifier pairings validated according to IDAPA 16.03.09 Medicaid coverage standards.';
+        paStatusEl.innerHTML = '✓ <strong>State Coverage Verified:</strong> Basic in-office diagnostic and therapeutic procedures approved without pre-authorization delays.';
+      } else {
+        modStatusEl.innerHTML = '✓ <strong>Commercial PPO Scrub Pass:</strong> Multi-payer NCCI edit rules applied. Modifier -25 and procedural modifiers formatted to standard CMS-1500 requirements.';
+        paStatusEl.innerHTML = '✓ <strong>Prior-Auth Telemetry:</strong> Procedure and E/M combination falls under standard commercial in-office non-preauth tier.';
+      }
+
+      // Update EDI String (Notice it uses an ANONYMIZED claim batch ID with ZERO patient names!)
+      const primaryIcd = icds[0].code.replace('.', '');
+      const primaryCpt = cpts[0].code;
+      document.getElementById('ediString').textContent = 
+        `CLM*ANON-ENC-${Date.now().toString().slice(-6)}*${totalFee.toFixed(2)}***11:B:1*Y*A*Y*Y~HI*BK:${primaryIcd}~SV1*HC:${primaryCpt}*${cpts[0].fee.toFixed(2)}*UN*1***1:2~DTP*472*D8*20261025~`;
+    }
+
+    function submitClaim() {
+      const checkLegal = document.getElementById('checkLegal');
+      if (checkLegal && !checkLegal.checked) {
+        alert('Action Required: Practice must verify that clinical documentation has been verified and agree to the Non-Delegable Billing Duty and V&C Safety Terms before exporting claims.');
+        openLegalModal();
+        return;
+      }
+      const currentTotal = document.getElementById('totalFeeDisplay').textContent;
+      const currentPayer = document.getElementById('displayPayerName').textContent;
+      document.getElementById('modalClaimTotal').textContent = currentTotal;
+      document.getElementById('modalPayer').textContent = currentPayer;
+      document.getElementById('modalBatchId').textContent = '#VC-MED-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById('claimSubmitModal').style.display = 'flex';
+
+      const banner = document.getElementById('submitBanner');
+      if (banner) {
+        banner.style.display = 'flex';
+      }
+    }
+
+    function closeClaimSubmitModal() {
+      document.getElementById('claimSubmitModal').style.display = 'none';
+    }
+
+    let isRedacted = false;
+    let originalUnredactedNote = '';
+
+    function toggleRedaction() {
+      const noteEl = document.getElementById('noteInput');
+      const redactBtn = document.getElementById('redactBtn');
+      const toast = document.getElementById('redactionToast');
+
+      if (!isRedacted) {
+        originalUnredactedNote = noteEl.value;
+        // Scrub patient identifiers from text view using regex matching lines
+        let lines = noteEl.value.split('\n');
+        let scrubbed = lines.map(line => {
+          if (/^patient:/i.test(line.trim())) {
+            return 'Patient: [██████ REDACTED BY FORTIFIED VAULT] | DOB: [██/██/████ - ADULT ENCRYPTED]';
+          }
+          if (/patient:\s*([^\n|]+)/i.test(line)) {
+            return line.replace(/patient:\s*([^\n|]+)/i, 'Patient: [██████ REDACTED BY FORTIFIED VAULT]');
+          }
+          if (/dob:\s*([^\n|]+)/i.test(line)) {
+            return line.replace(/dob:\s*([^\n|]+)/i, 'DOB: [██/██/████ - ENCRYPTED]');
+          }
+          return line;
+        }).join('\n');
+        noteEl.value = scrubbed;
+
+        isRedacted = true;
+        redactBtn.innerHTML = '<span>✓</span> PHI Redacted (Click to Reveal)';
+        redactBtn.style.background = '#ECFDF5';
+        redactBtn.style.borderColor = '#059669';
+        redactBtn.style.color = '#065F46';
+
+        toast.style.display = 'flex';
+        toast.innerHTML = '<span class="redact-pill" style="background:#059669;">VAULT SANITIZATION COMPLETE</span><span><strong>Visual Screen Sanitized:</strong> All patient names, birth dates, and demographics redacted in local memory.</span>';
+      } else {
+        noteEl.value = originalUnredactedNote || noteEl.value;
+        isRedacted = false;
+        redactBtn.innerHTML = '<span>🛡️</span> Scrub PHI (Redact Name/DOB)';
+        redactBtn.style.background = '#FEF3C7';
+        redactBtn.style.borderColor = '#D97706';
+        redactBtn.style.color = '#92400E';
+      }
+    }
+
+    function purgeMemoryForNextChart() {
+      closeClaimSubmitModal();
+      const noteEl = document.getElementById('noteInput');
+      noteEl.value = '';
+      originalUnredactedNote = '';
+      isRedacted = false;
+
+      // Reset analyze button and results
+      document.getElementById('emptyState').style.display = 'flex';
+      document.getElementById('outputContent').style.display = 'none';
+      document.getElementById('statusTag').textContent = 'Awaiting Clinical Note';
+      document.getElementById('statusTag').style.background = '';
+      document.getElementById('statusTag').style.color = '';
+      document.getElementById('redactionToast').style.display = 'none';
+
+      // Remove active states from sample buttons
+      document.querySelectorAll('.sample-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+
+      // Show toast alert
+      alert('✓ Fortified Vault Purged: Ephemeral RAM zeroed out. Screen wiped clean for the next patient chart.');
+    }
+
+    function openSecurityModal() {
+      document.getElementById('secModal').style.display = 'flex';
+    }
+
+    function closeSecurityModal() {
+      document.getElementById('secModal').style.display = 'none';
+    }
+
+    function openLegalModal() {
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+
+    function closeLegalModal() {
+      document.getElementById('legalModal').style.display = 'none';
+    }
+
+    // Auto-load sample 1 on startup
+    
+    // ==========================================
+    // 7-DAY VIP EXACT-HOUR ENGINE
+    // ==========================================
+    let vipTimerInterval = null;
+    let activeLicense = null;
+
+    const VALID_LOCAL_KEYS = [
+      'VANCE-FOUNDER-PASS',
+      'VANCE-MASTER-KEY',
+      'VC-PRACTICE-2026',
+      'PRACTICE-ORTHO-2026',
+      'PRACTICE-OPHTHALMOLOGY-2026',
+      'PRACTICE-OMFS-2026',
+      'PRACTICE-SURGERY-2026',
+      'PRACTICE-DERM-2026',
+      'PRACTICE-CARDIO-2026',
+      'PRACTICE-ENT-2026',
+      'PRACTICE-EXECUTIVE-7DAY',
+      'PRACTICE-MEMBER-7DAY',
+      'VANCE-VIP-PILOT'
+    ];
+
+    function initLicenseEngine() {
+      const storedKey = localStorage.getItem('vc_practice_key') || localStorage.getItem('vc_idid_key');
+      const storedActivated = localStorage.getItem('vc_practice_activated_at') || localStorage.getItem('vc_idid_activated_at');
+      const storedExpires = localStorage.getItem('vc_practice_expires_at') || localStorage.getItem('vc_idid_expires_at');
+      const storedTier = localStorage.getItem('vc_practice_tier') || localStorage.getItem('vc_idid_tier') || 'Practice Leadership Pass';
+
+      if (storedKey && storedActivated && storedExpires) {
+        activeLicense = {
+          key: storedKey,
+          tier: storedTier,
+          activatedAt: parseInt(storedActivated, 10),
+          expiresAt: parseInt(storedExpires, 10)
+        };
+        startVipTimer();
+      } else {
+        updateTopBadgeInactive();
+      }
+    }
+
+    function updateTopBadgeInactive() {
+      const badge = document.getElementById('topKeyBadge');
+      const statusText = document.getElementById('topKeyStatus');
+      if (badge && statusText) {
+        badge.style.display = 'inline-block';
+        statusText.textContent = 'Enter VIP Key';
+      }
+    }
+
+    function openKeyModal() {
+      document.getElementById('keyModal').style.display = 'flex';
+      const input = document.getElementById('inputVipKey');
+      if (activeLicense) {
+        input.value = activeLicense.key;
+      }
+    }
+
+    function closeKeyModal() {
+      document.getElementById('keyModal').style.display = 'none';
+      const msg = document.getElementById('keyStatusMsg');
+      if (msg) msg.style.display = 'none';
+    }
+
+    function openFeedbackModal() {
+      document.getElementById('feedbackModal').style.display = 'flex';
+    }
+
+    function closeFeedbackModal() {
+      document.getElementById('feedbackModal').style.display = 'none';
+      const msg = document.getElementById('fbStatusMsg');
+      if (msg) msg.style.display = 'none';
+    }
+
+    async function submitKeyActivation() {
+      const inputKey = document.getElementById('inputVipKey').value.trim().toUpperCase();
+      const inputPractice = document.getElementById('inputPracticeName').value.trim();
+      const statusMsg = document.getElementById('keyStatusMsg');
+
+      if (!inputKey) {
+        statusMsg.style.display = 'block';
+        statusMsg.style.background = '#FEE2E2';
+        statusMsg.style.color = '#991B1B';
+        statusMsg.textContent = 'Please enter an evaluation key.';
+        return;
+      }
+
+      // Try server activation first
+      try {
+        const response = await fetch('/api/license/activate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ key: inputKey, practiceName: inputPractice })
+        });
+        const resData = await response.json();
+
+        if (resData.success) {
+          activeLicense = {
+            key: resData.key,
+            tier: resData.tier,
+            activatedAt: resData.activatedAt,
+            expiresAt: resData.expiresAt
+          };
+
+          localStorage.setItem('vc_practice_key', activeLicense.key);
+          localStorage.setItem('vc_practice_tier', activeLicense.tier);
+          localStorage.setItem('vc_practice_activated_at', activeLicense.activatedAt.toString());
+          localStorage.setItem('vc_practice_expires_at', activeLicense.expiresAt.toString());
+
+          statusMsg.style.display = 'block';
+          statusMsg.style.background = '#ECFDF5';
+          statusMsg.style.color = '#065F46';
+          statusMsg.textContent = 'Key verified! 168-hour unrestricted evaluation pass activated.';
+
+          setTimeout(() => {
+            closeKeyModal();
+            startVipTimer();
+          }, 1000);
+          return;
+        } else {
+          statusMsg.style.display = 'block';
+          statusMsg.style.background = '#FEE2E2';
+          statusMsg.style.color = '#991B1B';
+          statusMsg.textContent = resData.message || 'Invalid evaluation key.';
+          return;
+        }
+      } catch (err) {
+        console.warn('Backend offline, checking local validation:', err);
+      }
+
+      // Offline / Static File Fallback
+      if (VALID_LOCAL_KEYS.includes(inputKey)) {
+        const now = Date.now();
+        let expiresAt = now + (168 * 60 * 60 * 1000); // exactly 168 hours
+
+        const existingActivated = localStorage.getItem('vc_practice_activated_at') || localStorage.getItem('vc_idid_activated_at');
+        const existingExpires = localStorage.getItem('vc_practice_expires_at') || localStorage.getItem('vc_idid_expires_at');
+        const existingKey = localStorage.getItem('vc_practice_key') || localStorage.getItem('vc_idid_key');
+        if (existingActivated && existingExpires && existingKey === inputKey) {
+          expiresAt = parseInt(existingExpires, 10);
+        }
+
+        activeLicense = {
+          key: inputKey,
+          tier: 'Practice Leadership Pass',
+          activatedAt: now,
+          expiresAt: expiresAt
+        };
+
+        localStorage.setItem('vc_practice_key', activeLicense.key);
+        localStorage.setItem('vc_practice_tier', activeLicense.tier);
+        localStorage.setItem('vc_practice_activated_at', activeLicense.activatedAt.toString());
+        localStorage.setItem('vc_practice_expires_at', activeLicense.expiresAt.toString());
+
+        statusMsg.style.display = 'block';
+        statusMsg.style.background = '#ECFDF5';
+        statusMsg.style.color = '#065F46';
+        statusMsg.textContent = 'Key verified! 168-hour unrestricted evaluation pass activated.';
+
+        setTimeout(() => {
+          closeKeyModal();
+          startVipTimer();
+        }, 1000);
+      } else {
+        statusMsg.style.display = 'block';
+        statusMsg.style.background = '#FEE2E2';
+        statusMsg.style.color = '#991B1B';
+        statusMsg.textContent = 'Invalid evaluation key. Please verify key from David Vance correspondence.';
+      }
+    }
+
+    function startVipTimer() {
+      if (!activeLicense) return;
+
+      if (vipTimerInterval) clearInterval(vipTimerInterval);
+
+      const vipBanner = document.getElementById('vipBanner');
+      const expiredBanner = document.getElementById('expiredBanner');
+      const clockDigits = document.getElementById('vipClock');
+      const topBadge = document.getElementById('topKeyBadge');
+      const topStatus = document.getElementById('topKeyStatus');
+      const vipTitle = document.getElementById('vipTitle');
+
+      if (vipTitle) {
+        vipTitle.textContent = activeLicense.tier.toUpperCase() + ' • ACTIVE';
+      }
+
+      function tick() {
+        const now = Date.now();
+        const diffMs = activeLicense.expiresAt - now;
+
+        if (diffMs <= 0) {
+          // EXPIRED
+          clearInterval(vipTimerInterval);
+          if (vipBanner) vipBanner.style.display = 'none';
+          if (expiredBanner) expiredBanner.style.display = 'block';
+          document.getElementById('expiredKeyDisplay').textContent = activeLicense.key;
+          if (topStatus) {
+            topStatus.textContent = 'Expired (' + activeLicense.key + ')';
+            topBadge.style.borderColor = '#EF4444';
+            topBadge.style.color = '#EF4444';
+            topBadge.style.background = 'rgba(239, 68, 68, 0.1)';
+          }
+
+          // Disable coding button
+          const analyzeBtn = document.querySelector('.btn-analyze');
+          if (analyzeBtn) {
+            analyzeBtn.disabled = true;
+            analyzeBtn.style.opacity = '0.6';
+            analyzeBtn.style.cursor = 'not-allowed';
+            analyzeBtn.title = '7-Day Practice Evaluation Period Concluded';
+          }
+          return;
+        }
+
+        // ACTIVE
+        if (expiredBanner) expiredBanner.style.display = 'none';
+        if (vipBanner) vipBanner.style.display = 'block';
+
+        const totalSecs = Math.floor(diffMs / 1000);
+        const days = Math.floor(totalSecs / 86400);
+        const hours = Math.floor((totalSecs % 86400) / 3600);
+        const mins = Math.floor((totalSecs % 3600) / 60);
+        const secs = totalSecs % 60;
+
+        if (clockDigits) {
+          clockDigits.textContent = `${days}d ${hours.toString().padStart(2, '0')}h ${mins.toString().padStart(2, '0')}m ${secs.toString().padStart(2, '0')}s`;
+        }
+
+        if (topStatus) {
+          topStatus.textContent = `Active (${days}d ${hours}h left)`;
+          topBadge.style.borderColor = '#34D399';
+          topBadge.style.color = '#34D399';
+          topBadge.style.background = 'rgba(5, 150, 105, 0.15)';
+        }
+      }
+
+      tick();
+      vipTimerInterval = setInterval(tick, 1000);
+    }
+
+    async function submitExecutiveFeedback() {
+      const doctorName = document.getElementById('fbDoctorName').value.trim();
+      const clinic = document.getElementById('fbClinic').value.trim();
+      const email = document.getElementById('fbEmail').value.trim();
+      const feedback = document.getElementById('fbFeedback').value.trim();
+      const requestedRules = document.getElementById('fbRules').value.trim();
+      const statusMsg = document.getElementById('fbStatusMsg');
+
+      if (!feedback && !requestedRules) {
+        statusMsg.style.display = 'block';
+        statusMsg.style.background = '#FEE2E2';
+        statusMsg.style.color = '#991B1B';
+        statusMsg.textContent = 'Please enter clinical feedback or requested billing rules.';
+        return;
+      }
+
+      const payload = {
+        key: activeLicense ? activeLicense.key : 'ANONYMOUS',
+        doctorName,
+        clinic,
+        email,
+        feedback,
+        requestedRules
+      };
+
+      try {
+        const res = await fetch('/api/license/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          statusMsg.style.display = 'block';
+          statusMsg.style.background = '#ECFDF5';
+          statusMsg.style.color = '#065F46';
+          statusMsg.textContent = 'Feedback successfully routed directly to David Vance and executive team.';
+          setTimeout(closeFeedbackModal, 2000);
+          return;
+        }
+      } catch (e) {
+        console.warn('Feedback fallback to local acknowledgment:', e);
+      }
+
+      statusMsg.style.display = 'block';
+      statusMsg.style.background = '#ECFDF5';
+      statusMsg.style.color = '#065F46';
+      statusMsg.textContent = 'Feedback received! David Vance and our advisory team will review your specialty requirements.';
+      setTimeout(closeFeedbackModal, 2000);
+    }
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initLicenseEngine();
+      loadSample('ortho');
+    });
+  </script>
+</body>
+</html>

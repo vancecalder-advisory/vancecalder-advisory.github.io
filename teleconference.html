@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics 4 Invisible Visitor Radar (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4EY86CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BPF4EY86CZ', {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+    gtag('config', 'GTM-MWCPMGV3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Teleconference Boardroom — Vance & Calder Advisory Group</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              300: '#E6C65C',
+              400: '#D4AF37',
+              500: '#AA8C2C',
+              600: '#806921'
+            },
+            navy: {
+              950: '#050B14',
+              900: '#0A192F',
+              850: '#0D203D',
+              800: '#112240',
+              700: '#233554'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #03070E;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF0B3 0%, #D4AF37 50%, #997A15 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .active-speaker-vance {
+      border: 2px solid #D4AF37 !important;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+    }
+    .active-speaker-calder {
+      border: 2px solid #38BDF8 !important;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+    }
+    @keyframes soundwave {
+      0%, 100% { height: 4px; opacity: 0.4; }
+      50% { height: 18px; opacity: 1; }
+    }
+    .audio-bar-vance {
+      width: 3px;
+      height: 6px;
+      background: #D4AF37;
+      border-radius: 2px;
+      display: inline-block;
+      transition: height 0.2s ease;
+    }
+    .audio-bar-calder {
+      width: 3px;
+      height: 6px;
+      background: #38BDF8;
+      border-radius: 2px;
+      display: inline-block;
+      transition: height 0.2s ease;
+    }
+    .audio-speaking .audio-bar-vance,
+    .audio-speaking .audio-bar-calder {
+      animation: soundwave 0.8s ease-in-out infinite;
+    }
+    .audio-speaking span:nth-child(1) { animation-delay: 0.0s; }
+    .audio-speaking span:nth-child(2) { animation-delay: 0.15s; }
+    .audio-speaking span:nth-child(3) { animation-delay: 0.3s; }
+    .audio-speaking span:nth-child(4) { animation-delay: 0.45s; }
+    
+    .tear-sheet-spotlight {
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .tear-sheet-spotlight-blue {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050B14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #233554;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="min-h-screen lg:h-screen flex flex-col bg-[#03070E] text-slate-100 overflow-x-hidden lg:overflow-hidden select-none">
+
+  <!-- ============================================== -->
+  <!-- 1. TOP BOARDROOM HEADER                        -->
+  <!-- ============================================== -->
+  <header class="min-h-16 lg:h-16 bg-navy-950/95 border-b border-brand-400/20 px-3 sm:px-6 py-2 lg:py-0 flex flex-wrap items-center justify-between gap-2 shrink-0 z-30">
+    
+    <!-- Left: Brand & Meeting Context -->
+    <div class="flex flex-wrap items-center gap-2 sm:gap-3 min-w-0">
+      <a href="/" class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+        <div class="p-1 rounded-lg bg-white flex items-center justify-center border border-brand-400/60 shadow-sm shrink-0">
+          <img src="/branding/logo.png" alt="Vance & Calder" class="h-6 sm:h-7 w-auto object-contain">
+        </div>
+        <div class="min-w-0">
+          <div class="text-white text-xs sm:text-sm font-bold tracking-wider truncate" id="header-brand-title">
+            VANCE &amp; CALDER
+          </div>
+          <div class="text-[9px] uppercase tracking-wider sm:tracking-widest text-slate-400 font-semibold font-mono truncate" id="header-brand-subtitle">
+            Executive Boardroom &bull; Room 302
+          </div>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-2 ml-4 pl-4 border-l border-slate-800">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-xs font-mono font-bold text-slate-300" id="header-consultation-type">
+          CONFIDENTIAL STRATEGIC CONSULTATION
+        </span>
+        <span class="text-[10px] font-mono text-brand-300 bg-brand-400/10 px-2 py-0.5 rounded border border-brand-400/30 font-semibold" id="header-client-label">
+          CLIENT: APEX COMMERCIAL
+        </span>
+      </div>
+    </div>
+
+    <!-- Center: Live 30-Minute Countdown Clock -->
+    <div class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-navy-900 border border-brand-400/30 shadow-inner shrink-0">
+      <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-400 shrink-0"></i>
+      <span class="text-[11px] sm:text-xs font-mono font-bold text-brand-300 tracking-wider whitespace-nowrap" id="meeting-timer">
+        26:45 REMAINING
+      </span>
+      <span class="hidden sm:inline-block text-[9px] uppercase tracking-wider text-slate-400 font-bold px-1.5 py-0.5 rounded bg-navy-950 border border-slate-700 whitespace-nowrap">
+        30M CADENCE
+      </span>
+    </div>
+
+    <!-- Right: Quick Actions -->
+    <div class="flex items-center gap-2 shrink-0">
+      <a id="btn-view-pdf" href="/templates/week-01-audit" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-navy-850 hover:bg-navy-800 border border-brand-400/30 text-xs font-mono font-semibold text-slate-200 transition-all">
+        <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-400"></i>
+        <span>Open PDF</span>
+      </a>
+      <a href="/#calendar" class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg bg-brand-400 hover:bg-brand-300 text-navy-950 text-xs font-bold transition-all shadow whitespace-nowrap">
+        <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+        <span>Lock In Sprint</span>
+      </a>
+      <a href="/briefing/latest" class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-navy-850 hover:bg-navy-800 text-slate-400 text-xs font-mono transition-all" title="Return to Asynchronous Briefing Room">
+        <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <!-- ============================================== -->
+  <!-- 2. MAIN BOARDROOM STAGE (TILES + SCREEN SHARE) -->
+  <!-- ============================================== -->
+  <main class="flex-1 p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 lg:overflow-hidden min-w-0">
+    
+    <!-- ============================================ -->
+    <!-- LEFT COLUMN: PRINCIPALS & CLIENT VIDEO TILES -->
+    <!-- ============================================ -->
+    <div class="lg:col-span-4 flex flex-col gap-3 lg:h-full lg:overflow-y-auto pr-0.5 min-w-0">
+      
+      <!-- Video Tile 1: David Vance (Managing Principal) -->
+      <div id="tile-vance" class="relative bg-navy-900 border border-brand-400/30 rounded-2xl overflow-hidden shadow-xl aspect-video lg:aspect-[16/10] shrink-0 transition-all duration-300">
+        <!-- Background Image Feed -->
+        <img src="/branding/avatars/david_vance.jpg" alt="David Vance in Private Study" class="w-full h-full object-cover filter brightness-[0.95] contrast-[1.05]">
+        
+        <!-- Subtle Office Ambient Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-navy-950/30 pointer-events-none"></div>
+
+        <!-- Top Badges -->
+        <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+          <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-navy-950/80 backdrop-blur-sm border border-brand-400/40 text-[10px] font-mono text-brand-300 font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>MANAGING PRINCIPAL</span>
+          </div>
+          <!-- Equalizer audio wave indicator -->
+          <div id="vance-wave" class="hidden items-center gap-0.5 px-2 py-1 rounded bg-navy-950/80 border border-brand-400/50">
+            <span class="audio-bar-vance"></span>
+            <span class="audio-bar-vance"></span>
+            <span class="audio-bar-vance"></span>
+            <span class="audio-bar-vance"></span>
+          </div>
+        </div>
+
+        <!-- Bottom Nameplate -->
+        <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-end justify-between">
+          <div>
+            <div class="text-sm font-bold text-white tracking-tight flex items-center gap-1.5">
+              <span>David Vance</span>
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-400"></i>
+            </div>
+            <div class="text-[10px] font-mono text-brand-300">
+              Commercial Strategy &bull; Deal Velocity
+            </div>
+            <a href="mailto:david@vancecalderadvisory.com" class="text-[9.5px] font-mono text-slate-300 hover:text-brand-300 transition-colors flex items-center gap-1 mt-0.5" title="Direct Google Workspace Inbox">
+              <i data-lucide="mail" class="w-3 h-3 text-brand-400"></i> david@vancecalderadvisory.com
+            </a>
+          </div>
+          <button onclick="playAgendaAudio('vance_intro')" class="px-2.5 py-1 rounded-lg bg-brand-400/20 hover:bg-brand-400/30 border border-brand-400/50 text-brand-300 hover:text-white text-[10px] font-mono font-bold flex items-center gap-1 transition-all">
+            <i data-lucide="volume-2" class="w-3 h-3"></i>
+            <span id="btn-label-vance">Speak</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Video Tile 2: Mark Calder (Operational Principal) -->
+      <div id="tile-calder" class="relative bg-navy-900 border border-slate-700 rounded-2xl overflow-hidden shadow-xl aspect-video lg:aspect-[16/10] shrink-0 transition-all duration-300">
+        <!-- Background Image Feed -->
+        <img src="/branding/avatars/mark_calder.jpg" alt="Mark Calder in Engineering Office" class="w-full h-full object-cover filter brightness-[0.95] contrast-[1.05]">
+        
+        <!-- Subtle Office Ambient Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-navy-950/30 pointer-events-none"></div>
+
+        <!-- Top Badges -->
+        <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+          <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-navy-950/80 backdrop-blur-sm border border-sky-400/40 text-[10px] font-mono text-sky-300 font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>OPERATIONAL PRINCIPAL</span>
+          </div>
+          <!-- Equalizer audio wave indicator -->
+          <div id="calder-wave" class="hidden items-center gap-0.5 px-2 py-1 rounded bg-navy-950/80 border border-sky-400/50">
+            <span class="audio-bar-calder"></span>
+            <span class="audio-bar-calder"></span>
+            <span class="audio-bar-calder"></span>
+            <span class="audio-bar-calder"></span>
+          </div>
+        </div>
+
+        <!-- Bottom Nameplate -->
+        <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-end justify-between">
+          <div>
+            <div class="text-sm font-bold text-white tracking-tight flex items-center gap-1.5">
+              <span>Mark Calder</span>
+              <i data-lucide="cpu" class="w-3.5 h-3.5 text-sky-400"></i>
+            </div>
+            <div class="text-[10px] font-mono text-sky-300">
+              Systems Architecture &bull; Pipeline Telemetry
+            </div>
+            <a href="mailto:mark@vancecalderadvisory.com" class="text-[9.5px] font-mono text-slate-300 hover:text-sky-300 transition-colors flex items-center gap-1 mt-0.5" title="Direct Google Workspace Inbox">
+              <i data-lucide="mail" class="w-3 h-3 text-sky-400"></i> mark@vancecalderadvisory.com
+            </a>
+          </div>
+          <button onclick="playAgendaAudio('calder_metrics')" class="px-2.5 py-1 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/50 text-sky-300 hover:text-white text-[10px] font-mono font-bold flex items-center gap-1 transition-all">
+            <i data-lucide="volume-2" class="w-3 h-3"></i>
+            <span id="btn-label-calder">Speak</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Video Tile 3: Client / Executive Prospect -->
+      <div id="tile-client" class="relative bg-navy-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg p-4 flex flex-col justify-between shrink-0 min-h-[130px]">
+        
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span class="text-[10px] font-mono font-bold text-slate-300">EXECUTIVE GUEST FEED</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button id="btn-toggle-cam" onclick="toggleClientCam()" class="p-1.5 rounded-lg bg-navy-950 border border-slate-700 text-slate-300 hover:text-white" title="Toggle Camera">
+              <i data-lucide="video" class="w-3.5 h-3.5"></i>
+            </button>
+            <button id="btn-toggle-mic" onclick="toggleClientMic()" class="p-1.5 rounded-lg bg-navy-950 border border-slate-700 text-slate-300 hover:text-white" title="Toggle Mic">
+              <i data-lucide="mic" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Video or Avatar Center -->
+        <div class="my-2 flex items-center justify-center">
+          <video id="client-webcam" class="hidden w-full h-24 object-cover rounded-xl border border-slate-700" autoplay playsinline muted></video>
+          <div id="client-avatar-ph" class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-navy-800 to-navy-700 border border-brand-400/40 flex items-center justify-center text-sm font-bold font-mono text-brand-300 shadow">
+              <span id="client-initials">VS</span>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-white" id="client-name-display">Victoria Sterling</div>
+              <div class="text-[10px] text-slate-400 font-mono" id="client-company-display">Sterling Capital Partners</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 border-t border-slate-800/60 pt-2">
+          <span>Status: Verified Partner</span>
+          <span class="text-emerald-400 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            HD 1080p
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Interactive Executive Q&A Console -->
+      <div id="card-executive-qa" class="bg-navy-900 border border-brand-400/30 rounded-2xl overflow-hidden shadow-xl p-3.5 flex flex-col gap-2.5 shrink-0 transition-all">
+        
+        <!-- Header -->
+        <div class="flex items-center justify-between pb-2 border-b border-brand-400/20">
+          <div class="flex items-center gap-2">
+            <i data-lucide="message-square-quote" class="w-4 h-4 text-brand-400"></i>
+            <span class="text-xs font-bold text-white tracking-wide">EXECUTIVE Q&amp;A INQUIRY</span>
+          </div>
+          <span id="qa-status-badge" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[9px] font-mono text-emerald-400 font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>AI PRINCIPALS LIVE</span>
+          </span>
+        </div>
+
+        <!-- Target Principal Selector -->
+        <div class="flex items-center gap-1 bg-navy-950 p-1 rounded-xl border border-slate-800 text-[10px] font-mono">
+          <button id="btn-target-auto" onclick="setQATarget('auto')" class="flex-1 py-1 px-1.5 rounded-lg font-bold bg-brand-400 text-navy-950 transition-all text-center">
+            Auto-Route
+          </button>
+          <button id="btn-target-vance" onclick="setQATarget('david-vance')" class="flex-1 py-1 px-1.5 rounded-lg font-bold text-slate-400 hover:text-white transition-all text-center">
+            David Vance
+          </button>
+          <button id="btn-target-calder" onclick="setQATarget('mark-calder')" class="flex-1 py-1 px-1.5 rounded-lg font-bold text-slate-400 hover:text-white transition-all text-center">
+            Mark Calder
+          </button>
+        </div>
+
+        <!-- Live Discussion Thread -->
+        <div id="qa-thread-container" class="max-h-40 overflow-y-auto space-y-2 pr-0.5 text-xs">
+          <!-- Initial Welcome Message from Principals -->
+          <div class="p-2.5 rounded-xl border border-brand-400/30 bg-navy-950/80 space-y-1">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <img src="/branding/avatars/david_vance.jpg" class="w-4 h-4 rounded-full object-cover border border-brand-400/60" alt="David Vance">
+                <span class="text-[10px] font-bold text-brand-300">David Vance</span>
+              </div>
+              <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-brand-400/20 text-brand-300 border border-brand-400/30">Commercial Strategy</span>
+            </div>
+            <div class="text-[11px] text-slate-200 leading-relaxed font-sans">
+              "Feel free to ask Mark or myself anything about your intake telemetry, our 28-day sprint roadmap, or tech stack integrations."
+            </div>
+          </div>
+        </div>
+
+        <!-- Mic Dictation Live Indicator -->
+        <div id="qa-mic-status" class="hidden text-[10px] font-mono text-amber-400 flex items-center gap-1.5 animate-pulse bg-amber-500/10 border border-amber-500/20 px-2 py-1 rounded-lg">
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping"></span>
+          <span>Listening to your question... speak now</span>
+        </div>
+
+        <!-- Question Input Bar -->
+        <div class="flex items-center gap-1.5">
+          <input id="qa-input-field" type="text" placeholder="Ask David or Mark anything (e.g. What does this cost?)..." onfocus="stopTeleconferenceAudio()" onkeydown="if(event.key==='Enter') submitExecutiveQuestion()" class="flex-1 bg-navy-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-400 font-sans">
+          <button id="btn-qa-mic" onclick="toggleQAMic()" class="p-2 rounded-xl bg-navy-950 border border-slate-700 text-slate-300 hover:text-brand-300 hover:border-brand-400/50 transition-all shrink-0" title="Speak question with Microphone">
+            <i data-lucide="mic" class="w-3.5 h-3.5"></i>
+          </button>
+          <button id="btn-qa-send" onclick="submitExecutiveQuestion()" class="px-3 py-2 rounded-xl bg-brand-400 hover:bg-brand-300 text-navy-950 font-bold text-xs flex items-center gap-1 transition-all shrink-0 shadow">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            <span>Ask</span>
+          </button>
+        </div>
+
+        <!-- Curated 1-Click Executive Prompt Chips -->
+        <div class="flex flex-wrap gap-1.5 pt-1 border-t border-slate-800/80">
+          <span class="text-[9px] font-mono text-slate-400 uppercase font-semibold block w-full">Quick Inquiries:</span>
+          <button onclick="sendQuickQA('What is this going to cost me? What are your fees?', 'david-vance')" class="px-2.5 py-1 rounded-lg bg-navy-950 hover:bg-navy-850 border border-emerald-400/50 hover:border-emerald-400 text-emerald-300 text-[10px] font-mono font-bold transition-colors">
+            💰 What Does This Cost?
+          </button>
+          <button onclick="sendQuickQA('What CRMs and tech stacks do you integrate with?', 'mark-calder')" class="px-2.5 py-1 rounded-lg bg-navy-950 hover:bg-navy-850 border border-sky-400/30 hover:border-sky-400 text-sky-200 text-[10px] font-mono transition-colors">
+            ⚙️ CRM Integrations
+          </button>
+          <button onclick="sendQuickQA('What are the exact 4 weekly deliverables in the 28-day sprint?', 'david-vance')" class="px-2.5 py-1 rounded-lg bg-navy-950 hover:bg-navy-850 border border-brand-400/30 hover:border-brand-400 text-brand-200 text-[10px] font-mono transition-colors">
+            📅 4-Week Deliverables
+          </button>
+          <button onclick="sendQuickQA('Who owns the IP and custom runbooks after handover?', 'mark-calder')" class="px-2.5 py-1 rounded-lg bg-navy-950 hover:bg-navy-850 border border-sky-400/30 hover:border-sky-400 text-sky-200 text-[10px] font-mono transition-colors">
+            🔐 100% IP Handover
+          </button>
+          <button onclick="sendQuickQA('Why choose your 28-day sprint instead of hiring an in-house VP of Operations?', 'david-vance')" class="px-2.5 py-1 rounded-lg bg-navy-950 hover:bg-navy-850 border border-brand-400/30 hover:border-brand-400 text-brand-200 text-[10px] font-mono transition-colors">
+            💼 Sprint vs VP Hire
+          </button>
+          <button onclick="sendQuickQA('How do the webhook listeners bring speed-to-lead latency under 5 minutes?', 'mark-calder')" class="px-2.5 py-1 rounded-lg bg-navy-950 hover:bg-navy-850 border border-sky-400/30 hover:border-sky-400 text-sky-200 text-[10px] font-mono transition-colors">
+            ⏱️ &lt;5 Min Latency
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- CENTER & RIGHT: LIVE TEAR-SHEET SCREEN-SHARE -->
+    <!-- ============================================ -->
+    <div class="lg:col-span-8 flex flex-col h-full bg-navy-900 border border-brand-400/30 rounded-2xl overflow-hidden shadow-2xl">
+      
+      <!-- Screen-Share Top Bar -->
+      <div class="px-4 py-2.5 bg-navy-950 border-b border-brand-400/20 flex flex-wrap items-center justify-between gap-2 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-brand-400/10 border border-brand-400/30 text-[10px] font-mono text-brand-300 font-bold">
+            <i data-lucide="monitor-up" class="w-3.5 h-3.5 text-brand-400"></i>
+            <span>SHARED STAGE: DIAGNOSTIC AUDIT DELIVERABLE</span>
+          </div>
+          <span class="text-xs text-slate-400 hidden sm:inline" id="screenshare-presenter">
+            Presented by: <strong>Mark Calder</strong>
+          </span>
+        </div>
+
+        <!-- Stage Navigation Tabs -->
+        <div class="flex items-center gap-1 bg-navy-900 p-1 rounded-xl border border-slate-800">
+          <button onclick="switchStageTab('page1')" id="tab-btn-page1" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold bg-brand-400 text-navy-950 transition-all">
+            Page 1: Forensic Drag
+          </button>
+          <button onclick="switchStageTab('page2')" id="tab-btn-page2" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold text-slate-300 hover:text-white transition-all">
+            Page 2: 28-Day Schematic
+          </button>
+          <button onclick="switchStageTab('sprint')" id="tab-btn-sprint" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold text-slate-300 hover:text-white transition-all">
+            Sprint Roadmap
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Document Canvas -->
+      <div class="flex-1 p-4 sm:p-6 overflow-y-auto bg-[#070D18]" id="document-canvas">
+        
+        <!-- ============================================ -->
+        <!-- VIEW 1: PAGE 1 OF TEAR-SHEET (LEAK MATRIX)   -->
+        <!-- ============================================ -->
+        <div id="view-page1" class="space-y-4 max-w-3xl mx-auto">
+          
+          <!-- Document Header -->
+          <div class="p-5 rounded-2xl bg-navy-900 border border-brand-400/30 shadow-lg">
+            <div class="flex items-center justify-between pb-3 border-b border-brand-400/15 mb-3">
+              <div class="text-[10px] font-mono text-brand-400 font-bold uppercase tracking-wider">
+                WEEK 01 FORENSIC DIAGNOSTIC &bull; CONFIDENTIAL TEAR-SHEET
+              </div>
+              <span class="text-[9px] font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20 font-bold">
+                EMPIRICAL VERIFIED
+              </span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h1 class="text-xl sm:text-2xl font-bold text-white tracking-tight" id="doc-company-name">
+                  Sterling Capital Partners
+                </h1>
+                <p class="text-xs font-mono text-brand-300 mt-0.5" id="doc-executive-name">
+                  Victoria Sterling &bull; Financial Services &bull; $10M - $25M ARR
+                </p>
+              </div>
+              <div class="text-right">
+                <div class="text-[10px] font-mono uppercase text-slate-400">Identified Latency Leak</div>
+                <div class="text-xl font-mono font-bold text-amber-400" id="doc-metric-drag">
+                  $148,000 / mo
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Metric Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            
+            <!-- Metric 1: Monthly Drag (Spotlightable) -->
+            <div id="card-monthly-drag" class="p-4 rounded-xl bg-navy-900 border border-brand-400/30 shadow transition-all duration-300">
+              <div class="text-[10px] font-mono text-slate-400 uppercase font-semibold">1. Monthly Pipeline Drag</div>
+              <div class="text-2xl font-bold font-mono text-brand-400 mt-1" id="box-monthly-drag">
+                $148,000
+              </div>
+              <div class="text-[10px] font-mono text-slate-400 mt-1" id="box-annual-drag">
+                $1,776,000 annualized
+              </div>
+            </div>
+
+            <!-- Metric 2: Speed-to-Lead Latency (Spotlightable) -->
+            <div id="card-latency" class="p-4 rounded-xl bg-navy-900 border border-slate-800 shadow transition-all duration-300">
+              <div class="text-[10px] font-mono text-slate-400 uppercase font-semibold">2. Speed-to-Lead Latency</div>
+              <div class="text-2xl font-bold font-mono text-amber-400 mt-1" id="box-latency">
+                4.6 hrs
+              </div>
+              <div class="text-[10px] font-mono text-slate-400 mt-1">
+                Benchmark: &lt;15 mins
+              </div>
+            </div>
+
+            <!-- Metric 3: Stalled Inactive Pipeline (Spotlightable) -->
+            <div id="card-stalled" class="p-4 rounded-xl bg-navy-900 border border-slate-800 shadow transition-all duration-300">
+              <div class="text-[10px] font-mono text-slate-400 uppercase font-semibold">3. Stalled Deals Frozen</div>
+              <div class="text-2xl font-bold font-mono text-sky-400 mt-1" id="box-stalled">
+                52 deals
+              </div>
+              <div class="text-[10px] font-mono text-slate-400 mt-1">
+                Drop-off rate: <span id="box-dropoff">36.0%</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Speed-to-Lead Degradation Curve -->
+          <div id="card-latency-curve" class="p-5 rounded-2xl bg-navy-900 border border-brand-400/20 shadow-lg">
+            <div class="text-xs font-mono font-bold uppercase text-brand-400 mb-3 flex items-center justify-between">
+              <span>Empirical Speed-to-Lead Conversion Velocity Curve</span>
+              <span class="text-[10px] text-slate-400 font-normal">Harvard Business Review &amp; InsideSales Telemetry</span>
+            </div>
+
+            <!-- Visual Bar Graph -->
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <div class="flex justify-between text-[11px] mb-1">
+                  <span class="text-emerald-400 font-bold">&bull; Sub-5 Minute Response (Target Architecture)</span>
+                  <span class="text-emerald-300 font-bold">91% High-Intent Retained</span>
+                </div>
+                <div class="h-3 w-full bg-navy-950 rounded-full overflow-hidden border border-emerald-500/30">
+                  <div class="h-full bg-emerald-400 rounded-full" style="width: 91%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-[11px] mb-1">
+                  <span class="text-amber-400 font-bold">&bull; 15 - 30 Minute Delay</span>
+                  <span class="text-amber-300">62% Retained (38% Drop-Off)</span>
+                </div>
+                <div class="h-3 w-full bg-navy-950 rounded-full overflow-hidden border border-amber-500/30">
+                  <div class="h-full bg-amber-400 rounded-full" style="width: 62%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-[11px] mb-1">
+                  <span class="text-rose-400 font-bold" id="label-client-latency">&bull; 4.6 Hour Current Prospect Latency</span>
+                  <span class="text-rose-300 font-bold">Over 35% Forfeited to Competitors</span>
+                </div>
+                <div class="h-3 w-full bg-navy-950 rounded-full overflow-hidden border border-rose-500/30">
+                  <div class="h-full bg-rose-500 rounded-full" style="width: 35%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mt-4 leading-relaxed font-sans">
+              <strong>Mark Calder's Technical Audit Finding:</strong> Waiting 4.6 hours allows qualified enterprise buyers to reach out to 2–3 competing firms before your commercial desk makes initial phone or email contact. In Week 2, we eliminate this friction entirely.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- ============================================ -->
+        <!-- VIEW 2: PAGE 2 OF TEAR-SHEET (WEEK 2 RAILS) -->
+        <!-- ============================================ -->
+        <div id="view-page2" class="hidden space-y-4 max-w-3xl mx-auto">
+          
+          <div class="p-5 rounded-2xl bg-navy-900 border border-brand-400/30 shadow-lg">
+            <div class="text-[10px] font-mono text-sky-400 font-bold uppercase tracking-wider mb-1">
+              WEEK 02 ENGINEERING SPECIFICATION
+            </div>
+            <h2 class="text-xl font-bold text-white tracking-tight">
+              Automated Qualification Funnel &amp; Calendar Rails
+            </h2>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Platform-agnostic webhook listeners engineered directly into your existing CRM (HubSpot, Salesforce, or spreadsheets). Zero new software licenses required.
+            </p>
+          </div>
+
+          <!-- Flow Schematic Diagram -->
+          <div class="p-5 rounded-2xl bg-navy-900 border border-brand-400/20 space-y-4">
+            
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-navy-950 border border-sky-400/30">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/50 flex items-center justify-center text-sky-300 font-bold font-mono text-xs">
+                01
+              </div>
+              <div class="flex-1">
+                <div class="text-xs font-bold text-white">Instant Inbound Webhook Listener</div>
+                <div class="text-[11px] text-slate-400">Captures webform, phone, or referral intake under 900 milliseconds.</div>
+              </div>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">&lt;1s SLA</span>
+            </div>
+
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-navy-950 border border-sky-400/30">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/50 flex items-center justify-center text-sky-300 font-bold font-mono text-xs">
+                02
+              </div>
+              <div class="flex-1">
+                <div class="text-xs font-bold text-white">Cloud Qualification &amp; Deal Sizing Rules</div>
+                <div class="text-[11px] text-slate-400">Filters tire-kickers; scores revenue tier and routes enterprise deals instantly.</div>
+              </div>
+              <span class="text-[10px] font-mono text-brand-300 bg-brand-400/10 px-2 py-0.5 rounded border border-brand-400/20">Algorithmic</span>
+            </div>
+
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-navy-950 border border-sky-400/30">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/50 flex items-center justify-center text-sky-300 font-bold font-mono text-xs">
+                03
+              </div>
+              <div class="flex-1">
+                <div class="text-xs font-bold text-white">Self-Serve Executive Calendar Booking</div>
+                <div class="text-[11px] text-slate-400">High-intent prospects choose guaranteed business day slots before dropping off.</div>
+              </div>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">&lt;5 min lead-time</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ============================================ -->
+        <!-- VIEW 3: 28-DAY SPRINT ROADMAP                -->
+        <!-- ============================================ -->
+        <div id="view-sprint" class="hidden space-y-4 max-w-3xl mx-auto">
+          
+          <div class="p-5 rounded-2xl bg-navy-900 border border-brand-400/30 shadow-lg">
+            <div class="text-[10px] font-mono text-brand-400 font-bold uppercase tracking-wider mb-1">
+              THE 28-DAY IMPLEMENTATION CADENCE
+            </div>
+            <h2 class="text-xl font-bold text-white tracking-tight">
+              Four Weeks. Four Working Assets. Zero Consulting Fluff.
+            </h2>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Every Friday concludes with an inspected, deployed asset. 100% intellectual property transfer to your in-house team.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 font-sans">
+            
+            <div class="p-4 rounded-xl bg-navy-900 border border-brand-400/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold font-mono text-brand-300">WEEK 01</span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Asset #1</span>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1">Diagnostic Brief &amp; Leak Matrix</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Empirical audit of inbound latency, pipeline drop-off, and stalled inactive leads. Delivered and signed off.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-900 border border-brand-400/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold font-mono text-brand-300">WEEK 02</span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Asset #2</span>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1">Cloud Qualification &amp; Calendar Rail</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Automated webhook routing and direct calendar rails installed in CRM. Speed-to-lead drops under 5 minutes.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-900 border border-brand-400/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold font-mono text-brand-300">WEEK 03</span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Asset #3</span>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1">Standard Operating Runbooks</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Institutional playbooks, SLA triage rules, and escalation protocols for handling high-value enterprise accounts.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-900 border border-brand-400/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold font-mono text-brand-300">WEEK 04</span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Asset #4</span>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1">Verification &amp; 100% IP Handover</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Stress-test of all intake vectors, deal velocity verification, and complete transition of all keys and runbooks.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Closed Captioning & Live Transcript Bar -->
+      <div class="px-4 py-2.5 bg-navy-950/95 border-t border-brand-400/15 flex items-center justify-between gap-3 shrink-0">
+        <div class="flex items-center gap-2 text-xs font-sans text-slate-300 overflow-hidden">
+          <span class="text-[10px] font-mono uppercase font-bold text-brand-400 shrink-0" id="cc-speaker-tag">
+            [DAVID VANCE]
+          </span>
+          <span class="truncate" id="cc-text">
+            "Look, Victoria, here's the reality. Mark Calder and I have finished analyzing your numbers..."
+          </span>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">
+            AUDIO LIVE
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- 3. BOTTOM TELECONFERENCE CONTROLS DOCK         -->
+  <!-- ============================================== -->
+  <footer class="min-h-16 h-auto py-2.5 xl:py-0 xl:h-16 bg-navy-950 border-t border-brand-400/20 px-3 sm:px-5 flex flex-wrap xl:flex-nowrap items-center justify-between gap-2 shrink-0 z-30">
+    
+    <!-- Left: Meeting Stage Indicator -->
+    <div class="flex flex-wrap items-center gap-2 min-w-0 max-w-full xl:shrink-0">
+      <div class="text-[11px] font-mono text-slate-400 hidden 2xl:block whitespace-nowrap">
+        AGENDA STAGE:
+      </div>
+      <div class="flex flex-wrap items-center gap-1.5" id="agenda-pills">
+        <button onclick="jumpToStage(1)" id="pill-stage-1" class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-brand-400 text-navy-950">
+          1. Alignment
+        </button>
+        <button onclick="jumpToStage(2)" id="pill-stage-2" class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-navy-850 text-slate-400 hover:text-white">
+          2. Systems Audit
+        </button>
+        <button onclick="jumpToStage(3)" id="pill-stage-3" class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-navy-850 text-slate-400 hover:text-white">
+          3. Sprint Plan
+        </button>
+        <button onclick="jumpToStage(4)" id="pill-stage-4" class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-navy-850 text-slate-400 hover:text-white">
+          4. Next Steps
+        </button>
+      </div>
+    </div>
+
+    <!-- Center: Master Call Controls (Zoom / Meet Style) -->
+    <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+      
+      <!-- Play / Pause Meeting Narration -->
+      <button id="btn-master-play" onclick="toggleMeetingNarration()" class="px-4 py-2 rounded-xl bg-brand-400 hover:bg-brand-300 text-navy-950 font-bold text-xs flex items-center gap-2 shadow-lg transition-all">
+        <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+        <span id="btn-master-text">Start Teleconference Audio</span>
+      </button>
+
+      <!-- Next Agenda Step -->
+      <button onclick="nextAgendaStep()" class="p-2 rounded-xl bg-navy-850 hover:bg-navy-800 border border-slate-700 text-slate-300 hover:text-white transition-all" title="Next Agenda Milestone">
+        <i data-lucide="skip-forward" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Screen Share Toggle -->
+      <button onclick="toggleSharedView()" class="p-2 rounded-xl bg-navy-850 hover:bg-navy-800 border border-brand-400/30 text-brand-300 hover:text-white transition-all" title="Toggle Shared View">
+        <i data-lucide="layout-grid" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Ask Principals Quick Button -->
+      <button onclick="focusQAInput()" class="px-3 py-2 rounded-xl bg-navy-850 hover:bg-navy-800 border border-brand-400/40 text-brand-300 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 transition-all shadow" title="Ask David or Mark a Question">
+        <i data-lucide="message-square-quote" class="w-4 h-4 text-brand-400"></i>
+        <span class="hidden md:inline">Ask Principals</span>
+      </button>
+
+    </div>
+
+    <!-- Right: Engagement / Sprint Lock Button -->
+    <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 min-w-0 max-w-full xl:shrink-0">
+      <button onclick="initiateBoardroomDeposit()" id="btn-boardroom-deposit" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-dark-950 text-xs font-bold transition-all shadow-md cursor-pointer whitespace-nowrap">
+        <i data-lucide="credit-card" class="w-3.5 h-3.5 text-dark-950 shrink-0"></i>
+        <span id="boardroom-deposit-text">Lock In 28-Day Sprint ($3,500 Deposit)</span>
+      </button>
+      <a href="/" class="px-3 py-2 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 text-xs font-bold transition-all whitespace-nowrap">
+        Leave Room
+      </a>
+    </div>
+
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- 4. CLIENT JAVASCRIPT & AUDIO ENGINE            -->
+  <!-- ============================================== -->
+  <script>
+    let currentAuditId = 'latest';
+    let currentSession = null;
+    let isPlaying = false;
+    let activeAudio = null;
+    let currentStageIndex = 1;
+    let timerSeconds = 26 * 60 + 45; // 26m 45s countdown
+
+    // Approved & Locked Studio Voice Tracks
+    const TELECONFERENCE_TRACKS = {
+      // Stage 1: David Vance Opening Alignment
+      stage1: {
+        speaker: 'david-vance',
+        name: 'David Vance',
+        title: 'Managing Principal (Commercial Strategy)',
+        audioUrl: '/audio/samples/david_pothos_sample.mp3',
+        ccText: "Look, here's the reality. Mark Calder and I have finished analyzing your numbers. We set up this private teleconference to give you straight answers without consulting fluff.",
+        tab: 'page1',
+        spotlight: 'card-monthly-drag'
+      },
+      // Stage 2: Mark Calder Systems & Telemetry Breakdown
+      stage2: {
+        speaker: 'mark-calder',
+        name: 'Mark Calder',
+        title: 'Operational Principal (Systems Architecture)',
+        audioUrl: '/audio/samples/mark_christopher_metrics.mp3',
+        ccText: "From a systems standpoint, the metrics are grounded in empirical intake data. The reason that timing is critical: waiting longer than fifteen minutes causes over thirty percent of high-intent buyers to look elsewhere.",
+        tab: 'page1',
+        spotlight: 'card-latency'
+      },
+      // Stage 3: David Vance Sprint Roadmap vs VP Hire
+      stage3: {
+        speaker: 'david-vance',
+        name: 'David Vance',
+        title: 'Managing Principal (Commercial Strategy)',
+        audioUrl: '/audio/samples/david_pothos_vp_comparison.mp3',
+        ccText: "Why burn six months and two hundred thousand dollars hiring an in-house VP when Mark Calder and I build the operational infrastructure in twenty-eight days?",
+        tab: 'sprint',
+        spotlight: null
+      },
+      // Stage 4: Mark Calder CRM & Webhook Engineering
+      stage4: {
+        speaker: 'mark-calder',
+        name: 'Mark Calder',
+        title: 'Operational Principal (Systems Architecture)',
+        audioUrl: '/audio/samples/mark_christopher_crm.mp3',
+        ccText: "Our architecture is platform-agnostic. Whether you run on HubSpot, Salesforce, or spreadsheets, we engineer webhook listeners that drop latency from hours down to under five minutes.",
+        tab: 'page2',
+        spotlight: null
+      }
+    };
+
+    // Countdown Timer Loop
+    setInterval(() => {
+      if (timerSeconds > 0) {
+        timerSeconds--;
+        const m = Math.floor(timerSeconds / 60);
+        const s = timerSeconds % 60;
+        const el = document.getElementById('meeting-timer');
+        if (el) el.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')} REMAINING`;
+      }
+    }, 1000);
+
+    function detectDivision() {
+      const p = window.location.pathname.toLowerCase();
+      if (p.includes('/clinical') || p.includes('/medical')) return 'clinical';
+      if (p.includes('/contractor') || p.includes('/bids')) return 'contractor';
+      if (p.includes('/legal') || p.includes('/law')) return 'legal';
+      return 'corporate';
+    }
+
+    function extractAuditId() {
+      const parts = window.location.pathname.split('/').filter(Boolean);
+      const last = parts[parts.length - 1];
+      const ignore = ['teleconference', 'teleconference.html', 'room', 'meeting', 'clinical', 'clinical.html', 'medical', 'medical.html', 'contractor', 'contractor.html', 'bids', 'bids.html', 'legal', 'legal.html', 'law', 'law.html'];
+      if (last && !ignore.includes(last)) {
+        return last.replace('.html', '');
+      }
+      const params = new URLSearchParams(window.location.search);
+      return params.get('auditId') || 'latest';
+    }
+
+    function applyDivisionBranding() {
+      const div = detectDivision();
+      const titleEl = document.getElementById('header-brand-title');
+      const subEl = document.getElementById('header-brand-subtitle');
+      const consultEl = document.getElementById('header-consultation-type');
+
+      const depositTextEl = document.getElementById('boardroom-deposit-text');
+      if (div === 'clinical') {
+        if (titleEl) titleEl.textContent = 'AEGIS CLINICAL ADVISORY';
+        if (subEl) subEl.textContent = 'Clinical Patient Intake Boardroom • Room 302';
+        if (consultEl) consultEl.textContent = 'CONFIDENTIAL PATIENT INTAKE CONSULTATION';
+        if (depositTextEl) depositTextEl.textContent = 'Lock In 28-Day Clinical Sprint ($3,500 Deposit)';
+        document.title = 'Aegis Clinical Boardroom — Patient Intake Advisory';
+      } else if (div === 'contractor') {
+        if (titleEl) titleEl.textContent = 'IRONCLAD BID SYSTEMS';
+        if (subEl) subEl.textContent = 'Commercial Estimating Boardroom • Room 302';
+        if (consultEl) consultEl.textContent = 'CONFIDENTIAL COMMERCIAL BID CONSULTATION';
+        if (depositTextEl) depositTextEl.textContent = 'Lock In 28-Day Estimating Sprint ($3,500 Deposit)';
+        document.title = 'Ironclad Bids Boardroom — Commercial Estimating Systems';
+      } else if (div === 'legal') {
+        if (titleEl) titleEl.textContent = 'JURISPOINT ADVISORY';
+        if (subEl) subEl.textContent = 'Legal Intake & Growth Boardroom • Room 302';
+        if (consultEl) consultEl.textContent = 'CONFIDENTIAL LEGAL INTAKE CONSULTATION';
+        if (depositTextEl) depositTextEl.textContent = 'Lock In 28-Day Legal Sprint ($4,500 Deposit)';
+        document.title = 'JurisPoint Boardroom — High-Stakes Legal Intake';
+      } else {
+        if (depositTextEl) depositTextEl.textContent = 'Lock In 28-Day Sprint ($6,500 Deposit)';
+      }
+    }
+
+    async function initiateBoardroomDeposit() {
+      const btn = document.getElementById('btn-boardroom-deposit');
+      const txt = document.getElementById('boardroom-deposit-text');
+      const originalText = txt ? txt.textContent : 'Lock In 28-Day Sprint';
+      if (btn) btn.disabled = true;
+      if (txt) txt.textContent = 'Opening Stripe Checkout...';
+
+      try {
+        const div = detectDivision();
+        const comp = currentSession?.prospect?.company || 'Commercial Partner';
+        const email = currentSession?.prospect?.email || 'billing@example.com';
+        const name = currentSession?.prospect?.name || 'Managing Director';
+        const auditId = currentAuditId || 'latest';
+        const amount = (div === 'clinical' || div === 'contractor') ? 3500 : (div === 'legal' ? 4500 : 6500);
+
+        const res = await fetch('/api/billing/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            tierId: 'client_deposit',
+            planName: `${comp} 28-Day Acceleration Sprint`,
+            amount: amount,
+            company: comp,
+            clientEmail: email,
+            clientName: name,
+            leadId: auditId,
+            paymentMethod: 'stripe'
+          })
+        });
+        const data = await res.json();
+        if (data.success && data.url) {
+          window.open(data.url, '_blank');
+        } else {
+          alert(data.message || 'Could not launch Stripe Checkout');
+        }
+      } catch (err) {
+        console.error('Boardroom checkout error:', err);
+        alert('Payment service temporarily unavailable. Please try again.');
+      } finally {
+        if (btn) btn.disabled = false;
+        if (txt) txt.textContent = originalText;
+      }
+    }
+
+    async function loadTeleconferenceData() {
+      applyDivisionBranding();
+      currentAuditId = extractAuditId();
+      try {
+        const res = await fetch(`/api/briefing/${encodeURIComponent(currentAuditId)}`);
+        if (!res.ok) throw new Error('Data fetch failed');
+        const data = await res.json();
+        if (data.session) {
+          currentSession = data.session;
+          applyProspectData(currentSession);
+        }
+      } catch (e) {
+        console.warn('Using client defaults for teleconference:', e);
+      }
+    }
+
+    function applyProspectData(session) {
+      if (!session) return;
+      const { prospect = {}, metrics = {} } = session;
+
+      const comp = prospect.company || 'Sterling Capital Partners';
+      const name = prospect.name || 'Victoria Sterling';
+      const leakage = metrics.monthly_leakage_dollars || '$148,000 / mo';
+      const annualized = metrics.annualized_leakage || '$1,776,000 / yr';
+      const latency = metrics.response_time || '4.6 hrs';
+      const stalled = metrics.stalled_deals || '52 deals';
+      const dropoff = metrics.dropoff_rate || '36.0%';
+
+      // Header and titles
+      document.getElementById('header-client-label').textContent = `CLIENT: ${comp.toUpperCase()}`;
+      document.getElementById('doc-company-name').textContent = comp;
+      document.getElementById('doc-executive-name').textContent = `${name} • ${prospect.industry || 'Commercial Enterprise'} • ${prospect.revenue || '$10M - $25M ARR'}`;
+      document.getElementById('client-name-display').textContent = name;
+      document.getElementById('client-company-display').textContent = comp;
+      
+      const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'EX';
+      document.getElementById('client-initials').textContent = initials;
+
+      // Metrics in document
+      document.getElementById('doc-metric-drag').textContent = leakage;
+      document.getElementById('box-monthly-drag').textContent = leakage.replace(' / mo', '');
+      document.getElementById('box-annual-drag').textContent = `${annualized} annualized`;
+      document.getElementById('box-latency').textContent = latency;
+      document.getElementById('box-stalled').textContent = stalled;
+      document.getElementById('box-dropoff').textContent = dropoff;
+      document.getElementById('label-client-latency').textContent = `• ${latency} Current ${comp} Latency`;
+
+      // PDF link
+      if (session.pdfUrl) {
+        document.getElementById('btn-view-pdf').href = session.pdfUrl;
+      }
+    }
+
+    // Switch between Shared Stage Tabs
+    function switchStageTab(tabKey) {
+      const v1 = document.getElementById('view-page1');
+      const v2 = document.getElementById('view-page2');
+      const vSprint = document.getElementById('view-sprint');
+
+      const b1 = document.getElementById('tab-btn-page1');
+      const b2 = document.getElementById('tab-btn-page2');
+      const bSprint = document.getElementById('tab-btn-sprint');
+
+      // Reset tabs styling
+      [b1, b2, bSprint].forEach(b => {
+        b.className = 'px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold text-slate-300 hover:text-white transition-all';
+      });
+
+      // Hide all views
+      v1.classList.add('hidden');
+      v2.classList.add('hidden');
+      vSprint.classList.add('hidden');
+
+      if (tabKey === 'page1') {
+        v1.classList.remove('hidden');
+        b1.className = 'px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold bg-brand-400 text-navy-950 transition-all';
+      } else if (tabKey === 'page2') {
+        v2.classList.remove('hidden');
+        b2.className = 'px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold bg-sky-400 text-navy-950 transition-all';
+      } else if (tabKey === 'sprint') {
+        vSprint.classList.remove('hidden');
+        bSprint.className = 'px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold bg-brand-400 text-navy-950 transition-all';
+      }
+    }
+
+    function setSpeakerActive(speakerKey) {
+      const tileVance = document.getElementById('tile-vance');
+      const tileCalder = document.getElementById('tile-calder');
+      const waveVance = document.getElementById('vance-wave');
+      const waveCalder = document.getElementById('calder-wave');
+      const presenterText = document.getElementById('screenshare-presenter');
+
+      if (speakerKey === 'david-vance') {
+        tileVance.classList.add('active-speaker-vance');
+        tileCalder.classList.remove('active-speaker-calder');
+        waveVance.classList.remove('hidden');
+        waveVance.classList.add('flex', 'audio-speaking');
+        waveCalder.classList.add('hidden');
+        waveCalder.classList.remove('flex', 'audio-speaking');
+        if (presenterText) presenterText.innerHTML = 'Presented by: <strong class="text-brand-300">David Vance</strong>';
+      } else if (speakerKey === 'mark-calder') {
+        tileCalder.classList.add('active-speaker-calder');
+        tileVance.classList.remove('active-speaker-vance');
+        waveCalder.classList.remove('hidden');
+        waveCalder.classList.add('flex', 'audio-speaking');
+        waveVance.classList.add('hidden');
+        waveVance.classList.remove('flex', 'audio-speaking');
+        if (presenterText) presenterText.innerHTML = 'Presented by: <strong class="text-sky-300">Mark Calder</strong>';
+      } else {
+        tileVance.classList.remove('active-speaker-vance');
+        tileCalder.classList.remove('active-speaker-calder');
+        waveVance.classList.add('hidden');
+        waveCalder.classList.add('hidden');
+      }
+    }
+
+    function stopTeleconferenceAudio() {
+      if (activeAudio) {
+        try {
+          activeAudio.pause();
+          activeAudio.currentTime = 0;
+        } catch (_) {}
+        activeAudio = null;
+      }
+      isPlaying = false;
+      setSpeakerActive(null);
+      
+      const playBtn = document.getElementById('btn-master-play');
+      const playText = document.getElementById('btn-master-text');
+      if (playBtn) playBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4 fill-current"></i><span>Resume Teleconference Audio</span>';
+      lucide.createIcons();
+    }
+
+    function jumpToStage(stageNum) {
+      stopTeleconferenceAudio();
+      currentStageIndex = stageNum;
+      
+      // Update pills styling
+      for (let i = 1; i <= 4; i++) {
+        const pill = document.getElementById(`pill-stage-${i}`);
+        if (pill) {
+          if (i === stageNum) {
+            pill.className = 'px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-brand-400 text-navy-950';
+          } else {
+            pill.className = 'px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-navy-850 text-slate-400 hover:text-white';
+          }
+        }
+      }
+
+      const stageKey = `stage${stageNum}`;
+      const config = TELECONFERENCE_TRACKS[stageKey];
+      if (!config) return;
+
+      // Switch stage tab
+      if (config.tab) switchStageTab(config.tab);
+
+      // Highlight spotlight card
+      ['card-monthly-drag', 'card-latency', 'card-stalled'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('tear-sheet-spotlight', 'tear-sheet-spotlight-blue');
+      });
+
+      if (config.spotlight) {
+        const target = document.getElementById(config.spotlight);
+        if (target) {
+          target.classList.add(config.speaker === 'mark-calder' ? 'tear-sheet-spotlight-blue' : 'tear-sheet-spotlight');
+        }
+      }
+
+      // Update closed captions
+      document.getElementById('cc-speaker-tag').textContent = `[${config.name.toUpperCase()}]`;
+      document.getElementById('cc-speaker-tag').className = config.speaker === 'mark-calder' 
+        ? 'text-[10px] font-mono uppercase font-bold text-sky-400 shrink-0'
+        : 'text-[10px] font-mono uppercase font-bold text-brand-400 shrink-0';
+      document.getElementById('cc-text').textContent = config.ccText;
+
+      // Play audio
+      playTrack(config);
+    }
+
+    function playTrack(config) {
+      isPlaying = true;
+      setSpeakerActive(config.speaker);
+
+      const playBtn = document.getElementById('btn-master-play');
+      if (playBtn) {
+        playBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 fill-current"></i><span>Pause Meeting Audio</span>';
+        lucide.createIcons();
+      }
+
+      const audio = new Audio(config.audioUrl);
+      activeAudio = audio;
+
+      audio.onended = () => {
+        setSpeakerActive(null);
+        // Automatically advance to next stage if available
+        if (currentStageIndex < 4) {
+          setTimeout(() => {
+            jumpToStage(currentStageIndex + 1);
+          }, 1200);
+        } else {
+          stopTeleconferenceAudio();
+        }
+      };
+
+      audio.onerror = (e) => {
+        console.warn('Teleconference audio playback notice:', e);
+        stopTeleconferenceAudio();
+      };
+
+      audio.play().catch(err => {
+        console.warn('Audio play exception:', err);
+        stopTeleconferenceAudio();
+      });
+    }
+
+    function toggleMeetingNarration() {
+      if (isPlaying) {
+        stopTeleconferenceAudio();
+      } else {
+        jumpToStage(currentStageIndex);
+      }
+    }
+
+    function nextAgendaStep() {
+      const nextIndex = currentStageIndex >= 4 ? 1 : currentStageIndex + 1;
+      jumpToStage(nextIndex);
+    }
+
+    function toggleSharedView() {
+      const doc = document.getElementById('document-canvas');
+      if (doc) {
+        doc.scrollTop = doc.scrollTop > 50 ? 0 : 300;
+      }
+    }
+
+    function playAgendaAudio(key) {
+      if (key === 'vance_intro') {
+        jumpToStage(1);
+      } else if (key === 'calder_metrics') {
+        jumpToStage(2);
+      }
+    }
+
+    // Client Webcam and Mic Toggle
+    let webcamStream = null;
+    let micMuted = false;
+
+    async function toggleClientCam() {
+      const video = document.getElementById('client-webcam');
+      const avatarPh = document.getElementById('client-avatar-ph');
+      const btn = document.getElementById('btn-toggle-cam');
+
+      if (webcamStream) {
+        webcamStream.getTracks().forEach(t => t.stop());
+        webcamStream = null;
+        video.classList.add('hidden');
+        avatarPh.classList.remove('hidden');
+        btn.classList.remove('bg-emerald-500/20', 'border-emerald-400');
+        btn.classList.add('bg-navy-950', 'border-slate-700');
+      } else {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+          webcamStream = stream;
+          video.srcObject = stream;
+          video.classList.remove('hidden');
+          avatarPh.classList.add('hidden');
+          btn.classList.add('bg-emerald-500/20', 'border-emerald-400');
+          btn.classList.remove('bg-navy-950', 'border-slate-700');
+        } catch (err) {
+          alert('Webcam permission not granted or device unavailable.');
+        }
+      }
+    }
+
+    function toggleClientMic() {
+      micMuted = !micMuted;
+      const btn = document.getElementById('btn-toggle-mic');
+      if (micMuted) {
+        btn.classList.add('bg-rose-500/20', 'border-rose-400', 'text-rose-300');
+        btn.classList.remove('bg-navy-950', 'border-slate-700', 'text-slate-300');
+      } else {
+        btn.classList.remove('bg-rose-500/20', 'border-rose-400', 'text-rose-300');
+        btn.classList.add('bg-navy-950', 'border-slate-700', 'text-slate-300');
+      }
+    }
+
+    // ==============================================
+    // 5. INTERACTIVE EXECUTIVE Q&A & VOICE ENGINE
+    // ==============================================
+    let selectedQATarget = 'auto'; // 'auto' | 'david-vance' | 'mark-calder'
+    let speechRecognitionInstance = null;
+    let isRecognizingSpeech = false;
+
+    function setQATarget(target) {
+      selectedQATarget = target;
+      const bAuto = document.getElementById('btn-target-auto');
+      const bVance = document.getElementById('btn-target-vance');
+      const bCalder = document.getElementById('btn-target-calder');
+      
+      [bAuto, bVance, bCalder].forEach(b => {
+        if (b) b.className = 'flex-1 py-1 px-1.5 rounded-lg font-bold text-slate-400 hover:text-white transition-all text-center';
+      });
+
+      if (target === 'auto' && bAuto) {
+        bAuto.className = 'flex-1 py-1 px-1.5 rounded-lg font-bold bg-brand-400 text-navy-950 transition-all text-center';
+      } else if (target === 'david-vance' && bVance) {
+        bVance.className = 'flex-1 py-1 px-1.5 rounded-lg font-bold bg-brand-400 text-navy-950 transition-all text-center';
+      } else if (target === 'mark-calder' && bCalder) {
+        bCalder.className = 'flex-1 py-1 px-1.5 rounded-lg font-bold bg-sky-400 text-navy-950 transition-all text-center';
+      }
+    }
+
+    function focusQAInput() {
+      stopTeleconferenceAudio();
+      const el = document.getElementById('qa-input-field');
+      if (el) {
+        el.focus();
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    async function sendQuickQA(question, targetOverride = null) {
+      stopTeleconferenceAudio();
+      const input = document.getElementById('qa-input-field');
+      if (input) input.value = question;
+      if (targetOverride) setQATarget(targetOverride);
+      await submitExecutiveQuestion();
+    }
+
+    async function submitExecutiveQuestion() {
+      stopTeleconferenceAudio();
+      const input = document.getElementById('qa-input-field');
+      if (!input) return;
+      const question = input.value.trim();
+      if (!question) return;
+
+      // Clear input
+      input.value = '';
+
+      // Append user question to thread
+      const clientName = document.getElementById('client-name-display')?.textContent || 'Executive Guest';
+      appendQAMessage('user', clientName, 'GUEST', question);
+
+      // Show "Thinking" status badge on principals
+      const statusBadge = document.getElementById('qa-status-badge');
+      if (statusBadge) {
+        statusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span><span>CONSULTING PRINCIPALS...</span>';
+      }
+
+      // Disable send button while thinking
+      const btnSend = document.getElementById('btn-qa-send');
+      if (btnSend) btnSend.disabled = true;
+
+      try {
+        const res = await fetch('/api/teleconference/qa', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            question,
+            auditId: currentAuditId,
+            targetPersona: selectedQATarget
+          })
+        });
+
+        const data = await res.json();
+        if (!data.success) throw new Error(data.message || 'Error processing response');
+
+        // Add assistant response to thread
+        appendQAMessage(data.speaker, data.speakerName, data.speakerRole, data.reply);
+
+        // Switch stage tab if targetTab suggested
+        if (data.targetTab) {
+          switchStageTab(data.targetTab);
+        }
+
+        // Spotlight card if returned
+        ['card-monthly-drag', 'card-latency', 'card-stalled'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.classList.remove('tear-sheet-spotlight', 'tear-sheet-spotlight-blue');
+        });
+
+        if (data.spotlight) {
+          const target = document.getElementById(data.spotlight);
+          if (target) {
+            target.classList.add(data.speaker === 'mark-calder' ? 'tear-sheet-spotlight-blue' : 'tear-sheet-spotlight');
+          }
+        }
+
+        // Update Closed Captions
+        const ccSpeaker = document.getElementById('cc-speaker-tag');
+        const ccText = document.getElementById('cc-text');
+        if (ccSpeaker) {
+          ccSpeaker.textContent = `[${data.speakerName.toUpperCase()}]`;
+          ccSpeaker.className = data.speaker === 'mark-calder'
+            ? 'text-[10px] font-mono uppercase font-bold text-sky-400 shrink-0'
+            : 'text-[10px] font-mono uppercase font-bold text-brand-400 shrink-0';
+        }
+        if (ccText) {
+          ccText.textContent = `"${data.cleanSpeech || data.reply}"`;
+        }
+
+        // Stop current narrative audio if playing
+        stopTeleconferenceAudio();
+
+        // Stream and play response audio
+        playDynamicQAAudio(data.speaker, data.audioUrl, data.speakerName);
+
+      } catch (err) {
+        console.error('Q&A Submission Error:', err);
+        appendQAMessage('system', 'System Notice', 'SYS', 'Unable to reach the live voice synthesis engine. Please try again.');
+      } finally {
+        if (btnSend) btnSend.disabled = false;
+        if (statusBadge) {
+          statusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span>AI PRINCIPALS LIVE</span>';
+        }
+      }
+    }
+
+    function playDynamicQAAudio(speakerKey, audioUrl, speakerName) {
+      isPlaying = true;
+      setSpeakerActive(speakerKey);
+
+      const playBtn = document.getElementById('btn-master-play');
+      if (playBtn) {
+        playBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4 fill-current"></i><span>Pause Principal Audio</span>';
+        lucide.createIcons();
+      }
+
+      const audio = new Audio(audioUrl);
+      activeAudio = audio;
+
+      audio.onended = () => {
+        setSpeakerActive(null);
+        stopTeleconferenceAudio();
+      };
+
+      audio.onerror = (e) => {
+        console.warn('Dynamic QA audio error:', e);
+        setSpeakerActive(null);
+        stopTeleconferenceAudio();
+      };
+
+      audio.play().catch(err => {
+        console.warn('Audio play notice:', err);
+        setSpeakerActive(null);
+        stopTeleconferenceAudio();
+      });
+    }
+
+    function appendQAMessage(sender, name, badge, text) {
+      const container = document.getElementById('qa-thread-container');
+      if (!container) return;
+
+      const msgDiv = document.createElement('div');
+      const isUser = sender === 'user';
+      const isVance = sender === 'david-vance';
+      const isCalder = sender === 'mark-calder';
+
+      let borderColor = 'border-slate-800';
+      let badgeColor = 'bg-slate-800 text-slate-300';
+      let avatarImg = '';
+
+      if (isVance) {
+        borderColor = 'border-brand-400/40 bg-navy-950/90';
+        badgeColor = 'bg-brand-400/20 text-brand-300 border border-brand-400/30';
+        avatarImg = '<img src="/branding/avatars/david_vance.jpg" class="w-4 h-4 rounded-full object-cover border border-brand-400/60" alt="David Vance">';
+      } else if (isCalder) {
+        borderColor = 'border-sky-400/40 bg-navy-950/90';
+        badgeColor = 'bg-sky-400/20 text-sky-300 border border-sky-400/30';
+        avatarImg = '<img src="/branding/avatars/mark_calder.jpg" class="w-4 h-4 rounded-full object-cover border border-sky-400/60" alt="Mark Calder">';
+      } else if (isUser) {
+        borderColor = 'border-slate-700 bg-navy-950/60';
+        badgeColor = 'bg-slate-700 text-slate-200';
+      }
+
+      msgDiv.className = `p-2.5 rounded-xl border ${borderColor} transition-all space-y-1`;
+      msgDiv.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            ${avatarImg}
+            <span class="text-[10px] font-bold ${isVance ? 'text-brand-300' : isCalder ? 'text-sky-300' : 'text-slate-300'}">${name}</span>
+          </div>
+          <span class="text-[9px] font-mono px-1.5 py-0.2 rounded ${badgeColor}">${badge}</span>
+        </div>
+        <div class="text-[11px] text-slate-200 leading-relaxed font-sans whitespace-pre-line">${text}</div>
+      `;
+
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    // Web Speech API Voice Dictation
+    function toggleQAMic() {
+      stopTeleconferenceAudio();
+      const micBtn = document.getElementById('btn-qa-mic');
+      const micStatus = document.getElementById('qa-mic-status');
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert('Voice dictation is not natively supported in this browser. Please type your inquiry directly into the text box.');
+        return;
+      }
+
+      if (isRecognizingSpeech && speechRecognitionInstance) {
+        speechRecognitionInstance.stop();
+        return;
+      }
+
+      try {
+        const recognition = new SpeechRecognition();
+        speechRecognitionInstance = recognition;
+        recognition.continuous = false;
+        recognition.interimResults = true;
+        recognition.lang = 'en-US';
+
+        recognition.onstart = () => {
+          isRecognizingSpeech = true;
+          if (micBtn) {
+            micBtn.classList.add('bg-rose-500/20', 'border-rose-400', 'text-rose-300', 'animate-pulse');
+          }
+          if (micStatus) micStatus.classList.remove('hidden');
+        };
+
+        recognition.onresult = (event) => {
+          let transcript = '';
+          for (let i = event.resultIndex; i < event.results.length; ++i) {
+            transcript += event.results[i][0].transcript;
+          }
+          const input = document.getElementById('qa-input-field');
+          if (input) input.value = transcript;
+        };
+
+        recognition.onerror = (e) => {
+          console.warn('Speech recognition notice:', e.error);
+          resetMicUI();
+        };
+
+        recognition.onend = () => {
+          resetMicUI();
+          // Auto-submit if question captured
+          const input = document.getElementById('qa-input-field');
+          if (input && input.value.trim().length > 4) {
+            submitExecutiveQuestion();
+          }
+        };
+
+        recognition.start();
+
+      } catch (err) {
+        console.warn('Mic start failed:', err);
+        resetMicUI();
+      }
+    }
+
+    function resetMicUI() {
+      isRecognizingSpeech = false;
+      const micBtn = document.getElementById('btn-qa-mic');
+      const micStatus = document.getElementById('qa-mic-status');
+      if (micBtn) {
+        micBtn.classList.remove('bg-rose-500/20', 'border-rose-400', 'text-rose-300', 'animate-pulse');
+        micBtn.classList.add('bg-navy-950', 'border-slate-700', 'text-slate-300');
+      }
+      if (micStatus) micStatus.classList.add('hidden');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      loadTeleconferenceData();
+    });
+  </script>
+
+</body>
+</html>
