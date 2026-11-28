@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Google Analytics 4 Invisible Visitor Radar (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4EY86CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BPF4EY86CZ', {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+    gtag('config', 'GTM-MWCPMGV3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Revenue Architecture &amp; Autonomous Coding Blueprint | Vance &amp; Calder Advisory Group</title>
+  <meta name="description" content="Executive briefing for private medical practices, outpatient surgical groups, and specialty clinics. Eliminate 6%–9% billing agency extraction and 45-day AR lags with local zero-cloud autonomous coding.">
+  <link rel="icon" type="image/png" href="/branding/favicon.png">
+  <link rel="shortcut icon" href="/branding/favicon.ico">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#D4AF37',
+              300: '#E3CE8C',
+              200: '#EBDDB0',
+            },
+            navy: {
+              950: '#040A14',
+              900: '#060F1D',
+              850: '#0A192F',
+              800: '#102444',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { background-color: #040A14; color: #E2E8F0; overflow-x: hidden; }
+    .navy-card {
+      background: rgba(10, 25, 47, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+    .gold-btn {
+      background: linear-gradient(135deg, #D4AF37 0%, #BF992B 100%);
+      color: #040A14;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .gold-btn:hover {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+      transform: translateY(-1px);
+    }
+    .metric-card {
+      background: linear-gradient(180deg, rgba(16, 36, 68, 0.6) 0%, rgba(6, 15, 29, 0.9) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      transition: all 0.2s ease;
+    }
+    .metric-card:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+      transform: translateY(-2px);
+    }
+  </style>
+  <link rel="canonical" href="https://vancecalderadvisory.com/medical-briefing.html">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Practice Revenue Architecture: How outpatient specialty practices, surgical centers, and private clinics eliminate six-figure agency fees.">
+  <meta property="og:title" content="Executive Medical Briefing | Vance &amp; Calder Advisory Group">
+  <meta property="og:url" content="https://vancecalderadvisory.com/medical-briefing.html">
+</head>
+<body class="min-h-screen antialiased flex flex-col justify-between selection:bg-brand-400 selection:text-navy-950">
+
+  <!-- Top Executive Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-brand-400/25 shadow-2xl transition-all w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Left: Logo & Brand Title -->
+      <a href="/" class="flex items-center gap-3.5 group text-decoration-none">
+        <div class="p-1 sm:p-1.5 rounded-xl bg-white flex items-center justify-center border-2 border-brand-400/80 shadow-lg shadow-black/60 group-hover:border-brand-400 transition-all shrink-0">
+          <img src="/branding/logo.png" alt="Vance &amp; Calder Advisory Group" class="h-8 sm:h-9 w-auto object-contain">
+        </div>
+        <div>
+          <div class="text-white text-sm sm:text-base font-bold flex items-center gap-1.5" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: 0.04em;">
+            VANCE &amp; CALDER
+          </div>
+          <div class="text-[9px] sm:text-[10px] text-brand-400 uppercase font-semibold" style="font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.22em;">
+            ADVISORY GROUP
+          </div>
+        </div>
+      </a>
+
+      <!-- Right: Action Buttons -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a href="/" class="text-xs font-semibold text-slate-300 hover:text-white transition-colors hidden md:inline-flex items-center gap-1">
+          <span>&larr; Firm Overview</span>
+        </a>
+        <a href="/clinical-coder.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400 text-emerald-300 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-md">
+          <i data-lucide="stethoscope" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Clinical Coder Pro™</span>
+        </a>
+        <a href="/#diagnostic" class="gold-btn hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs uppercase tracking-wider shadow-md">
+          <span>Request Audit</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full min-w-0 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16 flex-1">
+
+    <!-- Hero Header Banner -->
+    <div class="pb-8 mb-10 border-b border-slate-800 text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+      <div class="max-w-3xl min-w-0">
+        <div class="inline-flex flex-wrap justify-center sm:justify-start items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-[11px] font-mono uppercase tracking-widest mb-4 max-w-full text-center sm:text-left">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          Healthcare Revenue Governance &bull; Private Practice Autonomy
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+          Practice Revenue Architecture: <span class="text-brand-400">Ending 6%–9% Billing Extraction</span>
+        </h1>
+        <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed font-normal">
+          How outpatient specialty practices, surgical centers, and private clinics eliminate six-figure agency fees, compress 45-day reimbursement lags to 48 hours, and achieve zero-cloud hack immunity.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-stretch gap-3 shrink-0">
+        <a href="/clinical-coder.html" class="px-6 py-3 rounded-xl gold-btn text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl">
+          <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+          <span>Test Live Coding Engine</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Telemetry Cards: The Core Practice Numbers -->
+    <section class="mb-14">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xs font-mono font-bold uppercase tracking-widest text-brand-400">
+          Executive Telemetry &bull; The Four Revenue Realities
+        </h2>
+        <span class="text-[11px] font-mono text-slate-500">Practice Benchmarks (2026)</span>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Card 1 -->
+        <div class="metric-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-rose-400 uppercase tracking-wider">Fee Extraction</span>
+            <i data-lucide="percent" class="w-4 h-4 text-rose-400"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-white font-mono tracking-tight">6% – 9%</div>
+          <div class="text-xs font-semibold text-rose-300 mt-2">Gross Revenue Siphoned</div>
+          <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            Average billing agency rake costs practices <strong class="text-rose-200">$150,000 to $375,000+</strong> per physician annually.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="metric-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Turnaround Lag</span>
+            <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-300 font-mono tracking-tight">45d &rarr; 48h</div>
+          <div class="text-xs font-semibold text-amber-300 mt-2">Cash Velocity Acceleration</div>
+          <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            Autonomous dual-engine coding cuts billing cycles from 45 days down to 48 hours, ending bank credit-line dependence.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="metric-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Cyber Exposure</span>
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono tracking-tight">0 Cloud Risk</div>
+          <div class="text-xs font-semibold text-emerald-300 mt-2">Local Volatile RAM Only</div>
+          <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            Zero cloud databases, zero disk PHI. Immune to Change Healthcare vendor breaches: <em>"You cannot hack what is never stored."</em>
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="metric-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-brand-400 uppercase tracking-wider">Net Profit Restored</span>
+            <i data-lucide="trending-up" class="w-4 h-4 text-brand-400"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-400 font-mono tracking-tight">+$228K+</div>
+          <div class="text-xs font-semibold text-brand-300 mt-2">Annual Practice Savings</div>
+          <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            Flat, predictable retainer replaces percentage rake, keeping operating capital inside physician equity and clinic growth.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Main Briefing Content Card -->
+    <div class="navy-card p-8 sm:p-14 rounded-3xl border-2 border-brand-400/40 shadow-2xl space-y-14 text-slate-300 leading-relaxed font-normal text-sm sm:text-base">
+
+      <!-- High-Value Specialty Focus: Ophthalmology & Oral Surgery -->
+      <section class="p-8 rounded-2xl bg-navy-950/90 border-2 border-brand-400/40 space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-brand-400/10 border border-brand-400/30 text-brand-400 font-mono font-bold text-xs">SPECIALTY EXPANSION</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            Eye Surgery &amp; Oral Surgery: The Highest-Margin Recapture Opportunities
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-xl bg-navy-900/80 border border-slate-800 space-y-3">
+            <div class="flex items-center gap-2 text-sky-400 font-bold text-sm font-mono">
+              <span>👁️</span> OPHTHALMOLOGY &bull; HIGH-VOLUME EYE SURGERY
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Eye surgeons face massive procedure volume (cataracts, glaucoma, corneal, vitrectomy) and $2,000+ specialty retinal injectables. Third-party billing agencies siphon <strong>6% to 8% of collections</strong>—costing a private 2–3 doctor eye center <strong>$250,000 to $450,000+ per year</strong> for routine claims processing.
+            </p>
+            <div class="text-[11px] font-mono text-emerald-300 bg-emerald-500/10 p-2.5 rounded-lg border border-emerald-400/20">
+              V&amp;C Impact: Eliminates agency percentage fees and automates bilateral (-RT/-LT) modifiers in local RAM.
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl bg-navy-900/80 border border-slate-800 space-y-3">
+            <div class="flex items-center gap-2 text-brand-400 font-bold text-sm font-mono">
+              <span>🦷</span> ORAL &amp; MAXILLOFACIAL SURGERY &bull; MEDICAL CROSS-OVER
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Traditional dental insurance caps patient benefits at a rigid $1,500/year. However, complex surgical extractions, bone grafting, and TMJ reconstruction qualify for <strong>$5,000 to $15,000+ Major Medical Insurance reimbursements</strong>. Clinical Coder Pro™ autonomously cross-references ICD-10 medical pathology with medical CPT surgical codes.
+            </p>
+            <div class="text-[11px] font-mono text-brand-300 bg-brand-500/10 p-2.5 rounded-lg border border-brand-400/20">
+              V&amp;C Impact: Unlocks major medical reimbursement dollars previously lost to dental insurance limitations.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1: The Two Threats to Practice Solvency -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-brand-400/10 border border-brand-400/30 text-brand-400 font-mono font-bold text-xs">01</span>
+          <h2 class="text-xl sm:text-3xl font-bold text-white tracking-tight" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            The Two Compounding Traps Threatening Practice Solvency
+          </h2>
+        </div>
+        <p class="text-slate-300">
+          Across outpatient specialty clinics, private surgical centers, and physician practices, two compounding operational vulnerabilities quietly bleed margin and threaten independence:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          
+          <!-- Trap 1 -->
+          <div class="p-6 rounded-2xl bg-navy-950/90 border border-amber-400/30 space-y-3">
+            <div class="flex items-center gap-2.5 text-amber-400 font-bold text-sm">
+              <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+              <span class="font-mono uppercase tracking-wider">Trap 1: The 6% to 9% Percentage Extraction Rake</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Third-party medical billing agencies charge a percentage of gross practice collections—typically <strong>6% to 9%</strong>. For a high-volume surgical, orthopedic, dermatology, or specialty group collecting $3.5M to $8M annually, this means <strong>$200,000 to $500,000+ is siphoned out of practice operating capital every year</strong> for routine data entry.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Compounding this loss, outside agencies batch claims on an antiquated <strong>30- to 45-day queue</strong>. Practices are left waiting weeks for cash flow, often forced to utilize costly bank credit lines to make payroll while waiting on reimbursements already earned.
+            </p>
+          </div>
+
+          <!-- Trap 2 -->
+          <div class="p-6 rounded-2xl bg-navy-950/90 border border-rose-400/30 space-y-3">
+            <div class="flex items-center gap-2.5 text-rose-400 font-bold text-sm">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i>
+              <span class="font-mono uppercase tracking-wider">Trap 2: The Change Healthcare Supply-Chain Liability</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              To use outsourced billing agencies, clinics are forced to transmit unencrypted patient charts and clinical documentation into third-party cloud repositories. When an outside vendor suffers a cyberattack—as demonstrated in the catastrophic 2024 Change Healthcare ransomware breach—the practice remains <strong>100% forensically, legally, and financially liable under federal HIPAA mandates</strong>.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Under federal law, HIPAA compliance is non-delegable. Handing patient records to third-party clearinghouses exposes the clinic to catastrophic legal damages, patient notifications, and federal audit penalties.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 2: Direct Financial Comparison Table -->
+      <section class="space-y-6 border-t border-slate-800 pt-10">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-brand-400/10 border border-brand-400/30 text-brand-400 font-mono font-bold text-xs">02</span>
+          <h2 class="text-xl sm:text-3xl font-bold text-white tracking-tight" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            The Financial Reality: Agency Extraction vs. In-House Retainer
+          </h2>
+        </div>
+        <p class="text-slate-300">
+          Replacing percentage extraction with local autonomous coding reclaims hundreds of thousands of dollars directly into practice equity:
+        </p>
+
+        <!-- High-Impact Financial Recovery Matrix -->
+        <div class="w-full max-w-full overflow-x-auto rounded-2xl border-2 border-brand-400/40 bg-navy-950 shadow-2xl mb-6">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm font-mono">
+            <thead>
+              <tr class="border-b-2 border-brand-400/40 bg-navy-900/90 text-brand-300">
+                <th class="p-4 sm:p-5 font-bold uppercase tracking-wider">Practice Scale</th>
+                <th class="p-4 sm:p-5 font-bold uppercase tracking-wider">Annual Collections</th>
+                <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-rose-300">Outsourced Agency Fee<br><span class="text-[10px] font-normal text-rose-400/80">(Calculated @ 6.0% Minimum)</span></th>
+                <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-sky-300">Vance &amp; Calder Engine<br><span class="text-[10px] font-normal text-sky-400/80">($5k Setup + $1k/mo Retainer)</span></th>
+                <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-emerald-300">Annual Cash Saved<br><span class="text-[10px] font-normal text-emerald-400/80">(Practice Profit Restored)</span></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-slate-300">
+              <tr class="hover:bg-navy-900/40 transition-colors">
+                <td class="p-4 sm:p-5">
+                  <span class="font-bold text-white block text-sm sm:text-base">Solo Specialist</span>
+                  <span class="text-[11px] text-slate-400">1 Full-Time Provider</span>
+                </td>
+                <td class="p-4 sm:p-5 font-bold text-white text-sm sm:text-base">$1,500,000</td>
+                <td class="p-4 sm:p-5 text-rose-400 font-bold text-sm sm:text-base">$90,000 <span class="text-xs font-normal">/ yr</span></td>
+                <td class="p-4 sm:p-5 text-slate-300 text-xs sm:text-sm">$17,000 <span class="text-[10px] text-slate-500 block">($12k yr 2)</span></td>
+                <td class="p-4 sm:p-5">
+                  <span class="text-emerald-400 font-extrabold text-sm sm:text-base block">+$73,000 / yr</span>
+                  <span class="inline-block px-2 py-0.5 mt-1 rounded bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[10px] font-bold">81% SAVINGS</span>
+                </td>
+              </tr>
+              <tr class="bg-navy-900/25 hover:bg-navy-900/60 transition-colors">
+                <td class="p-4 sm:p-5">
+                  <span class="font-bold text-white block text-sm sm:text-base">Partner Practice</span>
+                  <span class="text-[11px] text-slate-400">2 Full-Time Providers</span>
+                </td>
+                <td class="p-4 sm:p-5 font-bold text-white text-sm sm:text-base">$3,000,000</td>
+                <td class="p-4 sm:p-5 text-rose-400 font-bold text-sm sm:text-base">$180,000 <span class="text-xs font-normal">/ yr</span></td>
+                <td class="p-4 sm:p-5 text-slate-300 text-xs sm:text-sm">$17,000 <span class="text-[10px] text-slate-500 block">($12k yr 2)</span></td>
+                <td class="p-4 sm:p-5">
+                  <span class="text-emerald-400 font-extrabold text-sm sm:text-base block">+$163,000 / yr</span>
+                  <span class="inline-block px-2 py-0.5 mt-1 rounded bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[10px] font-bold">91% SAVINGS</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-navy-900/40 transition-colors">
+                <td class="p-4 sm:p-5">
+                  <span class="font-bold text-white block text-sm sm:text-base">Mid-Sized Group</span>
+                  <span class="text-[11px] text-slate-400">3 to 4 Providers (Ortho, Eye, OMFS, Derm, ENT)</span>
+                </td>
+                <td class="p-4 sm:p-5 font-bold text-white text-sm sm:text-base">$5,000,000</td>
+                <td class="p-4 sm:p-5 text-rose-400 font-bold text-sm sm:text-base">$300,000 <span class="text-xs font-normal">/ yr</span></td>
+                <td class="p-4 sm:p-5 text-slate-300 text-xs sm:text-sm">$17,000 <span class="text-[10px] text-slate-500 block">($12k yr 2)</span></td>
+                <td class="p-4 sm:p-5">
+                  <span class="text-emerald-400 font-extrabold text-sm sm:text-base block">+$283,000 / yr</span>
+                  <span class="inline-block px-2 py-0.5 mt-1 rounded bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[10px] font-bold">94% SAVINGS</span>
+                </td>
+              </tr>
+              <tr class="bg-navy-900/25 hover:bg-navy-900/60 transition-colors">
+                <td class="p-4 sm:p-5">
+                  <span class="font-bold text-white block text-sm sm:text-base">Surgical Center Group</span>
+                  <span class="text-[11px] text-slate-400">5+ Providers / In-Office Operating Suites</span>
+                </td>
+                <td class="p-4 sm:p-5 font-bold text-white text-sm sm:text-base">$8,500,000</td>
+                <td class="p-4 sm:p-5 text-rose-400 font-bold text-sm sm:text-base">$510,000 <span class="text-xs font-normal">/ yr</span></td>
+                <td class="p-4 sm:p-5 text-slate-300 text-xs sm:text-sm">$17,000 <span class="text-[10px] text-slate-500 block">($12k yr 2)</span></td>
+                <td class="p-4 sm:p-5">
+                  <span class="text-emerald-400 font-extrabold text-sm sm:text-base block">+$493,000 / yr</span>
+                  <span class="inline-block px-2 py-0.5 mt-1 rounded bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[10px] font-bold">97% SAVINGS</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- The Practice Administrator's Reality Check Callout Box -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-amber-500/10 border-2 border-amber-400/50 shadow-lg text-slate-200">
+          <div class="flex items-center gap-2.5 text-amber-300 font-bold text-xs sm:text-sm uppercase tracking-wider font-mono mb-2">
+            <span>💡</span> THE PRACTICE ADMINISTRATOR'S REALITY CHECK:
+          </div>
+          <p class="text-xs sm:text-sm leading-relaxed text-slate-300">
+            Third-party medical billing agencies typically charge between <strong class="text-white">6.0% and 9.0%</strong>. If your clinic currently pays <strong class="text-amber-200">7.0%, 7.5%, or 8.5%</strong> (common for high-volume procedural specialties that require extensive prior-authorization and modifier scrubbing), <strong class="text-white">your actual annual cash loss is significantly higher than the table above</strong>. For example, a 3-doctor clinic paying 7.5% loses <strong class="text-rose-400 font-mono font-bold">$375,000/year</strong> ($75,000 more than shown in this conservative table).
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Live Practice Evaluation & Test Drive -->
+      <section class="p-8 sm:p-10 rounded-2xl bg-navy-950 border-2 border-emerald-400/50 space-y-6">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 shrink-0">
+            <i data-lucide="key" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest">Interactive Practice Test Drive</span>
+            <h3 class="text-lg sm:text-2xl font-bold text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+              Verify Autonomous Claim Assembly With Your Own Operative Notes
+            </h3>
+          </div>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          We do not ask practice administrators or managing physicians to take claims on faith. We invite your clinical and billing leadership to test drive Clinical Coder Pro™ directly using actual encounter notes:
+        </p>
+
+        <!-- Evaluation Key Box -->
+        <div class="p-5 rounded-xl bg-navy-900 border border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs">
+          <div>
+            <span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Universal Practice VIP Passkey:</span>
+            <span class="text-brand-400 font-extrabold text-lg sm:text-xl tracking-wider">VC-PRACTICE-2026</span>
+          </div>
+          <a href="/clinical-coder.html" class="px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-navy-950 font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+            <i data-lucide="terminal" class="w-4 h-4"></i>
+            <span>Launch Clinical Coder Pro™ &rarr;</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-300">
+          <div class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+            <span>Instant de-identification strips patient demographics before processing.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+            <span>Cross-specialty coding for Orthopedics, Ophthalmology (Eye Surgery), Oral &amp; Maxillofacial Surgery (OMFS), Dermatology, Outpatient Surgery &amp; Cardiology.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+            <span>Real-time pre-submission modifier audit (-25, -59, -RT/-LT) prevents claim denials.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: The 4-Week Practice Onboarding Sprint -->
+      <section class="space-y-6 border-t border-slate-800 pt-10">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-brand-400/10 border border-brand-400/30 text-brand-400 font-mono font-bold text-xs">04</span>
+          <h2 class="text-xl sm:text-3xl font-bold text-white tracking-tight" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            The 4-Week Practice Implementation Protocol
+          </h2>
+        </div>
+        <p class="text-slate-300">
+          Transitioning to autonomous in-house billing requires zero disruption to clinical operations. Vance &amp; Calder executes a rapid 4-week onboarding sprint:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 pt-2">
+          <div class="p-5 rounded-2xl bg-navy-950/70 border border-slate-800 space-y-2">
+            <div class="text-xs font-mono font-bold text-brand-400">Week 01</div>
+            <div class="text-sm font-bold text-white">Forensic Intake &amp; Audit</div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Historical denial analysis, payer fee schedule review, and clearinghouse connection mapping.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-navy-950/70 border border-slate-800 space-y-2">
+            <div class="text-xs font-mono font-bold text-brand-400">Week 02</div>
+            <div class="text-sm font-bold text-white">Custom Rule Authoring</div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Authoring specialty-specific ICD-10 and CPT pairings and local commercial payer scrub rules.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-navy-950/70 border border-slate-800 space-y-2">
+            <div class="text-xs font-mono font-bold text-brand-400">Week 03</div>
+            <div class="text-sm font-bold text-white">Staff Training &amp; RAM Setup</div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Zero-cloud local workstation configuration, staff workflow training, and shadow claim runs.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-navy-950/70 border border-slate-800 space-y-2">
+            <div class="text-xs font-mono font-bold text-brand-400">Week 04</div>
+            <div class="text-sm font-bold text-white">Full In-House Cutover</div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Autonomous claim submission goes live; third-party billing agency fee extraction terminated.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Executive Principals Closing & Signatures -->
+      <section class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+        <div>
+          <p class="text-xs text-slate-400 mb-3 uppercase tracking-wider font-mono">Respectfully submitted on behalf of the firm,</p>
+          <div class="flex items-center gap-6 mb-3">
+            <div>
+              <div class="text-xl font-bold text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">David Vance</div>
+              <div class="text-xs font-mono text-brand-400">Managing Principal &bull; Strategy &amp; Governance</div>
+            </div>
+            <div class="border-l border-slate-800 pl-6">
+              <div class="text-xl font-bold text-white" style="font-family: 'Plus Jakarta Sans', sans-serif;">Mark Calder</div>
+              <div class="text-xs font-mono text-slate-400">Operational Principal &bull; Systems Architecture</div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-500 font-mono">Vance &amp; Calder Advisory Group LLC &bull; Meridian, Idaho</div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-stretch gap-3 w-full sm:w-auto">
+          <a href="/clinical-coder.html" class="px-8 py-3.5 rounded-xl gold-btn text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl">
+            <i data-lucide="stethoscope" class="w-4 h-4"></i>
+            <span>Launch Clinical Coder Pro™</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 border-t border-brand-400/20 py-8 text-center text-xs text-slate-500 font-mono mt-16">
+    &copy; 2026 Vance &amp; Calder Advisory Group LLC &bull; Meridian, Idaho &bull; Institutional Healthcare Revenue Architecture
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

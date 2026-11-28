@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clinical Coder Pro™ • Practice Quick-Start Visual Roadmap</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 0.4in;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background: #FFFFFF;
+      color: #0F172A;
+      font-size: 11px;
+      line-height: 1.4;
+      padding: 10px;
+    }
+
+    /* Executive Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #C5A059;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0A1628;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .brand-sub {
+      font-size: 10px;
+      color: #C5A059;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .badge-wrap {
+      text-align: right;
+    }
+    .badge {
+      display: inline-block;
+      background: #ECFDF5;
+      color: #065F46;
+      border: 1px solid #10B981;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 9.5px;
+      text-transform: uppercase;
+    }
+
+    /* Document Title */
+    .doc-headline {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .doc-headline h1 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0A1628;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .doc-headline p {
+      font-size: 11px;
+      color: #64748B;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Visual Screen Map Container */
+    .map-frame {
+      border: 2px solid #0A1628;
+      border-radius: 8px;
+      background: #0A1628;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #FFFFFF;
+    }
+    .map-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 10px;
+      color: #94A3B8;
+    }
+
+    /* Top Sample Buttons Bar */
+    .pin-target-1 {
+      border: 2px dashed #F59E0B;
+      background: rgba(245, 158, 11, 0.15);
+      border-radius: 6px;
+      padding: 6px 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+    .pin {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: #F59E0B;
+      color: #000000;
+      font-weight: 900;
+      font-size: 11px;
+      border-radius: 50%;
+      margin-right: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+    .sample-pill {
+      background: #1E293B;
+      border: 1px solid #475569;
+      color: #F8FAFC;
+      font-size: 9px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Two Column Screen Layout Mock */
+    .mock-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .mock-card {
+      background: #FFFFFF;
+      color: #0F172A;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 9.5px;
+      position: relative;
+    }
+    .mock-card-title {
+      font-weight: 800;
+      font-size: 10.5px;
+      color: #0A1628;
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Pin Targets Inside Left Card */
+    .pin-target-2 {
+      border: 2px dashed #10B981;
+      background: rgba(16, 185, 129, 0.1);
+      border-radius: 4px;
+      padding: 4px 6px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pin-target-3 {
+      border: 2px dashed #3B82F6;
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 4px;
+      padding: 4px 6px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mock-textarea {
+      border: 1px solid #CBD5E1;
+      background: #F8FAFC;
+      border-radius: 4px;
+      padding: 6px;
+      height: 65px;
+      color: #64748B;
+      font-family: monospace;
+      font-size: 8px;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+    .pin-target-4 {
+      border: 2px dashed #EF4444;
+      background: rgba(239, 68, 68, 0.1);
+      border-radius: 4px;
+      padding: 6px;
+      text-align: center;
+    }
+    .mock-btn-navy {
+      background: #0A1628;
+      color: #F8FAFC;
+      border: 1px solid #C5A059;
+      font-weight: 800;
+      font-size: 9px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* Right Card: Results Mock */
+    .pin-target-5 {
+      border: 2px dashed #8B5CF6;
+      background: rgba(139, 92, 246, 0.08);
+      border-radius: 4px;
+      padding: 6px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mock-claim-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 3px 0;
+      font-size: 8.5px;
+    }
+    .mock-total-banner {
+      background: #ECFDF5;
+      border: 1px solid #059669;
+      color: #065F46;
+      font-weight: 800;
+      text-align: center;
+      padding: 4px;
+      border-radius: 4px;
+      margin-top: 6px;
+      font-size: 10px;
+    }
+
+    /* 5-Step Instruction Grid */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .step-box {
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      background: #F8FAFC;
+      position: relative;
+    }
+    .step-num-badge {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-weight: 900;
+      text-align: center;
+      line-height: 22px;
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+    .step-title {
+      font-weight: 800;
+      font-size: 11px;
+      color: #0A1628;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+    .step-desc {
+      font-size: 9.5px;
+      color: #475569;
+      line-height: 1.4;
+    }
+
+    /* Specific Step Colors */
+    .step-1 .step-num-badge { background: #F59E0B; }
+    .step-1 { border-top: 3px solid #F59E0B; }
+
+    .step-2 .step-num-badge { background: #10B981; }
+    .step-2 { border-top: 3px solid #10B981; }
+
+    .step-3 .step-num-badge { background: #3B82F6; }
+    .step-3 { border-top: 3px solid #3B82F6; }
+
+    .step-4 .step-num-badge { background: #EF4444; }
+    .step-4 { border-top: 3px solid #EF4444; }
+
+    .step-5 .step-num-badge { background: #8B5CF6; }
+    .step-5 { border-top: 3px solid #8B5CF6; }
+
+    /* Footer / Support Callout */
+    .footer-bar {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9.5px;
+      color: #64748B;
+    }
+    .footer-brand {
+      font-weight: 700;
+      color: #0A1628;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Executive Header -->
+  <div class="header">
+    <div>
+      <div class="brand-title">Vance &amp; Calder Advisory Group LLC</div>
+      <div class="brand-sub">Autonomous Practice Revenue &bull; Clinical Coder Pro™</div>
+    </div>
+    <div class="badge-wrap">
+      <span class="badge">✓ 100% In-House RAM Protected &bull; HIPAA Compliant</span>
+    </div>
+  </div>
+
+  <!-- Document Headline -->
+  <div class="doc-headline">
+    <h1>Practice Quick-Start Visual Roadmap</h1>
+    <p>How Any Clinic Staff Member Can Audit, Scrub &amp; Code a Patient Chart in 60 Seconds</p>
+  </div>
+
+  <!-- Visual Screen Map -->
+  <div class="map-frame">
+    <div class="map-header">
+      <span>🖥️ INTERACTIVE WORKSTATION MAP (Exact Screen Layout)</span>
+      <span style="color: #FDE047; font-weight: 700;">Follow Yellow Numbers ① Through ⑤</span>
+    </div>
+
+    <!-- Step 1 Target: Top Sample Buttons -->
+    <div class="pin-target-1">
+      <div style="display: flex; align-items: center;">
+        <span class="pin">①</span>
+        <strong style="color: #FDE047; font-size: 10.5px;">STEP 1: CLICK ANY PRE-LOADED SPECIALTY BUTTON</strong>
+      </div>
+      <div style="display: flex; gap: 4px;">
+        <span class="sample-pill">1. Ortho Knee</span>
+        <span class="sample-pill">2. Cataract Surgery</span>
+        <span class="sample-pill">5. Derm Excision</span>
+        <span class="sample-pill">6. Cardio E/M</span>
+      </div>
+    </div>
+
+    <!-- Two-Column Screen Preview -->
+    <div class="mock-split">
+      
+      <!-- Left Card: Doctor Note -->
+      <div class="mock-card">
+        <div class="mock-card-title">
+          <span>PHYSICIAN ENCOUNTER NOTE</span>
+          <span style="font-size: 8px; color: #64748B;">Input Terminal</span>
+        </div>
+
+        <!-- Step 2 Target: Scrub PHI Button -->
+        <div class="pin-target-2">
+          <div style="display: flex; align-items: center;">
+            <span class="pin" style="background:#10B981;">②</span>
+            <strong style="color: #065F46;">STEP 2: [ 🛡️ Scrub PHI ]</strong>
+          </div>
+          <span style="font-size: 8px; color: #047857; font-weight: 600;">Blacks out patient names on screen</span>
+        </div>
+
+        <!-- Step 3 Target: Payer Dropdown -->
+        <div class="pin-target-3">
+          <div style="display: flex; align-items: center;">
+            <span class="pin" style="background:#3B82F6; color:#FFF;">③</span>
+            <strong style="color: #1E40AF;">STEP 3: Pick Insurance</strong>
+          </div>
+          <span style="font-size: 8.5px; font-weight: 700; color: #1E3A8A; background: #DBEAFE; padding: 1px 4px; border-radius: 3px;">Blue Cross of Idaho ▼</span>
+        </div>
+
+        <!-- Textarea Mock -->
+        <div class="mock-textarea">
+          Patient: [██████ REDACTED] | DOB: [██/██/████]<br>
+          PREOPERATIVE DIAGNOSIS: Malignant melanoma in situ, left upper arm.<br>
+          PROCEDURE PERFORMED: Radical excision malignant lesion (1.8 cm excised diameter) with intermediate layered closure (2.5 cm). Complete hemostasis obtained...
+        </div>
+
+        <!-- Step 4 Target: Big Navy Analyze Button -->
+        <div class="pin-target-4">
+          <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 3px;">
+            <span class="pin" style="background:#EF4444; color:#FFF;">④</span>
+            <strong style="color: #991B1B; font-size: 10px;">STEP 4: CLICK THE MAGIC BUTTON!</strong>
+          </div>
+          <div class="mock-btn-navy">⚡ ANALYZE &amp; GENERATE CODES (1.5s Scan)</div>
+        </div>
+      </div>
+
+      <!-- Right Card: Instant Claim Results -->
+      <div class="mock-card">
+        <div class="mock-card-title">
+          <span>PRE-FORMATTED INSURANCE CLAIM (CMS-1500)</span>
+          <span style="font-size: 8px; color: #059669; font-weight: 700;">Status: Verified</span>
+        </div>
+
+        <!-- Step 5 Target: Results Display -->
+        <div class="pin-target-5">
+          <div>
+            <div style="display: flex; align-items: center; margin-bottom: 4px;">
+              <span class="pin" style="background:#8B5CF6; color:#FFF;">⑤</span>
+              <strong style="color: #5B21B6; font-size: 10.5px;">STEP 5: YOUR CLAIM &amp; CASH APPEAR HERE!</strong>
+            </div>
+            
+            <div style="font-size: 8px; color: #475569; margin-bottom: 6px;">
+              Auto-paired CPT codes, modifiers, and unbundled procedures:
+            </div>
+
+            <div class="mock-claim-row">
+              <span style="font-weight: 700; color: #0A1628;">CPT 11602</span>
+              <span>Excision malignant lesion (1.1-2.0cm)</span>
+              <span style="font-weight: 800; color: #0A1628;">$375.00</span>
+            </div>
+            <div class="mock-claim-row">
+              <span style="font-weight: 700; color: #0A1628;">CPT 12031-59</span>
+              <span>Intermediate repair (NCCI Unbundled)</span>
+              <span style="font-weight: 800; color: #0A1628;">$260.00</span>
+            </div>
+            <div class="mock-claim-row">
+              <span style="font-weight: 700; color: #0A1628;">ICD-10 C43.62</span>
+              <span>Malignant melanoma left upper limb</span>
+              <span style="color: #059669; font-weight: 700;">✓ Matched</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="mock-total-banner">
+              💰 TOTAL EXPECTED CASH REIMBURSEMENT: $635.00
+            </div>
+            <div style="text-align: center; margin-top: 4px; font-size: 8px; color: #64748B;">
+              📋 ANSI 837P Electronic EDI String Compiled (Ready to Send)
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Step-by-Step Fifth-Grader Written Directions -->
+  <div class="steps-grid">
+    
+    <div class="step-box step-1">
+      <div class="step-num-badge">1</div>
+      <div class="step-title">Pick a Note</div>
+      <p class="step-desc">
+        Click any specialty button at the top (like <strong>Derm Excision</strong> or <strong>Ortho Knee</strong>). A real doctor's operative note fills the box. <em>(Or paste your own chart).</em>
+      </p>
+    </div>
+
+    <div class="step-box step-2">
+      <div class="step-num-badge">2</div>
+      <div class="step-title">Hide Names</div>
+      <p class="step-desc">
+        Click the yellow <strong>[ 🛡️ Scrub PHI ]</strong> button. It blacks out patient names &amp; birthdates on screen for 100% HIPAA privacy.
+      </p>
+    </div>
+
+    <div class="step-box step-3">
+      <div class="step-num-badge">3</div>
+      <div class="step-title">Pick Insurance</div>
+      <p class="step-desc">
+        Choose who you are billing from the dropdown: <strong>Blue Cross of Idaho</strong>, Medicare, Medicaid, etc. The engine audits to that payer's rules.
+      </p>
+    </div>
+
+    <div class="step-box step-4">
+      <div class="step-num-badge">4</div>
+      <div class="step-title">Hit Big Button</div>
+      <p class="step-desc">
+        Click the dark navy button: <strong>[ ⚡ ANALYZE &amp; GENERATE CODES ]</strong>. In 1.5 seconds, it reads the note and audits medical necessity.
+      </p>
+    </div>
+
+    <div class="step-box step-5">
+      <div class="step-num-badge">5</div>
+      <div class="step-title">Get Paid!</div>
+      <p class="step-desc">
+        Look at the right side! Your clean CMS-1500 form, correct CPT codes, modifiers (-25, -59), and <strong>total dollar amount</strong> appear instantly.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bar">
+    <div>
+      <span class="footer-brand">Vance &amp; Calder Advisory Group LLC</span> &bull; The Village at Meridian &bull; Meridian, ID 83646
+    </div>
+    <div>
+      Direct Administrative Support: <strong>(208) 615-5773</strong> &bull; <strong>david@vancecalderadvisory.com</strong>
+    </div>
+  </div>
+
+</body>
+</html>

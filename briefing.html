@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics 4 Invisible Visitor Radar (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4EY86CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BPF4EY86CZ', {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+    gtag('config', 'GTM-MWCPMGV3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Strategic Briefing with David Vance — Vance & Calder Advisory Group</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              300: '#E6C65C',
+              400: '#D4AF37',
+              500: '#AA8C2C',
+              600: '#806921'
+            },
+            navy: {
+              950: '#050B14',
+              900: '#0A192F',
+              850: '#0D203D',
+              800: '#112240',
+              700: '#233554'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #050B14;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF0B3 0%, #D4AF37 50%, #997A15 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.08);
+    }
+    .chat-bubble-vance {
+      background: #0A192F;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-left: 3px solid #D4AF37;
+    }
+    .chat-bubble-user {
+      background: #112240;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .chat-bubble-calder {
+      background: #0A192F;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-left: 3px solid #38BDF8;
+    }
+    /* Audio Equalizer Waveform */
+    @keyframes soundwave {
+      0%, 100% { height: 4px; opacity: 0.4; }
+      50% { height: 16px; opacity: 1; }
+    }
+    .audio-bar {
+      width: 3px;
+      height: 6px;
+      background: #D4AF37;
+      border-radius: 2px;
+      display: inline-block;
+      transition: height 0.2s ease;
+    }
+    .audio-playing .audio-bar {
+      animation: soundwave 0.8s ease-in-out infinite;
+    }
+    .audio-playing .audio-bar:nth-child(1) { animation-delay: 0.0s; }
+    .audio-playing .audio-bar:nth-child(2) { animation-delay: 0.15s; }
+    .audio-playing .audio-bar:nth-child(3) { animation-delay: 0.3s; }
+    .audio-playing .audio-bar:nth-child(4) { animation-delay: 0.45s; }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050B14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #233554;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-navy-950 text-slate-100 antialiased selection:bg-brand-400 selection:text-navy-950">
+
+  <!-- ============================================== -->
+  <!-- 1. TOP EXECUTIVE NAVIGATION RAIL                -->
+  <!-- ============================================== -->
+  <header class="border-b border-brand-400/20 bg-navy-900/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      
+      <!-- Brand Block -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="p-1 rounded-lg bg-white flex items-center justify-center border border-brand-400/60 shadow-sm">
+          <img src="/branding/logo.png" alt="Vance & Calder" class="h-9 w-auto object-contain">
+        </div>
+        <div>
+          <div class="brand-title text-white text-base font-bold tracking-wider group-hover:text-brand-300 transition-colors">
+            VANCE &amp; CALDER
+          </div>
+          <div class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold">
+            Executive Advisory Group
+          </div>
+        </div>
+      </a>
+
+      <!-- Status Indicator -->
+      <div class="hidden md:flex items-center gap-3 px-4 py-1.5 rounded-full bg-navy-950 border border-brand-400/30">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-xs font-mono font-semibold text-slate-300 flex items-center gap-1.5">
+          ACTIVE ASYNCHRONOUS RAIL &bull; 
+          <span class="flex items-center gap-1 text-brand-300">
+            <img src="/branding/avatars/david_vance.jpg" class="w-4 h-4 rounded-full object-cover border border-brand-400">
+            <span>DAVID VANCE</span>
+          </span>
+          <span class="text-slate-500">&amp;</span>
+          <span class="flex items-center gap-1 text-sky-300">
+            <img src="/branding/avatars/mark_calder.jpg" class="w-4 h-4 rounded-full object-cover border border-sky-400">
+            <span>MARK CALDER</span>
+          </span>
+        </span>
+        <span class="text-[10px] uppercase tracking-wider text-slate-400 px-2 py-0.5 rounded bg-navy-850 font-bold border border-slate-700">
+          CONFIDENTIAL
+        </span>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-3">
+        <a href="/teleconference" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/30 hover:border-emerald-400 text-xs font-bold text-emerald-300 transition-all" title="Enter Live Boardroom Teleconference">
+          <i data-lucide="video" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Video Boardroom</span>
+        </a>
+        <a href="/voice-studio" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-navy-850 hover:bg-navy-800 border border-brand-400/30 hover:border-brand-400 text-xs font-bold text-brand-300 transition-all" title="Open Interactive Voice & Script Studio">
+          <i data-lucide="mic" class="w-3.5 h-3.5 text-brand-400"></i>
+          <span>Voice Studio</span>
+        </a>
+        <a id="btn-header-pdf" href="/templates/week-01-audit" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-navy-850 hover:bg-navy-800 border border-brand-400/30 hover:border-brand-400 text-xs font-bold text-slate-200 transition-all">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-400"></i>
+          <span>View Week 01 PDF</span>
+        </a>
+        <a href="/#calendar" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-400 hover:bg-brand-300 text-navy-950 text-xs font-bold shadow-lg transition-all">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>Schedule Live Consultation &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- 2. MAIN BRIEFING CONTAINER                     -->
+  <!-- ============================================== -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- ============================================ -->
+    <!-- LEFT COLUMN: PROSPECT DOSSIER & METRICS      -->
+    <!-- ============================================ -->
+    <div class="lg:col-span-4 space-y-6">
+      
+      <!-- Card 1: Executive Prospect Profile -->
+      <div class="bg-navy-900 border border-brand-400/30 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-brand-400/15">
+          <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            DIAGNOSTIC DOSSIER
+          </div>
+          <span id="audit-badge-id" class="text-[10px] font-mono text-slate-400 bg-navy-950 px-2 py-0.5 rounded border border-slate-800">
+            AUDIT-LIVE
+          </span>
+        </div>
+
+        <div>
+          <h2 id="dossier-company" class="text-xl font-bold text-white tracking-tight">
+            Apex Commercial Group
+          </h2>
+          <p id="dossier-domain" class="text-xs font-mono text-brand-300 mt-0.5">
+            apexcommercial.com
+          </p>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-navy-950 p-2.5 rounded-xl border border-slate-800">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">Scale</span>
+            <span id="dossier-revenue" class="font-bold text-white">$3M - $10M ARR</span>
+          </div>
+          <div class="bg-navy-950 p-2.5 rounded-xl border border-slate-800">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">Executive</span>
+            <span id="dossier-name" class="font-bold text-white">Arthur Sterling</span>
+          </div>
+        </div>
+
+        <div class="mt-3 bg-navy-950 p-3 rounded-xl border border-slate-800 text-xs">
+          <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Primary Enterprise Challenge</span>
+          <p id="dossier-challenge" class="text-slate-200 font-medium leading-snug">
+            Pipeline Leakage & Low Inbound Conversion Velocity
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Forensic Metrics Summary (Calder Engine) -->
+      <div class="bg-navy-900 border border-brand-400/30 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-brand-400/15">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <img src="/branding/avatars/mark_calder.jpg" alt="Mark Calder" class="w-11 h-11 rounded-full object-cover border-2 border-brand-400/80 shadow-md">
+              <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-sky-400 border-2 border-navy-900 rounded-full"></span>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+                <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+                MARK CALDER AUDIT FINDINGS
+              </div>
+              <div class="text-xs font-bold text-white">Operational Principal &bull; Systems Architect</div>
+            </div>
+          </div>
+          <span class="text-[9px] font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+            CONFIRMED DRAG
+          </span>
+        </div>
+
+        <!-- Highlight Metric: Monthly Leakage -->
+        <div class="p-4 rounded-xl bg-gradient-to-br from-navy-950 to-navy-850 border border-brand-400/40 mb-4">
+          <span class="text-[10px] uppercase font-bold tracking-wider text-slate-300 block mb-1">
+            Identified Monthly Pipeline Leakage
+          </span>
+          <div class="flex items-baseline gap-2">
+            <span id="metric-monthly-leakage" class="text-2xl sm:text-3xl font-extrabold font-mono text-brand-400">
+              $52,400 / mo
+            </span>
+          </div>
+          <p id="metric-annualized" class="text-[11px] text-slate-400 mt-1 font-mono">
+            $628,800 / yr annualized forfeiture
+          </p>
+        </div>
+
+        <!-- Metric Grid -->
+        <div class="grid grid-cols-2 gap-2.5 text-xs">
+          <div class="p-3 rounded-xl bg-navy-950 border border-slate-800">
+            <span class="text-[10px] uppercase text-slate-400 block font-bold">Speed-to-Lead</span>
+            <span id="metric-latency" class="text-base font-bold font-mono text-white">3.8 hrs</span>
+            <span class="text-[9px] text-rose-400 block mt-0.5">High drop-off rate</span>
+          </div>
+          <div class="p-3 rounded-xl bg-navy-950 border border-slate-800">
+            <span class="text-[10px] uppercase text-slate-400 block font-bold">Intake Friction</span>
+            <span id="metric-dropoff" class="text-base font-bold font-mono text-white">31.5%</span>
+            <span class="text-[9px] text-amber-400 block mt-0.5">Unconverted inquiries</span>
+          </div>
+          <div class="p-3 rounded-xl bg-navy-950 border border-slate-800">
+            <span class="text-[10px] uppercase text-slate-400 block font-bold">Stalled Deals</span>
+            <span id="metric-stalled" class="text-base font-bold font-mono text-white">24 deals</span>
+            <span class="text-[9px] text-slate-400 block mt-0.5">Dormant pipeline</span>
+          </div>
+          <div class="p-3 rounded-xl bg-navy-950 border border-slate-800">
+            <span class="text-[10px] uppercase text-slate-400 block font-bold">Staff Friction</span>
+            <span id="metric-hours" class="text-base font-bold font-mono text-white">64 hrs / mo</span>
+            <span class="text-[9px] text-slate-400 block mt-0.5">Administrative drag</span>
+          </div>
+        </div>
+
+        <!-- Action: Download Generated PDF -->
+        <div class="mt-5 pt-4 border-t border-brand-400/15">
+          <a id="btn-download-pdf" href="/templates/week-01-audit" target="_blank" class="w-full py-3 px-4 rounded-xl bg-navy-950 hover:bg-navy-850 border border-brand-400/40 hover:border-brand-400 text-xs font-bold text-white flex items-center justify-center gap-2 transition-all shadow-md group">
+            <i data-lucide="download" class="w-4 h-4 text-brand-400 group-hover:scale-110 transition-transform"></i>
+            <span>Download 2-Page Diagnostic Tear-Sheet (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Direct Principals Consultation Reservation -->
+      <div class="bg-gradient-to-b from-navy-900 to-navy-950 border border-brand-400/30 rounded-2xl p-5 text-center shadow-xl">
+        <div class="flex justify-center -space-x-2.5 mb-3">
+          <img src="/branding/avatars/david_vance.jpg" alt="David Vance" class="w-10 h-10 rounded-full object-cover border-2 border-brand-400 shadow-md ring-2 ring-brand-400/20 z-10" title="David Vance | Managing Principal">
+          <img src="/branding/avatars/mark_calder.jpg" alt="Mark Calder" class="w-10 h-10 rounded-full object-cover border-2 border-sky-400 shadow-md ring-2 ring-sky-400/20 z-20" title="Mark Calder | Operational Principal">
+        </div>
+        <h4 class="text-sm font-bold text-white">Prefer a Live Consultation?</h4>
+        <p class="text-xs text-slate-300 mt-1 max-w-xs mx-auto leading-relaxed">
+          Schedule a private 30-minute teleconference with David Vance and Mark Calder to review your custom architecture.
+        </p>
+        <div class="mt-4 space-y-2">
+          <a href="/teleconference" class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/40 font-bold text-xs shadow transition-all">
+            <i data-lucide="video" class="w-4 h-4"></i>
+            <span>Enter Boardroom Teleconference &rarr;</span>
+          </a>
+          <a href="/#calendar" class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-brand-400 hover:bg-brand-300 text-navy-950 font-bold text-xs shadow-lg transition-all">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Reserve Consultation Window &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- RIGHT COLUMN: INTERACTIVE BRIEFING TERMINAL  -->
+    <!-- ============================================ -->
+    <div class="lg:col-span-8 flex flex-col bg-navy-900 border border-brand-400/30 rounded-2xl shadow-2xl overflow-hidden min-h-[620px] lg:min-h-[750px]">
+      
+      <!-- Briefing Header Bar -->
+      <div class="p-4 sm:p-5 bg-navy-950 border-b border-brand-400/20 flex flex-wrap items-center justify-between gap-4">
+        
+        <!-- Active Advisor Identity Card -->
+        <div class="flex items-center gap-3.5">
+          <div class="relative">
+            <img id="terminal-advisor-avatar" src="/branding/avatars/david_vance.jpg" alt="David Vance" class="w-12 h-12 rounded-full object-cover border-2 border-brand-400 shadow-xl ring-2 ring-brand-400/30">
+            <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-navy-950 rounded-full animate-pulse"></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 id="terminal-advisor-name" class="text-sm sm:text-base font-bold text-white tracking-tight">
+                David Vance
+              </h3>
+              <span id="terminal-advisor-title" class="text-[10px] font-mono text-brand-300 uppercase px-2 py-0.5 rounded bg-brand-400/10 border border-brand-400/20 font-bold">
+                Managing Principal
+              </span>
+            </div>
+            <p id="terminal-advisor-focus" class="text-xs text-slate-400">
+              Autonomous Revenue Governance &amp; High-Ticket Pipeline Strategy
+            </p>
+          </div>
+        </div>
+
+        <!-- Security & Real-Time Voice Audio Controls -->
+        <div class="flex items-center gap-2">
+          
+          <!-- 60s Strategic Audio Briefing Trigger -->
+          <button id="btn-play-briefing" onclick="toggleStrategicBriefingAudio()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-brand-400/20 to-brand-400/10 hover:from-brand-400/30 hover:to-brand-400/20 border border-brand-400/50 text-brand-300 hover:text-white font-bold text-xs shadow-md transition-all">
+            <i data-lucide="play" id="icon-briefing-play" class="w-3.5 h-3.5 fill-current"></i>
+            <span id="text-briefing-play">60s Audio Briefing</span>
+            <div id="briefing-visualizer" class="hidden items-center gap-0.5 ml-1">
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+            </div>
+          </button>
+
+          <!-- Voice Synthesis Mode Toggle -->
+          <button id="btn-voice-toggle" onclick="toggleVoiceMode()" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-navy-850 hover:bg-navy-800 border border-brand-400/30 text-slate-300 text-xs font-semibold transition-all" title="Toggle automatic voice speech for assistant replies">
+            <i data-lucide="volume-2" id="icon-voice-status" class="w-3.5 h-3.5 text-brand-400"></i>
+            <span id="text-voice-status">Voice: ON</span>
+          </button>
+
+          <!-- Stop Speech Button (visible only when speaking) -->
+          <button id="btn-stop-audio" onclick="stopAllSpeech()" class="hidden inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/40 text-rose-300 text-xs font-semibold transition-all">
+            <i data-lucide="square" class="w-3 h-3 fill-current"></i>
+            <span>Stop</span>
+          </button>
+
+          <div class="hidden xl:block text-right ml-2 border-l border-slate-800 pl-3">
+            <div class="text-[9px] font-mono text-emerald-400 font-bold">256-BIT ENCRYPTED</div>
+            <div class="text-[9px] font-mono text-slate-400">ASYNCHRONOUS RAIL</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Principal Switcher Tabs Rail -->
+      <div class="px-4 py-2.5 bg-navy-950/90 border-b border-brand-400/20 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] font-mono uppercase text-slate-400 font-bold mr-1 hidden sm:inline">
+            ACTIVE ADVISOR:
+          </span>
+          <button id="tab-vance" onclick="switchAdvisor('david-vance')" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-brand-400 text-navy-950 font-bold shadow-md transition-all cursor-pointer">
+            <img src="/branding/avatars/david_vance.jpg" alt="David Vance" class="w-5 h-5 rounded-full object-cover border border-navy-950">
+            <span>David Vance <span class="opacity-80 font-normal hidden sm:inline">&bull; Commercial Strategy</span></span>
+          </button>
+          <button id="tab-calder" onclick="switchAdvisor('mark-calder')" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-navy-850 hover:bg-navy-800 text-slate-300 font-semibold border border-slate-700 hover:border-sky-400/40 transition-all cursor-pointer">
+            <img src="/branding/avatars/mark_calder.jpg" alt="Mark Calder" class="w-5 h-5 rounded-full object-cover border border-sky-400/50">
+            <span>Mark Calder <span class="opacity-80 font-normal hidden sm:inline">&bull; Systems Architecture</span></span>
+          </button>
+        </div>
+
+        <div class="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span id="advisor-status-pill">Ready to brief on Strategy &amp; Governance</span>
+        </div>
+      </div>
+
+      <!-- Quick Inquiry Chips -->
+      <div class="px-4 py-2.5 bg-navy-950/70 border-b border-slate-800/80 overflow-x-auto whitespace-nowrap flex items-center gap-2 text-xs">
+        <span class="text-[10px] font-mono uppercase text-slate-400 font-bold shrink-0">
+          PROMPT EXECUTIVES:
+        </span>
+        <button onclick="sendQuickPrompt('How does the 4-week sprint stop our calculated monthly leakage?', 'david-vance')" class="px-3 py-1 rounded-full bg-navy-850 hover:bg-navy-800 border border-brand-400/20 hover:border-brand-400 text-slate-200 text-xs shrink-0 transition-colors">
+          ⚡ [Vance] Stop Monthly Leakage
+        </button>
+        <button onclick="sendQuickPrompt('How do your automated qualification rails integrate into our existing CRM and calendar?', 'mark-calder')" class="px-3 py-1 rounded-full bg-navy-850 hover:bg-navy-800 border border-sky-400/30 hover:border-sky-400 text-sky-200 text-xs shrink-0 transition-colors">
+          ⚙️ [Calder] CRM &amp; API Integration
+        </button>
+        <button onclick="sendQuickPrompt('What are the exact weekly milestones and deliverables in the 28-day sprint?', 'david-vance')" class="px-3 py-1 rounded-full bg-navy-850 hover:bg-navy-800 border border-brand-400/20 hover:border-brand-400 text-slate-200 text-xs shrink-0 transition-colors">
+          📅 [Vance] Weekly Milestones
+        </button>
+        <button onclick="sendQuickPrompt('What specific qualification criteria do you engineer into the inbound webhook funnel?', 'mark-calder')" class="px-3 py-1 rounded-full bg-navy-850 hover:bg-navy-800 border border-sky-400/30 hover:border-sky-400 text-sky-200 text-xs shrink-0 transition-colors">
+          🛠️ [Calder] Qualification Logic
+        </button>
+        <button onclick="sendQuickPrompt('How does this advisory sprint compare against hiring an in-house VP of Operations?', 'david-vance')" class="px-3 py-1 rounded-full bg-navy-850 hover:bg-navy-800 border border-brand-400/20 hover:border-brand-400 text-slate-200 text-xs shrink-0 transition-colors">
+          💼 [Vance] Sprint vs VP Hire
+        </button>
+      </div>
+
+      <!-- Message History Stream -->
+      <div id="chat-messages-container" class="flex-1 p-4 sm:p-6 overflow-y-auto space-y-4 max-h-[520px]">
+        
+        <!-- Welcome Message from David Vance (Pre-rendered fallback, will sync via API) -->
+        <div id="initial-welcome-message" class="chat-bubble-vance p-4 sm:p-5 rounded-2xl max-w-3xl">
+          <div class="flex items-center justify-between mb-2 pb-2 border-b border-brand-400/10">
+            <div class="flex items-center gap-2">
+              <img src="/branding/avatars/david_vance.jpg" alt="David Vance" class="w-7 h-7 rounded-full object-cover border border-brand-400 shadow">
+              <span class="text-xs font-bold text-brand-300">
+                David Vance | Managing Principal
+              </span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="speakWelcomeMessage(this)" class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-brand-400/10 hover:bg-brand-400/20 border border-brand-400/30 text-brand-300 text-[10px] font-mono transition-colors">
+                <i data-lucide="volume-2" class="w-3 h-3"></i>
+                <span>Listen</span>
+              </button>
+              <span class="text-[10px] font-mono text-slate-400" id="msg-init-time">Direct Advisory Dispatch</span>
+            </div>
+          </div>
+          <div class="text-xs sm:text-sm text-slate-200 leading-relaxed space-y-3" id="msg-init-body">
+            <p>
+              Look, here's the reality. Mark Calder and I have finished analyzing the numbers on your company.
+            </p>
+            <p>
+              Right now, you've got over $52,400 a month slipping through the cracks. It's not a lead generation problem. It's an intake latency and manual qualification bottleneck.
+            </p>
+            <p>
+              We built this private room so you don't have to wait on a calendar slot to get straight answers. What's the biggest leak in your pipeline right now?
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Typing Indicator (Hidden by default) -->
+      <div id="typing-indicator" class="hidden px-6 py-2.5 flex items-center gap-2.5 text-xs font-mono text-brand-300 bg-navy-950/60 border-t border-brand-400/10">
+        <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+        <span id="typing-indicator-text">David Vance is formulating strategic advisory response...</span>
+      </div>
+
+      <!-- Input Composer Area -->
+      <div class="p-4 sm:p-5 bg-navy-950 border-t border-brand-400/20">
+        <form id="chat-form" onsubmit="submitChatMessage(event)" class="space-y-2">
+          
+          <div class="flex items-center justify-between text-[11px] font-mono px-1 pb-1">
+            <div class="flex items-center gap-1.5 text-slate-300">
+              <span class="text-slate-500">Addressing:</span>
+              <span id="composer-advisor-badge" class="px-2 py-0.5 rounded bg-brand-400/10 border border-brand-400/30 text-brand-300 font-bold flex items-center gap-1">
+                <img id="composer-advisor-icon" src="/branding/avatars/david_vance.jpg" class="w-3.5 h-3.5 rounded-full object-cover">
+                <span id="composer-advisor-text">David Vance (Strategy &amp; Governance)</span>
+              </span>
+            </div>
+            <span class="text-slate-500 hidden sm:inline">Press Enter to send &bull; Shift+Enter for new line</span>
+          </div>
+
+          <div class="relative flex items-center">
+            <textarea
+              id="chat-input"
+              rows="2"
+              required
+              placeholder="Ask Managing Principal David Vance regarding your diagnostic findings, sprint roadmap, or ROI..."
+              class="w-full pl-4 pr-24 py-3 rounded-xl bg-navy-900 border border-brand-400/30 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-brand-400 resize-none transition-all shadow-inner"
+              onkeydown="handleTextareaKeydown(event)"
+            ></textarea>
+            
+            <button
+              type="submit"
+              id="chat-send-btn"
+              class="absolute right-2 px-4 py-2.5 rounded-lg bg-brand-400 hover:bg-brand-300 text-navy-950 font-bold text-xs flex items-center gap-1.5 shadow-md transition-all cursor-pointer disabled:opacity-50"
+            >
+              <span>Send</span>
+              <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          
+          <div class="flex items-center justify-between text-[10px] text-slate-500 font-mono px-1">
+            <span>CONFIDENTIAL &bull; VANCE &amp; CALDER EXECUTIVE ENGINE</span>
+            <span class="text-brand-400/80">Voice Engine Active</span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- 3. CLIENT SCRIPT LOGIC                         -->
+  <!-- ============================================== -->
+  <script>
+    let currentAuditId = '';
+    let currentSession = null;
+    let currentAdvisor = 'david-vance'; // 'david-vance' or 'mark-calder'
+    let voiceModeEnabled = true;
+    let isSpeaking = false;
+    let currentUtterance = null;
+    let activeSpeakingButton = null;
+    let availableVoices = [];
+
+    // ==========================================
+    // 1. STUDIO-GRADE HD AUDIO ENGINE (LOCKED & PRE-CACHED)
+    // ==========================================
+    const STUDIO_AUDIO_MAP = {
+      // David Vance (en-US-AndrewMultilingualNeural / Pothos Profile)
+      david_sprint: '/audio/samples/david_pothos_sprint.mp3',
+      david_sample: '/audio/samples/david_pothos_sample.mp3',
+      david_roi: '/audio/samples/david_pothos_roi_conversational.mp3',
+      david_vp: '/audio/samples/david_pothos_vp_comparison.mp3',
+      david_pricing: '/audio/samples/david_pothos_pricing.mp3',
+
+      // Mark Calder (en-US-ChristopherNeural / Christopher Profile — Smooth Distinguished Systems Architect)
+      mark_sprint: '/audio/samples/mark_christopher_sprint.mp3',
+      mark_sample: '/audio/samples/mark_christopher_sample.mp3',
+      mark_metrics: '/audio/samples/mark_christopher_metrics.mp3',
+      mark_crm: '/audio/samples/mark_christopher_crm.mp3',
+      mark_runbooks: '/audio/samples/mark_christopher_runbooks.mp3',
+      mark_default: '/audio/samples/mark_christopher_default.mp3'
+    };
+
+    function initVoiceEngine() {
+      // Direct HD Audio Engine initialized - zero external TTS dependency
+      console.log('Vance & Calder Studio-Grade HD Audio Engine active.');
+    }
+
+    function resolveStudioAudioUrl(text, speakerKey) {
+      const isCalder = speakerKey === 'mark-calder' || (speakerKey && speakerKey.toLowerCase().includes('calder'));
+      const t = (text || '').toLowerCase();
+
+      if (isCalder) {
+        if (t.includes('runbook') || t.includes('sop') || t.includes('handover') || t.includes('playbook')) return STUDIO_AUDIO_MAP.mark_runbooks;
+        if (t.includes('crm') || t.includes('hubspot') || t.includes('salesforce') || t.includes('webhook') || t.includes('api')) return STUDIO_AUDIO_MAP.mark_crm;
+        if (t.includes('metric') || t.includes('latency') || t.includes('empirical') || t.includes('guesswork') || t.includes('breakdown') || t.includes('critical')) return STUDIO_AUDIO_MAP.mark_metrics;
+        if (t.includes('sprint') || t.includes('twenty-eight') || t.includes('28 days') || t.includes('engineering standpoint')) return STUDIO_AUDIO_MAP.mark_sprint;
+        return STUDIO_AUDIO_MAP.mark_default;
+      } else {
+        if (t.includes('vp of operations') || t.includes('in-house') || t.includes('salary') || t.includes('200k') || t.includes('two hundred thousand')) return STUDIO_AUDIO_MAP.david_vp;
+        if (t.includes('pricing') || t.includes('deposit') || t.includes('12,500') || t.includes('18,500') || t.includes('fee')) return STUDIO_AUDIO_MAP.david_pricing;
+        if (t.includes('slipping through the cracks') || t.includes('what\'s the biggest leak') || t.includes('built this private') || t.includes('private briefing') || t.includes('finished analyzing')) return STUDIO_AUDIO_MAP.david_sample;
+        if (t.includes('roi') || t.includes('leakage') || t.includes('52,400') || t.includes('six hundred thousand') || t.includes('dormant')) return STUDIO_AUDIO_MAP.david_roi;
+        if (t.includes('milestone') || t.includes('cadence') || t.includes('sprint') || t.includes('twenty-eight days') || t.includes('week one')) return STUDIO_AUDIO_MAP.david_sprint;
+        return STUDIO_AUDIO_MAP.david_sprint;
+      }
+    }
+
+    let activeAudioElement = null;
+
+    function stopAllSpeech() {
+      if (activeAudioElement) {
+        try {
+          activeAudioElement.pause();
+          activeAudioElement.currentTime = 0;
+        } catch (e) {}
+        activeAudioElement = null;
+      }
+      isSpeaking = false;
+
+      // Reset Header 60s Briefing button
+      const textPlay = document.getElementById('text-briefing-play');
+      const iconPlay = document.getElementById('icon-briefing-play');
+      const visualizer = document.getElementById('briefing-visualizer');
+      const stopBtn = document.getElementById('btn-stop-audio');
+
+      if (textPlay) textPlay.textContent = '60s Audio Briefing';
+      if (iconPlay) iconPlay.setAttribute('data-lucide', 'play');
+      if (visualizer) {
+        visualizer.classList.add('hidden');
+        visualizer.classList.remove('flex', 'audio-playing');
+      }
+      if (stopBtn) stopBtn.classList.add('hidden');
+
+      // Reset active card buttons
+      if (activeSpeakingButton) {
+        activeSpeakingButton.innerHTML = '<i data-lucide="volume-2" class="w-3 h-3"></i><span>Listen</span>';
+        activeSpeakingButton.classList.remove('bg-brand-400', 'text-navy-950', 'bg-sky-400');
+        activeSpeakingButton = null;
+      }
+
+      lucide.createIcons();
+    }
+
+    function playAudioFile(audioUrl, speakerKey, buttonEl) {
+      if (isSpeaking && activeSpeakingButton === buttonEl && buttonEl !== null) {
+        stopAllSpeech();
+        return;
+      }
+
+      stopAllSpeech();
+
+      const isCalder = speakerKey === 'mark-calder' || (speakerKey && speakerKey.toLowerCase().includes('calder'));
+      isSpeaking = true;
+
+      const stopBtn = document.getElementById('btn-stop-audio');
+      if (stopBtn) stopBtn.classList.remove('hidden');
+
+      const visualizer = document.getElementById('briefing-visualizer');
+      if (visualizer) {
+        visualizer.classList.remove('hidden');
+        visualizer.classList.add('flex', 'audio-playing');
+      }
+
+      if (buttonEl) {
+        activeSpeakingButton = buttonEl;
+        buttonEl.innerHTML = '<i data-lucide="square" class="w-3 h-3 fill-current"></i><span>Speaking HD...</span>';
+        buttonEl.classList.add(isCalder ? 'bg-sky-400' : 'bg-brand-400', 'text-navy-950');
+        lucide.createIcons();
+      }
+
+      const audio = new Audio(audioUrl);
+      activeAudioElement = audio;
+
+      audio.onended = () => {
+        stopAllSpeech();
+      };
+      audio.onerror = (e) => {
+        console.warn('HD Audio playback error:', e);
+        stopAllSpeech();
+      };
+
+      audio.play().catch(err => {
+        console.warn('Audio play exception:', err);
+        stopAllSpeech();
+      });
+    }
+
+    async function speakAdvisorText(rawText, speakerKey, buttonEl) {
+      const audioUrl = resolveStudioAudioUrl(rawText, speakerKey);
+      playAudioFile(audioUrl, speakerKey, buttonEl);
+    }
+
+    function toggleStrategicBriefingAudio() {
+      if (isSpeaking) {
+        stopAllSpeech();
+        return;
+      }
+
+      const briefingBtn = document.getElementById('btn-play-briefing');
+      const textPlay = document.getElementById('text-briefing-play');
+      const iconPlay = document.getElementById('icon-briefing-play');
+
+      if (textPlay) textPlay.textContent = 'Speaking Briefing...';
+      if (iconPlay) iconPlay.setAttribute('data-lucide', 'square');
+
+      const url = currentAdvisor === 'mark-calder'
+        ? STUDIO_AUDIO_MAP.mark_sprint
+        : STUDIO_AUDIO_MAP.david_sprint;
+
+      playAudioFile(url, currentAdvisor, briefingBtn);
+    }
+
+    function speakWelcomeMessage(btn) {
+      playAudioFile(STUDIO_AUDIO_MAP.david_sample, 'david-vance', btn);
+    }
+
+    function toggleVoiceMode() {
+      voiceModeEnabled = !voiceModeEnabled;
+      const textEl = document.getElementById('text-voice-status');
+      const iconEl = document.getElementById('icon-voice-status');
+
+      if (voiceModeEnabled) {
+        textEl.textContent = 'Voice: ON';
+        iconEl.setAttribute('data-lucide', 'volume-2');
+        iconEl.classList.remove('text-slate-500');
+        iconEl.classList.add('text-brand-400');
+      } else {
+        stopAllSpeech();
+        textEl.textContent = 'Voice: OFF';
+        iconEl.setAttribute('data-lucide', 'volume-x');
+        iconEl.classList.remove('text-brand-400');
+        iconEl.classList.add('text-slate-500');
+      }
+      lucide.createIcons();
+    }
+
+    // ==========================================
+    // 2. PRINCIPAL PERSONA SWITCHER
+    // ==========================================
+    function switchAdvisor(advisorKey) {
+      currentAdvisor = advisorKey;
+      const tabVance = document.getElementById('tab-vance');
+      const tabCalder = document.getElementById('tab-calder');
+      const avatarImg = document.getElementById('terminal-advisor-avatar');
+      const nameEl = document.getElementById('terminal-advisor-name');
+      const titleEl = document.getElementById('terminal-advisor-title');
+      const focusEl = document.getElementById('terminal-advisor-focus');
+      const pillEl = document.getElementById('advisor-status-pill');
+      const composerIcon = document.getElementById('composer-advisor-icon');
+      const composerText = document.getElementById('composer-advisor-text');
+      const inputEl = document.getElementById('chat-input');
+      const typingText = document.getElementById('typing-indicator-text');
+
+      if (advisorKey === 'mark-calder') {
+        // Mark Calder Active
+        tabCalder.className = 'flex items-center gap-2 px-3 py-1.5 rounded-xl bg-sky-400 text-navy-950 font-bold shadow-md transition-all cursor-pointer';
+        tabVance.className = 'flex items-center gap-2 px-3 py-1.5 rounded-xl bg-navy-850 hover:bg-navy-800 text-slate-300 font-semibold border border-slate-700 hover:border-brand-400/40 transition-all cursor-pointer';
+
+        avatarImg.src = '/branding/avatars/mark_calder.jpg';
+        avatarImg.alt = 'Mark Calder';
+        avatarImg.className = 'w-12 h-12 rounded-full object-cover border-2 border-sky-400 shadow-xl ring-2 ring-sky-400/30';
+
+        nameEl.textContent = 'Mark Calder';
+        titleEl.textContent = 'Operational Principal';
+        titleEl.className = 'text-[10px] font-mono text-sky-300 uppercase px-2 py-0.5 rounded bg-sky-500/10 border border-sky-400/20 font-bold';
+        focusEl.textContent = 'Forensic Systems Architecture, Tech Stack Qualification & Automation Rails';
+        pillEl.textContent = 'Ready to brief on Systems Architecture & Telemetry';
+
+        composerIcon.src = '/branding/avatars/mark_calder.jpg';
+        composerText.textContent = 'Mark Calder (Systems & Tech Stack)';
+        inputEl.placeholder = 'Ask Principal Mark Calder regarding qualification webhooks, CRM sync, or tech stack schemas...';
+        typingText.textContent = 'Mark Calder is formulating systems architecture response...';
+      } else {
+        // David Vance Active
+        tabVance.className = 'flex items-center gap-2 px-3 py-1.5 rounded-xl bg-brand-400 text-navy-950 font-bold shadow-md transition-all cursor-pointer';
+        tabCalder.className = 'flex items-center gap-2 px-3 py-1.5 rounded-xl bg-navy-850 hover:bg-navy-800 text-slate-300 font-semibold border border-slate-700 hover:border-sky-400/40 transition-all cursor-pointer';
+
+        avatarImg.src = '/branding/avatars/david_vance.jpg';
+        avatarImg.alt = 'David Vance';
+        avatarImg.className = 'w-12 h-12 rounded-full object-cover border-2 border-brand-400 shadow-xl ring-2 ring-brand-400/30';
+
+        nameEl.textContent = 'David Vance';
+        titleEl.textContent = 'Managing Principal';
+        titleEl.className = 'text-[10px] font-mono text-brand-300 uppercase px-2 py-0.5 rounded bg-brand-400/10 border border-brand-400/20 font-bold';
+        focusEl.textContent = 'Autonomous Revenue Governance & High-Ticket Pipeline Strategy';
+        pillEl.textContent = 'Ready to brief on Strategy & Governance';
+
+        composerIcon.src = '/branding/avatars/david_vance.jpg';
+        composerText.textContent = 'David Vance (Strategy & Governance)';
+        inputEl.placeholder = 'Ask Managing Principal David Vance regarding your diagnostic findings, sprint roadmap, or ROI...';
+        typingText.textContent = 'David Vance is formulating strategic advisory response...';
+      }
+    }
+
+    // ==========================================
+    // 3. SESSION INITIALIZATION & RENDERING
+    // ==========================================
+    function extractAuditId() {
+      const pathParts = window.location.pathname.split('/');
+      const lastPart = pathParts[pathParts.length - 1];
+      if (lastPart && lastPart !== 'briefing' && lastPart !== 'briefing.html') {
+        return lastPart.replace('.html', '');
+      }
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('auditId') || 'latest';
+    }
+
+    async function loadBriefingSession() {
+      currentAuditId = extractAuditId();
+      try {
+        const res = await fetch(`/api/briefing/${encodeURIComponent(currentAuditId)}`);
+        if (!res.ok) throw new Error('Session fetch failed');
+        const data = await res.json();
+        if (data.session) {
+          currentSession = data.session;
+          currentAuditId = currentSession.auditId;
+          renderSessionData(currentSession);
+        }
+      } catch (err) {
+        console.warn('Using client-side fallback session:', err);
+      }
+    }
+
+    function renderSessionData(session) {
+      if (!session) return;
+      const { prospect = {}, metrics = {}, messages = [], pdfUrl, auditId } = session;
+
+      // Update badge & identifiers
+      document.getElementById('audit-badge-id').textContent = auditId || 'AUDIT-LIVE';
+      document.getElementById('dossier-company').textContent = prospect.company || 'Enterprise Client';
+      document.getElementById('dossier-domain').textContent = prospect.domain || 'enterprise-client.com';
+      document.getElementById('dossier-revenue').textContent = prospect.revenue || '$3M - $10M ARR';
+      document.getElementById('dossier-name').textContent = prospect.name || 'Executive Leader';
+      document.getElementById('dossier-challenge').textContent = prospect.challenge || metrics.primary_challenge || 'Pipeline Friction';
+
+      // Update forensic metrics
+      document.getElementById('metric-monthly-leakage').textContent = metrics.monthly_leakage_dollars || '$52,400 / mo';
+      document.getElementById('metric-annualized').textContent = `${metrics.annualized_leakage || '$628,800 / yr'} annualized forfeiture`;
+      document.getElementById('metric-latency').textContent = metrics.response_time || '3.8 hrs';
+      document.getElementById('metric-dropoff').textContent = metrics.dropoff_rate || '31.5%';
+      document.getElementById('metric-stalled').textContent = metrics.stalled_deals || '24 deals';
+      document.getElementById('metric-hours').textContent = metrics.staff_hours_lost || '64 hrs / mo';
+
+      // Update PDF download links
+      if (pdfUrl) {
+        document.getElementById('btn-download-pdf').href = pdfUrl;
+        const headerPdf = document.getElementById('btn-header-pdf');
+        if (headerPdf) headerPdf.href = pdfUrl;
+      }
+
+      // Render Messages
+      if (Array.isArray(messages) && messages.length > 0) {
+        const container = document.getElementById('chat-messages-container');
+        container.innerHTML = '';
+        messages.forEach(msg => appendMessageElement(msg, false));
+        scrollToBottom();
+      }
+
+      lucide.createIcons();
+    }
+
+    function appendMessageElement(msg, doScroll = true) {
+      const container = document.getElementById('chat-messages-container');
+      const isAssistant = msg.sender === 'assistant';
+      const isCalder = isAssistant && (
+        (msg.name && msg.name.toLowerCase().includes('calder')) ||
+        (msg.avatar && msg.avatar.includes('mark_calder'))
+      );
+
+      const wrapper = document.createElement('div');
+      wrapper.className = isAssistant
+        ? (isCalder ? 'chat-bubble-calder p-4 sm:p-5 rounded-2xl max-w-3xl' : 'chat-bubble-vance p-4 sm:p-5 rounded-2xl max-w-3xl')
+        : 'chat-bubble-user p-4 sm:p-5 rounded-2xl max-w-2xl ml-auto bg-navy-800 text-white';
+
+      const timeStr = msg.timestamp ? new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Now';
+
+      let formattedBody = msg.text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n\n/g, '</p><p class="mt-2.5">')
+        .replace(/\n• /g, '<br>&bull; ');
+
+      // Speaker identity and avatar
+      let speakerName = msg.name;
+      let avatarHtml = '';
+
+      if (isAssistant) {
+        if (isCalder) {
+          speakerName = speakerName || 'Mark Calder | Operational Principal';
+          avatarHtml = `<img src="/branding/avatars/mark_calder.jpg" alt="Mark Calder" class="w-7 h-7 rounded-full object-cover border border-sky-400 shadow">`;
+        } else {
+          speakerName = speakerName || 'David Vance | Managing Principal';
+          avatarHtml = `<img src="/branding/avatars/david_vance.jpg" alt="David Vance" class="w-7 h-7 rounded-full object-cover border border-brand-400 shadow">`;
+        }
+      } else {
+        speakerName = speakerName || (currentSession?.prospect?.name || 'Executive');
+        avatarHtml = `<div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-300 font-mono">YOU</div>`;
+      }
+
+      const msgId = `msg-item-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+      wrapper.id = msgId;
+
+      wrapper.innerHTML = `
+        <div class="flex items-center justify-between mb-2 pb-2 border-b ${isAssistant ? (isCalder ? 'border-sky-400/15' : 'border-brand-400/15') : 'border-slate-700/50'}">
+          <div class="flex items-center gap-2">
+            ${avatarHtml}
+            <span class="text-xs font-bold ${isAssistant ? (isCalder ? 'text-sky-300' : 'text-brand-300') : 'text-slate-300'}">
+              ${speakerName}
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            ${isAssistant ? `
+              <button onclick="handleListenClick('${msgId}', '${isCalder ? 'mark-calder' : 'david-vance'}', this)" class="inline-flex items-center gap-1 px-2 py-0.5 rounded ${isCalder ? 'bg-sky-500/10 hover:bg-sky-500/20 border border-sky-400/30 text-sky-300' : 'bg-brand-400/10 hover:bg-brand-400/20 border border-brand-400/30 text-brand-300'} text-[10px] font-mono transition-colors">
+                <i data-lucide="volume-2" class="w-3 h-3"></i>
+                <span>Listen</span>
+              </button>
+            ` : ''}
+            <span class="text-[10px] font-mono text-slate-400">${timeStr}</span>
+          </div>
+        </div>
+        <div class="text-xs sm:text-sm text-slate-200 leading-relaxed space-y-2">
+          <p>${formattedBody}</p>
+        </div>
+      `;
+
+      // Store raw text for speech lookup
+      wrapper.dataset.rawText = msg.text;
+
+      container.appendChild(wrapper);
+      if (doScroll) scrollToBottom();
+      lucide.createIcons();
+    }
+
+    function handleListenClick(msgWrapperId, speaker, btn) {
+      const wrapper = document.getElementById(msgWrapperId);
+      if (!wrapper) return;
+      const text = wrapper.dataset.rawText || wrapper.innerText;
+      speakAdvisorText(text, speaker, btn);
+    }
+
+    function scrollToBottom() {
+      const container = document.getElementById('chat-messages-container');
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function handleTextareaKeydown(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        submitChatMessage(e);
+      }
+    }
+
+    function sendQuickPrompt(promptText, targetAdvisor) {
+      if (targetAdvisor && targetAdvisor !== currentAdvisor) {
+        switchAdvisor(targetAdvisor);
+      }
+      const input = document.getElementById('chat-input');
+      input.value = promptText;
+      submitChatMessage(new Event('submit'));
+    }
+
+    async function submitChatMessage(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+
+      input.value = '';
+      const sendBtn = document.getElementById('chat-send-btn');
+      sendBtn.disabled = true;
+
+      // Append user message immediately
+      appendMessageElement({
+        sender: 'user',
+        name: currentSession?.prospect?.name || 'Executive',
+        text: text,
+        timestamp: new Date().toISOString()
+      });
+
+      // Show typing indicator tailored to active persona
+      const typing = document.getElementById('typing-indicator');
+      const typingText = document.getElementById('typing-indicator-text');
+      typingText.textContent = currentAdvisor === 'mark-calder'
+        ? 'Mark Calder is formulating operational systems response...'
+        : 'David Vance is formulating strategic advisory response...';
+      typing.classList.remove('hidden');
+      scrollToBottom();
+
+      try {
+        const res = await fetch('/api/chat/briefing', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            auditId: currentAuditId,
+            message: text,
+            targetPersona: currentAdvisor
+          })
+        });
+
+        const data = await res.json();
+        typing.classList.add('hidden');
+
+        if (data.report && data.report.metrics && currentSession) {
+          currentSession.metrics = data.report.metrics;
+          if (data.report.pdfUrl) currentSession.pdfUrl = data.report.pdfUrl;
+          renderSessionData(currentSession);
+        }
+
+        let assistantReplyText = '';
+        let speakerKey = currentAdvisor;
+
+        if (data.success && data.message) {
+          appendMessageElement(data.message);
+          assistantReplyText = data.message.text;
+          if (data.message.name && data.message.name.toLowerCase().includes('calder')) {
+            speakerKey = 'mark-calder';
+          }
+        } else if (data.reply) {
+          const isCalder = data.primaryPersona && data.primaryPersona.toLowerCase().includes('calder');
+          speakerKey = isCalder ? 'mark-calder' : 'david-vance';
+          appendMessageElement({
+            sender: 'assistant',
+            name: data.primaryPersona || (isCalder ? 'Mark Calder | Operational Principal' : 'David Vance | Managing Principal'),
+            avatar: isCalder ? '/branding/avatars/mark_calder.jpg' : '/branding/avatars/david_vance.jpg',
+            text: data.reply,
+            timestamp: new Date().toISOString()
+          });
+          assistantReplyText = data.reply;
+        }
+
+        // Auto-play voice synthesis if Voice Mode is active
+        if (voiceModeEnabled && assistantReplyText) {
+          const lastMsg = document.getElementById('chat-messages-container').lastElementChild;
+          const listenBtn = lastMsg ? lastMsg.querySelector('button') : null;
+          speakAdvisorText(assistantReplyText, speakerKey, listenBtn);
+        }
+
+      } catch (err) {
+        console.error('Chat error:', err);
+        typing.classList.add('hidden');
+        appendMessageElement({
+          sender: 'assistant',
+          name: 'David Vance | Managing Principal',
+          avatar: '/branding/avatars/david_vance.jpg',
+          text: `Thank you for your note. Principal Mark Calder and I are actively inspecting ${currentSession?.prospect?.company || 'your organization'}'s pipeline vectors. To explore this in depth, I recommend locking in our direct 30-minute consultation window on our advisory rail: [Schedule Consultation](/#calendar).`,
+          timestamp: new Date().toISOString()
+        });
+      } finally {
+        sendBtn.disabled = false;
+        input.focus();
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initVoiceEngine();
+      lucide.createIcons();
+      loadBriefingSession();
+    });
+  </script>
+
+</body>
+</html>

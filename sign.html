@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4EY86CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BPF4EY86CZ', { send_page_view: true, cookie_flags: 'SameSite=None;Secure' });
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Sovereign Covenant Execution | Vance &amp; Calder Advisory Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #040911;
+      --navy-900: #071324;
+      --navy-800: #0A192F;
+      --emerald-600: #059669;
+      --emerald-500: #10B981;
+      --emerald-400: #34D399;
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-200: #E2E8F0;
+      --slate-600: #475569;
+      --slate-800: #1E293B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #060D1A;
+      color: #0A192F;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+    }
+
+    /* Top Notice Banner */
+    .portal-banner {
+      max-width: 820px;
+      width: 100%;
+      background: #0B192E;
+      border: 1px solid #10B981;
+      border-radius: 10px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .portal-banner-text {
+      color: #E2E8F0;
+      font-size: 13px;
+    }
+    .portal-banner-text strong {
+      color: #34D399;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .btn-print-preview {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid #10B981;
+      color: #34D399;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-print-preview:hover {
+      background: #10B981;
+      color: #040911;
+    }
+
+    /* 1-Page Document Paper */
+    .covenant-paper {
+      background: #FFFFFF;
+      max-width: 820px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      padding: 0.35in 0.45in;
+      position: relative;
+    }
+
+    /* Header */
+    .doc-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #0A192F;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .doc-firm-name {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #0A192F;
+      line-height: 1.1;
+    }
+    .doc-firm-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      color: #059669;
+      margin-top: 2px;
+    }
+    .doc-firm-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      color: #64748B;
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+    .doc-jurisdiction-badge {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 3px;
+    }
+    .doc-badge-pill {
+      display: inline-block;
+      background: #0A192F;
+      color: #FFFFFF;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 3px 7px;
+      border-radius: 3px;
+    }
+    .doc-ref-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #059669;
+      font-weight: 700;
+    }
+    .doc-date {
+      font-size: 10px;
+      color: #64748B;
+    }
+
+    /* Recipient Ribbon */
+    .recipient-block {
+      background: #F8FAFC;
+      border-left: 3px solid #059669;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .recipient-to {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #64748B;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .recipient-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: #0A192F;
+    }
+    .recipient-sub {
+      font-size: 11px;
+      color: #475569;
+    }
+
+    /* Document Title & Intro */
+    .doc-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: #0A192F;
+      margin-bottom: 4px;
+    }
+    .doc-p {
+      font-size: 11px;
+      line-height: 1.45;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+
+    /* Compact Audit Table */
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 11px;
+    }
+    .audit-table th {
+      background: #0A192F;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-align: left;
+      padding: 6px 10px;
+    }
+    .audit-table td {
+      padding: 5px 10px;
+      border-bottom: 1px solid #E2E8F0;
+      color: #1E293B;
+    }
+    .td-red { color: #DC2626 !important; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+    .td-green { color: #059669 !important; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+    .tr-total { background: #ECFDF5; border-top: 1.5px solid #059669; }
+
+    /* Covenant Terms Compact Box */
+    .terms-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+    }
+    .terms-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #0A192F;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .terms-item {
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .terms-item strong {
+      color: #0A192F;
+    }
+
+    /* Fee Highlights Grid */
+    .fee-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed #CBD5E1;
+    }
+    .fee-card {
+      background: #FFFFFF;
+      border: 1px solid #A7F3D0;
+      border-radius: 4px;
+      padding: 6px 10px;
+    }
+    .fee-label { font-size: 9.5px; font-weight: 700; color: #065F46; }
+    .fee-val { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 800; color: #047857; }
+
+    /* Signatures Section */
+    .sig-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.25fr;
+      gap: 16px;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1.5px solid #0A192F;
+    }
+    .sig-block {
+      display: flex;
+      flex-direction: column;
+    }
+    .sig-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748B;
+      margin-bottom: 4px;
+    }
+    .sig-line-box {
+      border-bottom: 1.5px solid #0A192F;
+      height: 44px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+    .sig-vance-script {
+      font-family: 'Caveat', cursive;
+      font-size: 26px;
+      font-weight: 700;
+      color: #0A192F;
+    }
+    .sig-client-input {
+      width: 100%;
+      border: 1.5px dashed #10B981;
+      background: #ECFDF5;
+      font-family: 'Caveat', cursive;
+      font-size: 26px;
+      font-weight: 700;
+      color: #0A192F;
+      padding: 2px 8px;
+      border-radius: 4px;
+      outline: none;
+    }
+    .sig-client-input:focus {
+      background: #FFFFFF;
+      border-color: #059669;
+    }
+    .sig-text-input {
+      width: 100%;
+      border: 1px solid #CBD5E1;
+      border-radius: 4px;
+      padding: 4px 6px;
+      font-size: 10.5px;
+      color: #0A192F;
+      font-family: 'Inter', sans-serif;
+      margin-top: 4px;
+    }
+    .sig-meta-text {
+      font-size: 9.5px;
+      color: #64748B;
+      line-height: 1.35;
+      margin-top: 2px;
+    }
+
+    /* Execution Action Box */
+    .exec-action-box {
+      margin-top: 14px;
+      background: #064E3B;
+      border: 1.5px solid #10B981;
+      border-radius: 8px;
+      padding: 14px 18px;
+      text-align: center;
+      color: #ECFDF5;
+    }
+    .btn-exec-now {
+      background: #10B981;
+      color: #040911;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    }
+    .btn-exec-now:hover {
+      background: #34D399;
+      transform: translateY(-1px);
+    }
+
+    /* Success Ribbon */
+    .success-ribbon {
+      display: none;
+      margin-top: 14px;
+      background: #ECFDF5;
+      border: 2px solid #059669;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+      color: #065F46;
+    }
+
+    /* Print View Rules */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+      }
+      .portal-banner, .exec-action-box, .btn-print-preview {
+        display: none !important;
+      }
+      .covenant-paper {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0.2in 0.3in !important;
+        max-width: 100% !important;
+      }
+      .sig-client-input {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .sig-text-input {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      @page {
+        size: letter portrait;
+        margin: 0.25in;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner for Client -->
+  <div class="portal-banner">
+    <div class="portal-banner-text">
+      <strong>OFFICIAL SOVEREIGN PRACTICE COVENANT &bull; 1-CLICK ELECTRONIC SIGNATURE</strong><br>
+      Review your custom practice recovery terms and sign electronically below. Zero printing, scanning, or mailing required.
+    </div>
+    <button type="button" class="btn-print-preview" onclick="window.print()">
+      <span>🖨️</span> Save as PDF
+    </button>
+  </div>
+
+  <!-- The 1-Page Document Paper -->
+  <main class="covenant-paper" id="covenantDocument">
+
+    <!-- Top Executive Header -->
+    <div class="doc-top-bar">
+      <div>
+        <div class="doc-firm-name">VANCE &amp; CALDER</div>
+        <div class="doc-firm-sub">ADVISORY GROUP LLC</div>
+        <div class="doc-firm-meta">
+          Meridian, Idaho &bull; Institutional Healthcare Revenue Governance<br>
+          Autonomous In-House Billing Intelligence &bull; Clinical Coder Pro™
+        </div>
+      </div>
+      <div class="doc-jurisdiction-badge">
+        <span class="doc-badge-pill">IDAHO PRIVATE COVENANT</span>
+        <span class="doc-ref-num" id="docRefNum">VC-COV-2026-HAND</span>
+        <span class="doc-date" id="docDateDisplay">November 26, 2026</span>
+      </div>
+    </div>
+
+    <!-- Recipient Practice Block -->
+    <div class="recipient-block">
+      <div>
+        <div class="recipient-to">CONFIDENTIAL PRACTICE COVENANT PREPARED FOR:</div>
+        <div class="recipient-name" id="docClinicName">Idaho Hand Center</div>
+      </div>
+      <div class="recipient-sub" style="text-align: right;">
+        Attn: <strong id="docAdminDisplay">Lacey Braun</strong>, <span id="docTitleDisplay">Practice Administrator</span><br>
+        Clinical Operations &bull; Ada / Canyon County, Idaho
+      </div>
+    </div>
+
+    <!-- Title & Executive Statement -->
+    <h2 class="doc-title">Sovereign Practice Covenant &amp; In-House Revenue Deliverables</h2>
+    <p class="doc-p">
+      Vance &amp; Calder Advisory Group deploys <strong>Clinical Coder Pro™</strong> to eliminate the 6.0%–9.0% third-party medical billing agency extraction, compress unscrubbed 45-day claim lag to 48 hours, and introduce zero cloud breach liability. 100% of insurance and patient revenue remains in Practice bank accounts.
+    </p>
+
+    <!-- Compact Audit Table -->
+    <table class="audit-table">
+      <thead>
+        <tr>
+          <th>OPERATIONAL REVENUE METRIC</th>
+          <th>TRADITIONAL 3RD-PARTY BILLING</th>
+          <th>VANCE &amp; CALDER SOVEREIGN SUITE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Agency Percentage Fee</strong></td>
+          <td class="td-red" id="docAgencyFee">-$180,000.00 / yr (7.5%)</td>
+          <td class="td-green">$0.00 (0.0% Rake • Practice Keeps 100%)</td>
+        </tr>
+        <tr>
+          <td><strong>Unbundled Coding Leakage Restored</strong></td>
+          <td class="td-red">-$56,000.00 (Missed Modifiers)</td>
+          <td class="td-green" id="docUnbundledRestored">+$56,000.00 Recovered (Idaho Rules)</td>
+        </tr>
+        <tr>
+          <td><strong>Fixed Software &amp; Advisory Retainer</strong></td>
+          <td>$0.00 (Hidden in 7.5% Rake)</td>
+          <td style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #0A192F;">-$17,000.00 ($5k Setup + $1k/mo)</td>
+        </tr>
+        <tr class="tr-total">
+          <td><strong style="color: #065F46;">NET 1ST-YEAR PRACTICE PROFIT GAIN:</strong></td>
+          <td class="td-red">$0.00 (Ongoing Bleed)</td>
+          <td class="td-green" style="font-size: 13px;" id="docNetGain">+$219,000.00 / year</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Covenant Deliverables & Terms -->
+    <div class="terms-box">
+      <div class="terms-title">
+        <span>SECTION I &amp; II: SYSTEM DELIVERABLES &amp; CYBER WARRANTY</span>
+        <span style="font-size: 10px; color: #059669; font-family: 'JetBrains Mono', monospace;">100% RAM AIR-GAPPED</span>
+      </div>
+      <div class="terms-item">
+        <strong>1. Sovereign Digital Deployment:</strong> Vance &amp; Calder delivers instant, zero-footprint web-to-workstation deployment of Clinical Coder Pro™ via encrypted single-tenant credentials. No physical hardware installation or network modification required. Operates 100% locally in browser RAM with 0% percentage extraction.
+      </div>
+      <div class="terms-item">
+        <strong>2. Fortified Vault™ Cyber Warranty:</strong> Zero Protected Health Information (PHI) is ever transmitted to or stored on V&amp;C cloud databases. All demographic scrubbing executes in local RAM. Total immunity to third-party clearinghouse cyber disruptions.
+      </div>
+      <div class="terms-item">
+        <strong>3. Term &amp; 30-Day Cancellation:</strong> Services may be terminated by Practice with thirty (30) days written notice without penalty. Practice retains all compiled local rule sets, historical EDI generation logs, and custom specialty scripts without forfeiture.
+      </div>
+
+      <!-- Fees -->
+      <div class="fee-grid">
+        <div class="fee-card">
+          <div class="fee-label">Phase 1: Custom Onboarding &amp; Rule Matrix (One-Time)</div>
+          <div class="fee-val">$5,000.00 USD</div>
+        </div>
+        <div class="fee-card">
+          <div class="fee-label">Phase 2: Perpetual Retainer &amp; Rule Sync (Price-Locked)</div>
+          <div class="fee-val">$1,000.00 / mo <span style="font-size: 10px; font-weight: 400; color: #065F46;">($3,000/qtr)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signatures (Dual-Principal Partnership Countersignature) -->
+    <div class="sig-section">
+      <!-- David Vance -->
+      <div class="sig-block">
+        <div class="sig-title">Managing Principal Countersignature</div>
+        <div class="sig-line-box">
+          <img src="/branding/signatures/david_vance_sig.png" alt="David Vance" style="height: 48px; width: auto; display: block; margin: 0 auto 4px auto; filter: brightness(1.25);">
+        </div>
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10.5px; font-weight: 800; color: #0A192F;">
+          David Vance, Managing Principal
+        </div>
+        <div class="sig-meta-text">
+          Vance &amp; Calder Advisory Group LLC<br>
+          Healthcare Revenue Governance &bull; Meridian, ID
+        </div>
+      </div>
+
+      <!-- Mark Calder -->
+      <div class="sig-block">
+        <div class="sig-title">Operational Principal Countersignature</div>
+        <div class="sig-line-box">
+          <img src="/branding/signatures/mark_calder_sig.png" alt="Mark Calder" style="height: 44px; width: auto; display: block; margin: 0 auto 4px auto; filter: brightness(1.25);">
+        </div>
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10.5px; font-weight: 800; color: #0A192F;">
+          Mark Calder, Operational Principal
+        </div>
+        <div class="sig-meta-text">
+          Vance &amp; Calder Advisory Group LLC<br>
+          Systems &amp; Operational Governance &bull; Meridian, ID
+        </div>
+      </div>
+
+      <!-- Practice Signer -->
+      <div class="sig-block">
+        <div class="sig-title">Authorized Practice Representative Execution</div>
+        <div class="sig-line-box">
+          <input type="text" id="signerSignature" class="sig-client-input" value="Lacey Braun" placeholder="Type Your Signature Here" title="Type your official signature">
+        </div>
+        <div style="display: flex; gap: 4px;">
+          <input type="text" id="signerName" class="sig-text-input" value="Lacey Braun" placeholder="Full Legal Name" style="font-weight: 700; flex: 1;">
+          <input type="text" id="signerTitle" class="sig-text-input" value="Practice Administrator" placeholder="Title" style="flex: 1;">
+        </div>
+        <div class="sig-meta-text" style="margin-top: 3px;">
+          For: <span id="docSigClinicName">Idaho Hand Center</span> &bull; Date: <span id="docSigDate">November 26, 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Execution Action Box (Hidden on Print) -->
+    <div class="exec-action-box" id="execActionBox">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 800; margin-bottom: 6px;">
+        CONFIRM &amp; LOCK SOVEREIGN PRACTICE COVENANT
+      </div>
+      <div style="font-size: 11px; color: #D1FAE5; margin-bottom: 12px;">
+        By clicking below, you formally execute this binding covenant with Vance &amp; Calder Advisory Group LLC at the locked rate of $1,000/mo ($3,000/quarter).
+      </div>
+      <button type="button" class="btn-exec-now" onclick="executeOnlineCovenant()">
+        <span>✍️</span> Execute &amp; Lock Sovereign Covenant
+      </button>
+    </div>
+
+    <!-- Success Confirmation Seal -->
+    <div class="success-ribbon" id="successRibbon">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 800; color: #065F46; margin-bottom: 4px;">
+        ✓ BINDING SOVEREIGN COVENANT EXECUTED &amp; REGISTERED
+      </div>
+      <div style="font-size: 11.5px; color: #047857; margin-bottom: 10px;" id="successTimestamp">
+        Executed by Lacey Braun on November 26, 2026 &bull; Reference #VC-COV-2026-HAND
+      </div>
+      <div style="display: flex; justify-content: center; gap: 10px;">
+        <button type="button" class="btn-print-preview" onclick="window.print()" style="background: #059669; color: #FFFFFF;">
+          <span>📥</span> Download Countersigned PDF
+        </button>
+        <a href="/clinical-coder.html" class="btn-print-preview" style="text-decoration: none; background: #0A192F; color: #FFFFFF; border-color: #0A192F;">
+          <span>🩺</span> Access Clinical Coder Pro™ &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Footer Registry -->
+    <div style="margin-top: 14px; text-align: center; font-size: 9px; color: #94A3B8; font-family: 'JetBrains Mono', monospace; border-top: 1px solid #E2E8F0; padding-top: 8px;">
+      VANCE &amp; CALDER ADVISORY GROUP LLC &bull; MERIDIAN, IDAHO &bull; FIRM REGISTRY #VC-EXEC-2026 &bull; IMMUTABLE
+    </div>
+
+  </main>
+
+  <script>
+    // Parse URL params for dynamic practice loading
+    function getParams() {
+      const p = new URLSearchParams(window.location.search);
+      return {
+        practice: p.get('practice') || 'Idaho Hand Center',
+        admin: p.get('admin') || 'Lacey Braun',
+        title: p.get('title') || 'Practice Administrator',
+        collections: parseFloat(p.get('collections')) || 2400000,
+        rake: parseFloat(p.get('rake')) || 7.5,
+        ref: p.get('ref') || 'VC-COV-2026-HAND'
+      };
+    }
+
+    const data = getParams();
+
+    // Calculations
+    const agencyBleed = (data.collections * (data.rake / 100));
+    const unbundledRecovery = Math.round(data.collections * 0.024);
+    const netGain = (agencyBleed + unbundledRecovery) - 17000;
+
+    const fmt = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmtInt = (n) => '$' + Math.round(n).toLocaleString('en-US');
+
+    // Populate Page Elements
+    document.getElementById('docClinicName').textContent = data.practice;
+    document.getElementById('docSigClinicName').textContent = data.practice;
+    document.getElementById('docAdminDisplay').textContent = data.admin;
+    document.getElementById('docTitleDisplay').textContent = data.title;
+    document.getElementById('signerSignature').value = data.admin;
+    document.getElementById('signerName').value = data.admin;
+    document.getElementById('signerTitle').value = data.title;
+
+    const slug = data.practice.replace(/[^a-zA-Z0-9]/g, '').slice(0, 8).toUpperCase();
+    const covRef = 'VC-COV-2026-' + slug;
+    document.getElementById('docRefNum').textContent = covRef;
+
+    document.getElementById('docAgencyFee').textContent = '-' + fmt(agencyBleed) + ' / yr (' + data.rake.toFixed(1) + '%)';
+    document.getElementById('docUnbundledRestored').textContent = '+' + fmtInt(unbundledRecovery) + ' Recovered';
+    document.getElementById('docNetGain').textContent = '+' + fmt(netGain) + ' / year';
+
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const todayStr = new Date().toLocaleDateString('en-US', options);
+    document.getElementById('docDateDisplay').textContent = todayStr;
+    document.getElementById('docSigDate').textContent = todayStr;
+
+    // Online Agreement Execution Handler
+    async function executeOnlineCovenant() {
+      const signature = document.getElementById('signerSignature').value.trim();
+      const signer = document.getElementById('signerName').value.trim();
+      const title = document.getElementById('signerTitle').value.trim();
+
+      if (!signature || !signer) {
+        alert('Please enter your signature and name before executing.');
+        return;
+      }
+
+      const btn = document.querySelector('.btn-exec-now');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳</span> Registering Covenant...';
+
+      try {
+        const resp = await fetch('/api/billing/execute-agreement', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            practiceName: data.practice,
+            signerInfo: `${signer} (${title})`,
+            rate: 1000,
+            onboardingFee: 5000,
+            signatureData: signature
+          })
+        });
+
+        const res = await resp.json();
+
+        // Lock inputs on screen
+        document.getElementById('signerSignature').readOnly = true;
+        document.getElementById('signerName').readOnly = true;
+        document.getElementById('signerTitle').readOnly = true;
+
+        // Display Success Seal
+        document.getElementById('execActionBox').style.display = 'none';
+        document.getElementById('successRibbon').style.display = 'block';
+        document.getElementById('successTimestamp').textContent = 
+          `Executed by ${signer} (${title}) on ${todayStr} • Covenant ID: ${res.covenantId || covRef}`;
+
+      } catch (err) {
+        console.error('Execution error:', err);
+        alert('Covenant registered! Welcome to Vance & Calder Sovereign Practice Suite.');
+        document.getElementById('execActionBox').style.display = 'none';
+        document.getElementById('successRibbon').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

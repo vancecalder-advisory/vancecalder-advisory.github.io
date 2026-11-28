@@ -1,0 +1,570 @@
+/* Custom polished CSS for Vance & Calder Advisory Group */
+
+/* ==========================================================================
+   Global Viewport & Overflow Restraint
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Legal Subtext Typography */
+.legal-subtext {
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: #94a3b8;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+/* Nav Button Styles */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: all 0.15s ease-in-out;
+}
+.nav-btn:hover {
+  color: #f8fafc;
+  background-color: #1e293b;
+}
+.nav-btn.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(10, 25, 47, 0.5) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  font-weight: 600;
+}
+.nav-btn.active i {
+  color: #D4AF37;
+}
+
+/* KPI Card */
+.kpi-card {
+  background-color: #0A192F;
+  border: 1px solid #132A4B;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.kpi-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -2px rgba(212, 175, 55, 0.15);
+}
+
+/* Niche Filter Pills */
+.niche-filter-btn {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #0E223F;
+  border: 1px solid #1E3A63;
+  color: #cbd5e1;
+  transition: all 0.15s ease;
+}
+.niche-filter-btn:hover {
+  background-color: #1E3A63;
+  color: #ffffff;
+}
+.niche-filter-btn.active {
+  background-color: #D4AF37;
+  border-color: #BF992B;
+  color: #0A192F;
+  font-weight: 700;
+}
+
+/* Outreach Step Pills */
+.outreach-step-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background-color: transparent;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.outreach-step-btn:hover {
+  color: #f1f5f9;
+  background-color: #132A4B;
+}
+.outreach-step-btn.active {
+  color: #D4AF37;
+  background-color: #0A192F;
+  border-bottom: 2px solid #D4AF37;
+}
+
+/* Kanban Columns */
+.kanban-col {
+  min-width: 250px;
+  background-color: #0b1120;
+  border: 1px solid #1e293b;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.kanban-header {
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.65rem;
+  background-color: #0f172a;
+  border-left: 3px solid;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.stage-count {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+}
+.kanban-card {
+  background-color: #151e34;
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  padding: 0.85rem;
+  transition: all 0.15s ease;
+}
+.kanban-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Vance & Calder Advisory Group Brand Tokens */
+:root {
+  --color-vc-navy: #0A192F;
+  --color-vc-navy-dark: #060F1D;
+  --color-vc-gold: #D4AF37;
+  --color-vc-gold-dark: #BF992B;
+  --color-vc-gold-light: #F4ECD4;
+}
+
+/* Print Styling for Proposal with Executive Cover Sheet */
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm 15mm;
+  }
+  body {
+    background: #FFFFFF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #proposal-document, #proposal-document * {
+    visibility: visible;
+  }
+  #proposal-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    border: none !important;
+    background: #FFFFFF !important;
+  }
+  .executive-cover-sheet {
+    page-break-after: always !important;
+    break-after: page !important;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0 !important;
+    border: 1px solid #E2E8F0 !important;
+  }
+  .proposal-body-header,
+  .running-header {
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-top: 2rem !important;
+  }
+}
+
+/* ==========================================================================
+   Executive Top Navigation Bar (Three-Column Layout)
+   ========================================================================== */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.navbar-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.nav-links,
+nav ul.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 0 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links a {
+  padding: 0.35rem 0.5rem;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #D4AF37;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-btn-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-btn-audit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .nav-links,
+  nav ul.nav-links {
+    display: none;
+  }
+  .navbar-container {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Mobile Header & Navigation Bar (@media (max-width: 768px)) */
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .nav-links,
+  nav ul.nav-links {
+    display: none !important;
+  }
+
+  /* Hide secondary outlined CLIENT PORTAL button on mobile */
+  .nav-btn-portal,
+  .nav-actions a[href="/dashboard"],
+  .nav-actions .outline-btn {
+    display: none !important;
+  }
+
+  /* Reduce font and padding of top gold REQUEST AUDIT button */
+  .nav-btn-audit,
+  .nav-actions a[href="#diagnostic"],
+  .nav-actions .gold-btn {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    gap: 0.35rem !important;
+    border-radius: 0.5rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .nav-actions a[href="#diagnostic"] svg,
+  .nav-actions .gold-btn svg,
+  .nav-actions a[href="#diagnostic"] i,
+  .nav-actions .gold-btn i {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+  }
+
+  .nav-actions {
+    gap: 0.5rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Scale down brand title text so 'VANCE & CALDER' fits comfortably on the left without pushing header width */
+  .navbar-brand-group {
+    gap: 0.5rem !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-logo-badge {
+    padding: 0.25rem !important;
+  }
+
+  .navbar-logo-img,
+  .navbar-brand-group img {
+    height: 2rem !important;
+    width: auto !important;
+  }
+
+  .brand-title {
+    font-size: 0.825rem !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  .brand-subtitle {
+    font-size: 0.525rem !important;
+    letter-spacing: 0.16em !important;
+    line-height: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   Hero & Content Container Bounds
+   ========================================================================== */
+section,
+header,
+footer,
+main,
+nav,
+.hero-section,
+.content-container,
+.grid,
+.navy-card,
+.kpi-card,
+.card-wrapper {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-title,
+.hero-subtitle,
+.section-title,
+p, h1, h2, h3, h4, h5, h6 {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+}
+
+
+/* ==========================================================================
+   Audit Request Received Confirmation Card Action Buttons
+   ========================================================================== */
+.confirm-actions-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto 2rem auto;
+  max-width: 52rem;
+}
+
+@media (min-width: 640px) {
+  .confirm-actions-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* Base button specifications for both confirmation buttons */
+.confirm-btn,
+#audit-success-msg .gold-btn,
+#audit-success-msg .outline-btn,
+#audit-success-msg .btn-primary {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+/* Primary Gold Consultation Scheduling Button */
+.confirm-btn-gold,
+#audit-success-msg .gold-btn,
+#audit-success-msg .btn-primary,
+#audit-schedule-btn {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #D4AF37 0%, #BF992B 100%);
+  color: #060F1D;
+  border: none;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+.confirm-btn-gold:hover,
+#audit-success-msg .gold-btn:hover,
+#audit-success-msg .btn-primary:hover,
+#audit-schedule-btn:hover {
+  background: linear-gradient(135deg, #E3CE8C 0%, #D4AF37 100%);
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Secondary Outlined Diagnostic Tear-Sheet Preview Button */
+.confirm-btn-outline,
+#audit-success-msg .outline-btn,
+#audit-preview-tear-sheet-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 25, 47, 0.85);
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  color: #FAF7EE;
+}
+
+.confirm-btn-outline:hover,
+#audit-success-msg .outline-btn:hover,
+#audit-preview-tear-sheet-btn:hover {
+  border-color: #D4AF37;
+  background: rgba(212, 175, 55, 0.12);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* ======================================================== */
+/* Responsive Calendar Booking Modal Architecture           */
+/* ======================================================== */
+.calendar-modal-dialog {
+  width: min(540px, 94vw);
+  max-width: 540px;
+  min-width: 0;
+  margin: 1rem auto;
+  padding: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.calendar-modal-briefing-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.calendar-modal-briefing-btn {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.calendar-modal-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+}
+
+/* Mobile Responsiveness (@media (max-width: 640px)) */
+@media (max-width: 640px) {
+  .calendar-modal-dialog {
+    width: 92% !important;
+    width: min(540px, 94vw) !important;
+    max-width: 540px !important;
+    min-width: 0 !important;
+    margin: 1rem auto !important;
+    padding: 1.25rem !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+
+  .calendar-modal-briefing-card {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .calendar-modal-briefing-btn {
+    width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  .calendar-modal-slots-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.625rem !important;
+  }
+}
+
+

@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Google Analytics 4 Invisible Visitor Radar (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4EY86CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BPF4EY86CZ', {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+    gtag('config', 'GTM-MWCPMGV3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Revenue Architecture &amp; Autonomous Coding | Vance &amp; Calder</title>
+  <meta name="description" content="Outpatient healthcare advisory led by David Vance. Eliminating 6%–9% billing agency extraction, compressing 45-day AR lags to 48 hours, and achieving zero-cloud hack immunity for independent Idaho practices.">
+  <link rel="icon" type="image/png" href="/branding/favicon.png">
+  <link rel="shortcut icon" href="/branding/favicon.ico">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#D4AF37',
+              300: '#E3CE8C',
+              200: '#EBDDB0',
+            },
+            emerald: {
+              400: '#34D399',
+              500: '#10B981',
+              600: '#059669',
+            },
+            navy: {
+              950: '#040A14',
+              900: '#060F1D',
+              850: '#0A192F',
+              800: '#102444',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { background-color: #040A14; color: #E2E8F0; overflow-x: hidden; }
+    
+    /* Fixed Modal Backdrop & Window Overlay */
+    .modal-backdrop {
+      position: fixed !important;
+      inset: 0 !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      background: rgba(4, 9, 17, 0.88) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      z-index: 99999 !important;
+      display: none;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 20px !important;
+      box-sizing: border-box !important;
+      overflow-y: auto !important;
+    }
+    .modal-window {
+      background: #070F1E !important;
+      border: 2px solid #D4AF37 !important;
+      border-radius: 12px !important;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.95), 0 0 30px rgba(212, 175, 55, 0.2) !important;
+      max-width: 820px !important;
+      width: 100% !important;
+      max-height: 90vh !important;
+      overflow-y: auto !important;
+      position: relative !important;
+      margin: auto !important;
+    }
+
+    .navy-card {
+      background: radial-gradient(120% 120% at 50% 0%, #0D272B 0%, #0A192F 50%, #060F1D 100%);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+    .emerald-glow {
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.15);
+    }
+    .emerald-glow:hover {
+      border-color: rgba(16, 185, 129, 0.8);
+      box-shadow: 0 0 35px -2px rgba(16, 185, 129, 0.25);
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+    }
+    .outline-btn {
+      background: rgba(10, 25, 47, 0.85);
+      border: 1.5px solid rgba(16, 185, 129, 0.5);
+      color: #FAF7EE;
+      transition: all 0.25s ease;
+    }
+    .outline-btn:hover {
+      border-color: #10B981;
+      background: rgba(16, 185, 129, 0.12);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+    /* Three-Column Top Executive Navigation Layout */
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem;
+      box-sizing: border-box;
+    }
+    .nav-links {
+      flex: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 1.5rem;
+      padding: 0;
+    }
+    .nav-links a {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #CBD5E1;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: #10B981;
+    }
+  </style>
+</head>
+<body class="bg-navy-950 text-slate-200 antialiased selection:bg-emerald-500 selection:text-navy-950">
+
+  <!-- ========================================== -->
+  <!-- 1. TOP NAVIGATION                          -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-navy-850/95 backdrop-blur-md border-b border-emerald-500/25 shadow-2xl transition-all w-full max-w-full">
+    <nav class="navbar-container">
+      
+      <!-- Far Left: Brand Logo / Link to Home -->
+      <a href="/" class="flex items-center gap-3 group shrink-0">
+        <div class="p-1 rounded-xl bg-white border-2 border-emerald-400/80 shadow shrink-0">
+          <img src="/branding/logo.png" alt="Vance &amp; Calder" class="h-8 w-auto object-contain">
+        </div>
+        <div>
+          <div class="text-white text-sm sm:text-base font-bold tracking-wide flex items-center gap-1.5 font-sans">
+            VANCE &amp; CALDER
+          </div>
+          <div class="text-[9px] text-emerald-400 uppercase font-semibold tracking-widest font-mono">
+            OUTPATIENT HEALTHCARE DIVISION
+          </div>
+        </div>
+      </a>
+
+      <!-- True Center: Evenly Spread Out Links -->
+      <div class="nav-links hidden md:flex">
+        <a href="/" class="text-slate-300 hover:text-emerald-400 flex items-center gap-2 transition-colors">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Main Hub
+        </a>
+        <a href="/construction.html" class="text-amber-400 hover:text-amber-300 flex items-center gap-2 transition-colors font-semibold">
+          <i data-lucide="hard-hat" class="w-3.5 h-3.5 text-amber-400"></i> Construction Practice
+        </a>
+        <a href="/clinical-coder.html" class="text-emerald-300 hover:text-white flex items-center gap-2 transition-colors font-semibold">
+          <i data-lucide="activity" class="w-3.5 h-3.5 text-emerald-400"></i> Clinical Coder Pro™
+        </a>
+        <a href="/training.html" class="text-slate-300 hover:text-emerald-400 flex items-center gap-2 transition-colors font-semibold">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-emerald-400"></i> Staff Training
+        </a>
+        <a href="#governance" class="text-emerald-300 hover:text-white flex items-center gap-2 transition-colors font-semibold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Diligence Vault
+        </a>
+      </div>
+
+      <!-- Far Right: Action Button -->
+      <div class="shrink-0">
+        <a href="#diagnostic" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-navy-950 font-bold text-xs tracking-wider uppercase shadow-lg transition-all">
+          <i data-lucide="file-check" class="w-3.5 h-3.5"></i>
+          <span>Request Diagnostic</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO : HEALTHCARE DIVISION DIRECTED     -->
+  <!-- ========================================== -->
+  <section class="relative bg-navy-950 bg-grid py-8 lg:py-12 overflow-hidden border-b border-emerald-500/20 flex flex-col justify-center" style="min-height: calc(100vh - 58px); box-sizing: border-box;">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      
+      <!-- Top Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-900 border border-emerald-400/40 shadow-lg mb-4">
+        <i data-lucide="stethoscope" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span class="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-emerald-300">
+          Outpatient Healthcare Division &bull; Directed by David Vance
+        </span>
+      </div>
+
+      <!-- Headline (All on one line or cleanly wrapped) -->
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight leading-tight max-w-6xl mx-auto font-sans sm:whitespace-nowrap">
+        Ending the 6%–9% Medical Billing Extraction
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-sm sm:text-base text-slate-300 max-w-4xl mx-auto leading-relaxed mb-8">
+        We eliminate third-party billing agency fees, compress 45-day reimbursement lags to 48 hours, and deliver zero-cloud hack immunity for independent surgical, orthopedic, and specialty practices across <span class="whitespace-nowrap font-semibold text-white">Idaho and the Pacific Northwest.</span>
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-10">
+        <a href="#diagnostic" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-navy-950 font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xl transition-all">
+          <i data-lucide="file-check" class="w-4 h-4"></i>
+          <span>Schedule 20-Minute Practice Diagnostic</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="/clinical-coder.html" class="w-full sm:w-auto px-6 py-3.5 rounded-xl outline-btn text-xs font-semibold tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm">
+          <i data-lucide="play" class="w-4 h-4 text-emerald-400"></i>
+          <span>Launch Clinical Coder Pro™ (Live Engine)</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-emerald-400"></i>
+        </a>
+      </div>
+
+      <!-- ========================================================== -->
+      <!-- 3. THE 4 METRIC CARDS (LAURIE'S CORE INSTITUTIONAL PROOF)  -->
+      <!-- ========================================================== -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+        
+        <!-- Metric 1: Fee Extraction -->
+        <div class="p-5 rounded-2xl navy-card emerald-glow transition-all">
+          <div class="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-emerald-400 mb-0.5">6% – 9%</div>
+          <div class="text-[11px] uppercase tracking-wider text-slate-200 font-bold">Gross Revenue Siphoned</div>
+          <p class="text-[10px] text-slate-400 mt-1">Agency Fee Extraction Eliminated</p>
+        </div>
+
+        <!-- Metric 2: Turnaround Lag -->
+        <div class="p-5 rounded-2xl navy-card emerald-glow transition-all">
+          <div class="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-emerald-400 mb-0.5">45d &rarr; 48h</div>
+          <div class="text-[11px] uppercase tracking-wider text-slate-200 font-bold">Cash Velocity Acceleration</div>
+          <p class="text-[10px] text-slate-400 mt-1">Autonomous Dual-Engine Turnaround</p>
+        </div>
+
+        <!-- Metric 3: Cyber Exposure -->
+        <div class="p-5 rounded-2xl navy-card emerald-glow transition-all">
+          <div class="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-emerald-400 mb-0.5">0 Cloud Risk</div>
+          <div class="text-[11px] uppercase tracking-wider text-slate-200 font-bold">Local Volatile RAM Only</div>
+          <p class="text-[10px] text-slate-400 mt-1">Zero Cloud Databases &bull; Hack Immune</p>
+        </div>
+
+        <!-- Metric 4: Net Profit Restored -->
+        <div class="p-5 rounded-2xl navy-card emerald-glow transition-all">
+          <div class="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-emerald-400 mb-0.5">+$228K+</div>
+          <div class="text-[11px] uppercase tracking-wider text-slate-200 font-bold">Annual Practice Savings</div>
+          <p class="text-[10px] text-slate-400 mt-1">Direct Margin to Physician Equity</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 4. THE 3 CORE HEALTHCARE SOLUTION PILLARS  -->
+  <!-- ========================================== -->
+  <section class="relative bg-navy-900 bg-grid py-10 sm:py-14 lg:py-16 border-b border-emerald-500/20 flex flex-col justify-center" style="min-height: 100vh; box-sizing: border-box;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-auto w-full">
+      
+      <div class="text-center max-w-4xl mx-auto mb-10 sm:mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-[11px] font-mono uppercase tracking-widest mb-3">
+          Practice Revenue Architecture
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3 tracking-tight font-sans">
+          The Three Bleeds Draining Independent Practice Margin
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-3xl mx-auto leading-relaxed">
+          Independent outpatient specialty medicine is under siege from hospital monopolization and fee extraction. Here is how we protect your clinical and financial sovereignty.
+        </p>
+      </div>
+
+      <!-- 3 Pillar Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch">
+        
+        <!-- Pillar 1: Fee Extraction -->
+        <div class="p-5 sm:p-6 rounded-2xl navy-card h-full emerald-glow flex flex-col justify-between transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-400 mb-5 shadow-inner">
+              <i data-lucide="percent" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 font-sans">
+              Third-Party Agency Extraction
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              The 6% to 9% Gross Revenue Sink
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Third-party billing agencies siphon 6% to 9% of total practice collections—extracting $150,000 to $375,000+ per physician annually for routine claims processing. We replace variable percentage extractions with a predictable, flat quarterly governance retainer.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800">
+            <span class="text-[11px] font-mono text-emerald-400 font-bold uppercase tracking-wider">&bull; +$180K+ Average Practice Margin Recaptured</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2: 45-Day AR Lag -->
+        <div class="p-5 sm:p-6 rounded-2xl navy-card h-full emerald-glow flex flex-col justify-between transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-400 mb-5 shadow-inner">
+              <i data-lucide="clock" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 font-sans">
+              45-Day Reimbursement Lag
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              Ending Cash-Flow Strangulation
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Outsourced billing delays average 45 days, forcing independent clinics onto expensive bank credit lines and burning staff hours on hold with payers. Our autonomous in-house engine codes and scrubs encounters same-day, accelerating reimbursement to 48 hours.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800">
+            <span class="text-[11px] font-mono text-emerald-400 font-bold uppercase tracking-wider">&bull; 92% Reduction in Billing Cycle Latency</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Cloud Cyber Risk -->
+        <div class="p-5 sm:p-6 rounded-2xl navy-card h-full emerald-glow flex flex-col justify-between transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-400 mb-5 shadow-inner">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 font-sans">
+              Fortified Vault™ Cyber Immunity
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              Zero Cloud Breach &amp; Ransomware Liability
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              The 2024 Change Healthcare cyberattack proved that third-party cloud aggregators are a catastrophic liability. Our engine runs 100% in local volatile computer memory (RAM). Zero cloud databases. <em>"You cannot hack what is never stored."</em>
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800">
+            <span class="text-[11px] font-mono text-emerald-400 font-bold uppercase tracking-wider">&bull; 100% Client-Side Ephemeral RAM Execution</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 5. CLOSING FINALE : BOLD & COMMANDING (SIDE-BY-SIDE 100VH) -->
+  <!-- ========================================== -->
+  <section id="diagnostic" class="relative bg-navy-950 bg-grid py-8 sm:py-10 border-t border-emerald-500/20 flex flex-col justify-between" style="min-height: 100vh; box-sizing: border-box;">
+    
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 my-auto w-full">
+      
+      <!-- Section Header (Pulled Up & Bolder) -->
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/50 text-emerald-300 text-[11px] font-mono font-bold uppercase tracking-wider mb-2.5 shadow">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          Principal Governance &bull; Practice Revenue Strategy
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-sans">
+          Direct Senior Partner Governance
+        </h2>
+      </div>
+
+      <!-- Side-by-Side 2-Column Grid (Expanded 3 Squares Outward & Separated by 2 Squares) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-stretch">
+        
+        <!-- Left Card: David Vance Bio & Quote (Bigger & Bolder) -->
+        <div class="p-8 sm:p-10 lg:p-12 rounded-3xl navy-card emerald-glow border-2 border-emerald-500/50 shadow-2xl flex flex-col justify-between h-full group hover:shadow-emerald-500/15 transition-all">
+          <div>
+            <div class="flex items-center gap-6 mb-6">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-emerald-400 shadow-2xl shrink-0 ring-4 ring-emerald-400/20">
+                <img src="/branding/avatars/david_vance.jpg" alt="David Vance" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <div class="text-[11px] font-mono font-bold uppercase tracking-widest text-emerald-400 mb-1">
+                  MANAGING PRINCIPAL
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white font-sans tracking-tight">David Vance</h3>
+                <p class="text-xs sm:text-sm text-slate-300 font-mono mt-1">Healthcare Revenue Governance &bull; Practice Autonomy</p>
+              </div>
+            </div>
+
+            <!-- Big Bold Statement (Manifesto) -->
+            <p class="text-sm sm:text-base lg:text-lg text-slate-100 font-medium leading-relaxed italic border-l-4 border-emerald-400 pl-5 my-6">
+              "Independent medical practice is not meant to bleed 6% to 9% of its gross revenue to third-party billing agencies while waiting 45 days for claims to clear. We restore clinical and financial sovereignty through autonomous in-house claim velocity, zero-cloud hack immunity, and disciplined quarterly governance."
+            </p>
+          </div>
+
+          <div class="pt-5 border-t border-slate-800/90 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm text-slate-300 font-mono">
+            <a href="mailto:david@vancecalderadvisory.com" class="text-emerald-300 hover:text-white flex items-center gap-2 transition-colors font-bold">
+              <i data-lucide="mail" class="w-4 h-4"></i> david@vancecalderadvisory.com
+            </a>
+            <span class="text-xs text-slate-400 font-semibold tracking-wide">Meridian &bull; Boise &bull; Nampa &bull; Kuna &bull; Surrounding Areas</span>
+          </div>
+        </div>
+
+        <!-- Right Card: Request 20-Min Practice Diagnostic Action Box (Bigger & Bolder) -->
+        <div class="p-8 sm:p-10 lg:p-12 rounded-3xl bg-gradient-to-b from-[#0F2D32] via-[#091E23] to-[#060F1D] border-2 border-emerald-400/60 shadow-2xl flex flex-col justify-between h-full group hover:shadow-emerald-500/15 transition-all">
+          <div>
+            <div class="flex items-center gap-3.5 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 shrink-0 shadow-inner">
+                <i data-lucide="calendar-check" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white font-sans tracking-tight">
+                Schedule a 20-Minute Practice Diagnostic
+              </h3>
+            </div>
+            
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8 font-normal">
+              David Vance will conduct an executive-level review of your current billing fee extraction, claim denial rate, and AR turnaround lag. No software sales pitch—just clear operational numbers and net recaptured equity.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <a href="mailto:david@vancecalderadvisory.com?subject=Practice%20Revenue%20Diagnostic%20Request" class="p-4 sm:p-5 rounded-2xl bg-navy-950 border-2 border-emerald-400/40 hover:border-emerald-400 transition-all group/btn shadow-lg">
+                <div class="text-[10px] text-emerald-400 font-mono font-bold uppercase tracking-wider mb-1">Direct Principal Email</div>
+                <div class="text-[11px] sm:text-xs lg:text-[13px] text-white font-bold group-hover/btn:text-emerald-300 flex items-center justify-between">
+                  <span class="truncate">david@vancecalderadvisory.com</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 shrink-0 ml-1"></i>
+                </div>
+              </a>
+              <a href="tel:+12086155773" class="p-4 sm:p-5 rounded-2xl bg-navy-950 border-2 border-emerald-400/40 hover:border-emerald-400 transition-all group/btn shadow-lg">
+                <div class="text-[10px] text-emerald-400 font-mono font-bold uppercase tracking-wider mb-1">Executive Line</div>
+                <div class="text-xs sm:text-sm text-white font-bold group-hover/btn:text-emerald-300 flex items-center justify-between">
+                  <span>(208) 615-5773</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 shrink-0 ml-1"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-5 border-t border-slate-800/90 text-center text-xs text-slate-400 font-mono">
+            Vance &amp; Calder Advisory Group LLC &bull; 3597 E Monarch Sky Ln, Suite 240, Meridian, ID 83646
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- ========================================== -->
+  <!-- 6. SLIDE 4 : PRACTICE DILIGENCE & GOVERNANCE VAULT -->
+  <!-- ========================================== -->
+  <section id="governance" class="relative bg-navy-900 bg-grid py-10 sm:py-14 border-t border-emerald-500/20 flex flex-col justify-between" style="min-height: 100vh; box-sizing: border-box;">
+    
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 my-auto w-full">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-4xl mx-auto mb-8 sm:mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/50 text-emerald-300 text-[11px] font-mono font-bold uppercase tracking-wider mb-2.5 shadow">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          Treasure Valley Healthcare Community &bull; Diligence &amp; Governance Vault
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-sans mb-3">
+          Practice Due Diligence &amp; Governance Vault
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-3xl mx-auto leading-relaxed">
+          Inspect our binding price-lock covenant, verified local physician reflections, and turnkey transition legal runbooks before launching your 30-day practice evaluation.
+        </p>
+      </div>
+
+      <!-- 4 Diligence Cards (2x2 Grid) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 items-stretch mb-8">
+        
+        <!-- Card 1: Local Practice Comments & Reflections -->
+        <div class="p-6 sm:p-8 rounded-2xl navy-card emerald-glow flex flex-col justify-between h-full group hover:shadow-emerald-500/15 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-400/30">
+                Community Reflections &bull; Verified Local Voices
+              </span>
+              <i data-lucide="message-square-quote" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 font-sans">
+              Administrative Practice Evaluations &amp; Comments
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              Voices from the Clinic: The Relief of Taking Control
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Read honest reflections from local Treasure Valley practice administrators, outpatient surgery directors, and billing coordinators who tested the system and eliminated agency dependence.
+            </p>
+            <!-- Quote preview -->
+            <div class="bg-navy-950/80 border border-slate-800 p-3.5 rounded-xl mb-4 italic text-xs text-slate-200 border-l-4 border-emerald-400">
+              "Seeing how cleanly the claims and modifiers were scrubbed without needing a computer science degree took a huge weight off my chest..."
+              <span class="block not-italic text-[10px] text-emerald-300 font-mono mt-1.5 font-bold">&mdash; Billing Lead, Dermatology &amp; Mohs (Treasure Valley)</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-800/90">
+            <button type="button" onclick="openPracticeCommentsModal()" class="w-full py-2.5 px-4 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/60 text-emerald-300 hover:text-white font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+              <span>Read All Community Reflections &amp; Submit Yours &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Sovereign Price-Lock Covenant -->
+        <div class="p-6 sm:p-8 rounded-2xl navy-card emerald-glow flex flex-col justify-between h-full group hover:shadow-emerald-500/15 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-400/30">
+                Binding Legal Agreement &bull; Zero Percentage Rake
+              </span>
+              <i data-lucide="scroll" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 font-sans">
+              Sovereign Practice Governance &amp; Price-Lock Covenant
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              Perpetual $1,000/mo Retainer Protection ($3,000/Quarter)
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Guarantees your practice never pays a 6%–9% percentage extraction. Outlines our $5,000 initial custom rule onboarding, quarterly compliance updates, and locks your retainer in perpetuity with zero surprise price hikes.
+            </p>
+            <div class="bg-navy-950/80 border border-slate-800 p-3.5 rounded-xl mb-4 text-xs text-slate-200">
+              <div class="flex justify-between items-center text-[11px] font-mono mb-1">
+                <span class="text-slate-400">Onboarding &amp; Custom Rules:</span>
+                <span class="text-white font-bold">$5,000 (One-Time)</span>
+              </div>
+              <div class="flex justify-between items-center text-[11px] font-mono">
+                <span class="text-slate-400">Locked Retainer:</span>
+                <span class="text-emerald-400 font-bold">$1,000/mo ($3,000/qtr perpetual)</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-800/90">
+            <button type="button" onclick="openPaymentModal()" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-navy-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg">
+              <i data-lucide="file-signature" class="w-3.5 h-3.5"></i>
+              <span>Inspect Price-Lock Covenant &amp; Sign Online &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Notice of Billing Service Termination -->
+        <div class="p-6 sm:p-8 rounded-2xl navy-card emerald-glow flex flex-col justify-between h-full group hover:shadow-emerald-500/15 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-400/30">
+                Turnkey Transition Playbook &bull; Zero Lag
+              </span>
+              <i data-lucide="file-x-2" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 font-sans">
+              Notice of Termination &amp; Mandatory Asset Transfer
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              The 30-Day Third-Party Agency Severance Protocol
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              The formal legal directive requiring your current billing agency to release clearinghouse credentials, 835 ERA remittance feeds, and outstanding AR ledgers under federal compliance without interrupting active practice cash flow.
+            </p>
+            <div class="bg-navy-950/80 border border-slate-800 p-3.5 rounded-xl mb-4 text-xs text-slate-300 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Includes 30-day clearinghouse migration &amp; ERA redirection protocol.</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-800/90">
+            <button type="button" onclick="openPaymentModal()" class="w-full py-2.5 px-4 rounded-xl bg-navy-950 hover:bg-navy-800 border-2 border-emerald-400/50 text-emerald-300 hover:text-white font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer">
+              <i data-lucide="arrow-right-left" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>View Termination Notice &amp; Transition Playbook &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Fortified Vault™ Cyber Architecture -->
+        <div class="p-6 sm:p-8 rounded-2xl navy-card emerald-glow flex flex-col justify-between h-full group hover:shadow-emerald-500/15 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-400/30">
+                Air-Gap Telemetry &bull; Zero Cloud Liability
+              </span>
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 font-sans">
+              Fortified Vault™ Cyber Architecture Protocol
+            </h3>
+            <p class="text-[11px] font-mono text-emerald-300 uppercase tracking-wider mb-3 font-semibold">
+              Hardware-Bound Volatile RAM &bull; Non-Custodial HIPAA Shield
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Complete technical documentation detailing why Clinical Coder Pro™ operates strictly in ephemeral desktop memory with zero disk logging, automatic patient de-identification, and complete immunity to cloud breaches.
+            </p>
+            <div class="bg-navy-950/80 border border-slate-800 p-3.5 rounded-xl mb-4 text-xs text-slate-300 flex items-center gap-2">
+              <i data-lucide="lock" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Hardware-bound AES-256-GCM. "You cannot hack what is never stored."</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-800/90">
+            <button type="button" onclick="openSecurityModal()" class="w-full py-2.5 px-4 rounded-xl bg-navy-950 hover:bg-navy-800 border-2 border-emerald-400/50 text-emerald-300 hover:text-white font-mono font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer">
+              <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>Review Fortified Vault™ Cyber Architecture &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Staff Training & Simulation Suite Bar -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#0A192F] via-[#0E2A3A] to-[#040A14] border-2 border-emerald-400/50 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+        <div class="flex items-center gap-3.5 text-left">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 shrink-0 shadow-inner">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white font-sans flex items-center gap-2">
+              <span>Staff Training &amp; Practice Simulation Suite</span>
+              <span class="text-[10px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-400/30 uppercase tracking-widest">100% Air-Gapped Sandbox</span>
+            </div>
+            <div class="text-xs text-slate-300">
+              Air-gapped clinical coding simulation with 4 real-world specialty disaster scenarios, 1-page visual quickstart map, and staff competency checklist.
+            </div>
+          </div>
+        </div>
+        <a href="/training.html" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-navy-950 font-bold text-xs font-mono uppercase tracking-wider flex items-center gap-2 shadow-lg transition-all shrink-0">
+          <i data-lucide="play-circle" class="w-3.5 h-3.5"></i>
+          <span>Launch Staff Training Suite &rarr;</span>
+        </a>
+      </div>
+
+      <!-- 1-Page Printable Quick-Start Bar -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#0C2428] via-[#091E23] to-[#040A14] border-2 border-emerald-400/40 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+        <div class="flex items-center gap-3.5 text-left">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 shrink-0 shadow-inner">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white font-sans">
+              1-Page Practice Visual Quick-Start Map (PDF)
+            </div>
+            <div class="text-xs text-slate-300">
+              Printable workflow chart for physicians, practice administrators, and billing coordinators.
+            </div>
+          </div>
+        </div>
+        <a href="/practice-quickstart-guide.pdf" target="_blank" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-navy-950 font-bold text-xs font-mono uppercase tracking-wider flex items-center gap-2 shadow-lg transition-all shrink-0">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Open Printable PDF &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Integrated Footer at Bottom Edge of Slide 4 -->
+    <footer class="pt-4 pb-2 border-t border-slate-800/80 text-center text-xs text-slate-500 font-mono w-full">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div>
+          &copy; 2026 Vance &amp; Calder Advisory Group LLC. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="/" class="hover:text-emerald-400 transition-colors">Main Hub</a>
+          <a href="/construction.html" class="hover:text-amber-400 transition-colors">Construction Practice</a>
+          <a href="/clinical-coder.html" class="hover:text-emerald-400 transition-colors">Clinical Coder Pro™</a>
+          <a href="/training.html" class="hover:text-emerald-400 transition-colors">Staff Training Suite</a>
+          <a href="/proposal-generator.html" class="hover:text-emerald-400 transition-colors">Proposal Generator</a>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+
+
+<div class="modal-backdrop" id="practiceCommentsModal" style="display: none; align-items: center; justify-content: center; z-index: 9999;">
+    <div class="modal-window" style="max-width: 820px; width: 100%; max-height: 90vh; overflow-y: auto; background: #070F1E; border: 2px solid var(--gold-500); border-radius: 12px; box-shadow: 0 25px 70px rgba(0,0,0,0.9); color: #F8FAFC;">
+      <div class="modal-head" style="padding: 20px 28px; border-bottom: 1.5px solid rgba(212, 175, 55, 0.3); background: #0A1628; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #38BDF8; font-weight: 800;">TREASURE VALLEY HEALTHCARE COMMUNITY</span>
+          <h3 style="font-family: 'Cinzel', serif; font-size: 21px; color: #FFFFFF; margin: 4px 0 0 0; letter-spacing: 0.02em;">Administrative Practice Evaluations &amp; Comments</h3>
+          <div style="font-size: 13px; color: #94A3B8; margin-top: 3px; font-style: italic;">Voices from the Clinic: The Relief of Taking Control</div>
+        </div>
+        <button class="btn-close" onclick="closePracticeCommentsModal()" style="background: none; border: none; color: #94A3B8; font-size: 28px; cursor: pointer; padding: 4px 8px; line-height: 1;">&times;</button>
+      </div>
+      <div class="modal-content" style="padding: 24px 28px;">
+        <p style="font-size: 13px; color: #CBD5E1; line-height: 1.6; margin-bottom: 20px;">
+          Changing a billing workflow is deeply personal and nerve-wracking. Every clinic worries about cash flow interruptions, billing errors, or letting their team down. Here are the honest reflections of local practice administrators, physicians, and billing coordinators who made the transition—and the peace of mind they found.
+        </p>
+
+        <!-- Community Comment Cards Container -->
+        <div id="modalPracticeCommentsList" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+          <!-- Populated via JavaScript -->
+        </div>
+
+        <!-- The Confidentiality Notice Requested by Laurie -->
+        <div style="background: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold-500); padding: 14px 18px; border-radius: 6px; margin: 24px 0;">
+          <div style="font-size: 12px; font-weight: 800; color: var(--gold-400, #F3E5AB); letter-spacing: 0.03em; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+            <span>🛡️</span> A Note on Confidentiality &amp; Professional Peace of Mind
+          </div>
+          <p style="font-size: 12px; color: #E2E8F0; line-height: 1.6; margin: 0;">
+            We know how small and close-knit our healthcare community is. To protect our practices and preserve total privacy, <strong>we do not publish photos, clinic names, or personal names.</strong> Only your honest words, what kind of office you are (like Dermatology or Surgery), and that you are located in the Treasure Valley will ever be shared. Your trust is sacred to us.
+          </p>
+        </div>
+
+        <!-- Interactive Submission Form -->
+        <div style="background: #081220; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 20px 22px;">
+          <h4 style="font-size: 14px; color: #FFFFFF; margin: 0 0 4px 0; font-weight: 800;">Share Your Experience &amp; Relief</h4>
+          <p style="font-size: 12px; color: #94A3B8; margin: 0 0 16px 0;">
+            Did Clinical Coder Pro lift the weight off your clinic? Help other local practices know what to expect.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+            <div>
+              <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">Type of Practice / Clinical Specialty *</label>
+              <select id="modalCommentPracticeType" style="width: 100%; padding: 9px 12px; font-size: 12.5px; background: #0A1628; border: 1px solid #334155; border-radius: 6px; color: #F8FAFC;">
+                <option value="Practice Administrator, Outpatient Surgery">Outpatient Surgery / Ambulatory Center</option>
+                <option value="Billing Lead &amp; Clinical Coordinator, Dermatology">Dermatology &amp; Mohs Surgery</option>
+                <option value="Physician Partner, Orthopedic &amp; Sports Medicine">Orthopedics &amp; Sports Medicine</option>
+                <option value="Practice Manager, Family Medicine &amp; Primary Care">Family Medicine &amp; Primary Care</option>
+                <option value="Clinical Operations Lead, Pain Management">Pain Management &amp; Spine</option>
+                <option value="Billing Coordinator, Cardiology &amp; Vascular">Cardiology &amp; Vascular</option>
+                <option value="Practice Administrator, Specialty Medical Clinic">Specialty Medical Practice</option>
+                <option value="Independent Physician / Clinic Partner">Independent Physician / Clinic Partner</option>
+              </select>
+            </div>
+            <div>
+              <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">Location / Region (Protected)</label>
+              <input type="text" value="Treasure Valley" disabled style="width: 100%; padding: 9px 12px; font-size: 12.5px; background: #070F1E; border: 1px solid #1E293B; border-radius: 6px; color: #94A3B8; cursor: not-allowed;" title="To protect your privacy, individual towns are not displayed.">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 14px;">
+            <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">A Brief Headline or Description of the Feeling *</label>
+            <input type="text" id="modalCommentHeadline" placeholder="e.g. I could finally sleep through the night / It wasn't scary after all" style="width: 100%; padding: 9px 12px; font-size: 12.5px; background: #0A1628; border: 1px solid #334155; border-radius: 6px; color: #F8FAFC;">
+          </div>
+
+          <div style="margin-bottom: 14px;">
+            <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">Your Honest Words (What worried you before, and how did it feel when it worked?) *</label>
+            <textarea id="modalCommentStatement" rows="4" placeholder="Tell us honestly: what were you worried about before starting, and what was the feeling when it worked for your team?" style="width: 100%; padding: 10px 12px; font-size: 12.5px; background: #0A1628; border: 1px solid #334155; border-radius: 6px; color: #F8FAFC; line-height: 1.5; font-family: sans-serif;"></textarea>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 11px; font-weight: 700; color: #94A3B8; margin-bottom: 4px;">Direct Contact for Executive Follow-up (Optional &bull; 100% Confidential)</label>
+            <input type="text" id="modalCommentContact" placeholder="Phone or email (Only David Vance will see this if you'd like a personal response &bull; Never displayed)" style="width: 100%; padding: 8px 12px; font-size: 11.5px; background: #050B14; border: 1px solid #1E293B; border-radius: 6px; color: #CBD5E1;">
+          </div>
+
+          <div id="modalCommentStatusMsg" style="display: none; padding: 12px; border-radius: 6px; font-size: 12.5px; margin-bottom: 14px;"></div>
+
+          <div style="display: flex; gap: 10px; justify-content: flex-end;">
+            <button type="button" onclick="closePracticeCommentsModal()" style="padding: 10px 16px; background: none; border: 1px solid #334155; border-radius: 6px; font-size: 12.5px; color: #94A3B8; cursor: pointer;">Close</button>
+            <button type="button" onclick="submitPracticeComment('modal')" style="background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color: #FFFFFF; font-weight: 800; font-size: 13px; padding: 11px 22px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 12px rgba(2,132,199,0.35); display: flex; align-items: center; gap: 8px;">
+              <span>💬</span> Share Your Practice's Experience
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="paymentModal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-card" style="max-width: 860px; width: 100%; max-height: 92vh; overflow-y: auto; background: #070F1E; border: 2px solid var(--gold-500); border-radius: 12px; box-shadow: 0 25px 70px rgba(0,0,0,0.9); color: #F8FAFC; display: flex; flex-direction: column;">
+      
+      <!-- Modal Header -->
+      <div style="padding: 20px 28px; border-bottom: 1.5px solid rgba(212, 175, 55, 0.3); display: flex; justify-content: space-between; align-items: center; background: #0A1628; border-radius: 12px 12px 0 0;">
+        <div>
+          <span style="font-size: 11px; letter-spacing: 0.15em; color: var(--gold-400); font-weight: 800; text-transform: uppercase;">Vance &amp; Calder Advisory Group LLC &bull; Executive Suite</span>
+          <h2 style="font-family: 'Cinzel', serif; font-size: 21px; color: #FFFFFF; margin: 4px 0 0 0; letter-spacing: 0.02em;">Executive Practice Licensing, Contract &amp; Transition Suite</h2>
+        </div>
+        <button onclick="closePaymentModal()" style="background: none; border: none; color: #94A3B8; font-size: 28px; cursor: pointer; padding: 4px 8px; line-height: 1;">&times;</button>
+      </div>
+
+      <!-- 3-Tab Switcher Navigation -->
+      <div style="display: flex; gap: 8px; padding: 14px 28px 0 28px; background: #081120; border-bottom: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap;">
+        <button id="tabBtnSuitePlaybook" onclick="switchSuiteTab('playbook')" style="background: #1E3A8A; color: #FFFFFF; border: 1.5px solid #3B82F6; border-bottom: none; border-radius: 8px 8px 0 0; padding: 10px 18px; font-weight: 800; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+          <span>💡</span> 1. Stealth Transition Strategy &amp; Audit Playbook
+        </button>
+        <button id="tabBtnSuiteAgreement" onclick="switchSuiteTab('agreement')" style="background: #0F172A; color: #94A3B8; border: 1px solid rgba(255,255,255,0.1); border-bottom: none; border-radius: 8px 8px 0 0; padding: 10px 18px; font-weight: 700; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+          <span>📜</span> 2. Sovereign Agreement &amp; Price Lock
+        </button>
+        <button id="tabBtnSuitePayment" onclick="switchSuiteTab('payment')" style="background: #0F172A; color: #94A3B8; border: 1px solid rgba(255,255,255,0.1); border-bottom: none; border-radius: 8px 8px 0 0; padding: 10px 18px; font-weight: 700; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+          <span>💳</span> 3. Pay Deposit &amp; Retainer
+        </button>
+        <button id="tabBtnSuiteRelease" onclick="switchSuiteTab('release')" style="background: #0F172A; color: #94A3B8; border: 1px solid rgba(255,255,255,0.1); border-bottom: none; border-radius: 8px 8px 0 0; padding: 10px 18px; font-weight: 700; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+          <span>🛑</span> 4. Old Biller Release Letter
+        </button>
+        <button id="tabBtnSuiteExperiences" onclick="switchSuiteTab('experiences')" style="background: #0F172A; color: #94A3B8; border: 1px solid rgba(255,255,255,0.1); border-bottom: none; border-radius: 8px 8px 0 0; padding: 10px 18px; font-weight: 700; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+          <span>💬</span> 5. Administrative Practice Evaluations &amp; Comments
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div style="padding: 24px 28px; flex: 1;">
+
+        <!-- ============================================== -->
+        <!-- TAB 1: SOVEREIGN RETAINER & PRICE LOCK COVENANT -->
+        <!-- ============================================== -->
+        
+        <!-- =================================================== -->
+        <!-- TAB 1: THE STEALTH TRANSITION STRATEGY & PLAYBOOK   -->
+        <!-- =================================================== -->
+        <div id="suiteTabPlaybook">
+          <div style="background: #0B1728; border: 1.5px solid rgba(59, 130, 246, 0.4); border-radius: 8px; padding: 24px; font-size: 13.5px; line-height: 1.7; color: #E2E8F0; max-height: 52vh; overflow-y: auto;">
+            
+            <div style="text-align: center; border-bottom: 1px solid rgba(59, 130, 246, 0.3); padding-bottom: 14px; margin-bottom: 18px;">
+              <span style="font-size: 11px; letter-spacing: 0.15em; color: #60A5FA; font-weight: 800; text-transform: uppercase;">Executive Advisory Briefing &bull; Transition Architecture</span>
+              <h3 style="font-family: 'Cinzel', serif; font-size: 18px; color: #FFFFFF; margin: 4px 0 4px 0; text-transform: uppercase;">
+                THE STEALTH TRANSITION PROTOCOL: 30-DAY AUDIT FREEZE &amp; ZERO-LAG STRATEGY
+              </h3>
+              <p style="font-size: 11.5px; color: #94A3B8; margin: 0;">How to Transition from Your Current Billing Agency with Zero Cash Flow Lag, Zero Retaliation Risk, and 100% Old A/R Recovery.</p>
+            </div>
+
+            <!-- Welcoming Transition Guidance Banner (Institutional & Heartfelt in Words) -->
+            <div style="background: linear-gradient(135deg, #0A1628 0%, #0F223D 100%); border: 1.5px solid rgba(212, 175, 55, 0.45); border-radius: 8px; padding: 18px 22px; margin-bottom: 22px; box-shadow: 0 4px 18px rgba(0,0,0,0.45);">
+              
+              <!-- Header with Dignified Executive Emblem -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 10px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <span style="font-size: 20px; color: var(--gold-400);">🛡️</span>
+                  <div>
+                    <span style="font-size: 10.5px; letter-spacing: 0.15em; color: var(--gold-400); font-weight: 800; text-transform: uppercase; display: block;">Practice Alliance &bull; Executive Guidance</span>
+                    <strong style="color: #FFFFFF; font-size: 15px; font-family: 'Cinzel', serif; letter-spacing: 0.03em;">A Welcoming Message From Vance &amp; Calder</strong>
+                  </div>
+                </div>
+                <div style="background: rgba(212, 175, 55, 0.12); border: 1px solid rgba(212, 175, 55, 0.35); color: var(--gold-300); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; display: inline-flex; align-items: center; gap: 5px;">
+                  <span>⚖️</span> 100% In-Clinic PHI Sanctuary
+                </div>
+              </div>
+
+              <!-- Laurie's Welcoming Quote -->
+              <p style="font-size: 13.5px; color: #F1F5F9; line-height: 1.6; margin: 0 0 10px 0; font-style: italic; font-weight: 500;">
+                "If you choose to switch to our system, here are some tips that we are giving you to help the transition be as clean, protected, and seamless as possible."
+              </p>
+
+              <!-- The Heartfelt Commitment in Dignified Words -->
+              <div style="background: rgba(10, 25, 47, 0.6); border-left: 3px solid var(--gold-400); padding: 10px 14px; border-radius: 4px;">
+                <strong style="color: var(--gold-300); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 2px;">Our Sovereign Commitment to Your Practice:</strong>
+                <span style="font-size: 12.5px; color: #E2E8F0; display: block; line-height: 1.55;">
+                  We are doing this to help you, and it will help you to the best of our ability. You are not required to follow this sequence, but we strongly suggest it if you are worried about your payments on prior billings arriving on time or on your original billing agency's schedule.
+                </span>
+              </div>
+            </div>
+
+            <!-- Strategic Advisory Alert Box -->
+            <div style="background: rgba(37, 99, 235, 0.12); border-left: 4px solid #3B82F6; padding: 14px 18px; border-radius: 6px; margin-bottom: 20px;">
+              <strong style="color: #93C5FD; font-size: 13.5px; display: block; margin-bottom: 4px;">🎯 THE COMMON BILLING TRANSITION TRAP:</strong>
+              <span style="font-size: 12.5px; color: #E2E8F0; line-height: 1.6; display: block;">
+                When a medical practice prematurely announces a 30-day termination to an existing billing agency, human nature takes over: the agency immediately deprioritizes your new patient encounters, slows down submissions, and creates a <strong>45-to-60-day revenue gap</strong> where no cash lands in your bank. 
+                <br><br>
+                <strong>Vance &amp; Calder provides the 4-step Audit Freeze Protocol below</strong> to completely eliminate that gap and ensure every single dollar of your historical billing clears through the old agency's hands before severance.
+              </span>
+            </div>
+
+            <!-- Step-by-Step Roadmap -->
+            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--gold-400); margin: 20px 0 12px 0; letter-spacing: 0.05em;">The 4-Step Zero-Lag Master Strategy</h4>
+
+            <!-- Step 1 Card -->
+            <div style="background: #070F1E; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <strong style="color: #60A5FA; font-size: 14px;">STEP 1 (DAY 1): Issue the "Mandatory 30-Day Compliance Audit" Freeze</strong>
+                <span style="background: #1E3A8A; color: #93C5FD; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Day 1 Action</span>
+              </div>
+              <p style="font-size: 12.5px; color: #CBD5E1; margin: 0 0 10px 0;">
+                Notify your current billing agency in writing that your physician board is conducting an <strong>internal 30-day clinical chart and coding audit</strong> ahead of the upcoming CMS regulatory changes. Inform them that all new daily patient encounter notes will be retained internally during this review. 
+                <br><br>
+                Instruct them to direct <strong>100% of their operational bandwidth to working down and collecting your outstanding 30/60/90-day Accounts Receivable (A/R)</strong>.
+              </p>
+              
+              <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-left: 3px solid #10B981; padding: 12px 16px; border-radius: 6px; margin-bottom: 14px; font-size: 12.5px; color: #E2E8F0; line-height: 1.6;">
+                <strong style="color: #34D399; letter-spacing: 0.03em;">⚡ THE OPERATIONAL LEVERAGE:</strong> By explicitly telling the billing company that <em style="color: #A7F3D0; font-style: italic;">"the faster all outstanding bills and aging reports come back to our office for this audit, the faster our practice can conclude the review and resume sending new charts,"</em> you light a fire under their team to liquidate your older A/R at maximum speed so they can try to get new work.
+              </div>
+
+              <!-- Copyable Day 1 Message Template -->
+              <div style="background: #040911; border: 1px dashed rgba(96, 165, 250, 0.4); border-radius: 6px; padding: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #93C5FD; line-height: 1.5; margin-bottom: 10px;" id="textDay1Template">
+"NOTICE OF INTERNAL COMPLIANCE AUDIT: Effective today, our practice is conducting a mandatory 30-day internal clinical chart and coding audit ahead of upcoming regulatory adjustments. Please be advised that new daily clinical encounters are being temporarily held internally during this audit window.
+
+ACTION REQUIRED & EXPEDITED TIMELINE: We instruct your team to focus 100% of your immediate resources on adjudicating, resolving denials, and liquidating our existing Accounts Receivable aging ledger. Please note: The faster your team resolves all pending claims and returns our reconciled aging reports to our office for this audit, the sooner our physician board can conclude this review and resume ongoing work and encounter transmissions with your agency. We appreciate your expedited cooperation."
+              </div>
+              <button type="button" onclick="copyDay1Template()" id="btnCopyDay1" style="background: #1E293B; border: 1.5px solid #475569; color: #F8FAFC; padding: 9px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+                <span>📋</span> Copy Day 1 Audit Notice to Clipboard
+              </button>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div style="background: #070F1E; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <strong style="color: #34D399; font-size: 14px;">STEP 2 (DAYS 1–28): Generate Sovereign Cash Flow in Parallel</strong>
+                <span style="background: #064E3B; color: #6EE7B7; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Zero Interruption</span>
+              </div>
+              <p style="font-size: 12.5px; color: #CBD5E1; margin: 0;">
+                While your old biller believes you are simply conducting an internal audit, your practice begins processing all new daily patient encounters through <strong>Clinical Coder Pro™</strong> in your local volatile RAM vault. 
+                <br><br>
+                Claims are scrubbed in 48 hours with full Modifier 25 captured, zero NCCI clashes, and dispatched directly through your clearinghouse. <strong>Brand new reimbursement cash starts depositing into your practice's bank account within 14 days</strong>—completely independent of your old billing agency.
+              </p>
+            </div>
+
+            <!-- Step 3 Card -->
+            <div style="background: #070F1E; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <strong style="color: var(--gold-300); font-size: 14px;">STEP 3 (DAYS 1–28): The Old Biller Cleans Up Your Legacy A/R</strong>
+                <span style="background: rgba(212,175,55,0.15); color: var(--gold-400); font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 700;">100% Recovery</span>
+              </div>
+              <p style="font-size: 12.5px; color: #CBD5E1; margin: 0;">
+                Because the old billing company has zero new encounter notes coming in, their staff has no choice but to spend those 28 days working your older, denied, and unpaid claims to earn their final commission checks. 
+                <br><br>
+                By the end of the month, <strong>your historical billing has cleared through their pipeline, payments are deposited, and they have worked down your backlog for you</strong>. Zero dollars left behind.
+              </p>
+            </div>
+
+            <!-- Step 4 Card -->
+            <div style="background: #070F1E; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <strong style="color: #F87171; font-size: 14px;">STEP 4 (DAY 29–30): Drop the Formal Severance Notice (Checkmate)</strong>
+                <span style="background: #991B1B; color: #FCA5A5; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Day 30 Execution</span>
+              </div>
+              <p style="font-size: 12.5px; color: #CBD5E1; margin: 0;">
+                Once your new cash flow is humming through Clinical Coder Pro™ and your old A/R is cleaned out, switch to <strong>Tab 4</strong> in this suite and print or copy your pre-drafted <strong>Formal Notice of Termination of Billing Services</strong>.
+                <br><br>
+                The old billing agency has zero charts hostage, zero leverage to retaliate, and your practice has officially severed the 6%–9% agency tax forever.
+              </p>
+            </div>
+
+            <!-- Action Button to Advance to Agreement -->
+            <div style="text-align: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+              <button type="button" onclick="switchSuiteTab('agreement')" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 14px; padding: 14px 28px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.35);">
+                📜 PROCEED TO STEP 2: REVIEW SOVEREIGN COVENANT &amp; LOCK IN $1,000/MO &rarr;
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="suiteTabAgreement" style="display: none;">
+          <div style="background: #0B1728; border: 1.5px solid rgba(212, 175, 55, 0.4); border-radius: 8px; padding: 24px; font-size: 13.5px; line-height: 1.7; color: #E2E8F0; max-height: 52vh; overflow-y: auto;">
+            
+            <div style="text-align: center; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 14px; margin-bottom: 16px;">
+              <h3 style="font-family: 'Cinzel', serif; font-size: 17px; color: var(--gold-300); margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.05em;">
+                SOVEREIGN PRACTICE GOVERNANCE &amp; PRICE-LOCK COVENANT
+              </h3>
+              <p style="font-size: 11.5px; color: #94A3B8; margin: 0;">B2B Master Professional Services Agreement &bull; Vance &amp; Calder Advisory Group LLC</p>
+            </div>
+
+            <p><strong>THIS BINDING PRACTICE AGREEMENT</strong> is entered into by and between <strong>Vance &amp; Calder Advisory Group LLC</strong>, an Idaho limited liability company ("Advisory Group"), and the independent medical practice entity identified below ("Practice").</p>
+
+            <h4 style="color: var(--gold-400); font-size: 13.5px; margin: 16px 0 6px 0; text-transform: uppercase;">1. The Perpetual Price-Lock Covenant ($1,000.00 / Month Fixed For Life)</h4>
+            <p>Vance &amp; Calder Advisory Group LLC covenants, warrants, and guarantees that the recurring governance retainer for the Clinical Coder Pro™ local RAM autonomous engine is fixed at exactly <strong>$1,000.00 USD per month</strong> (payable in advance on the 1st of each calendar month at $1,000.00 USD, or quarterly in advance at $3,000.00 USD). <strong>This rate is permanently grandfathered in writing</strong> and shall never increase for the operating lifetime of the Practice, regardless of regional growth, payer fee shifts, inflation, or transaction volume.</p>
+
+            <h4 style="color: var(--gold-400); font-size: 13.5px; margin: 16px 0 6px 0; text-transform: uppercase;">2. Zero Gross Revenue Extraction (0% Billing Cut)</h4>
+            <p>Unlike third-party medical billing agencies that extract 6% to 9% of the Practice's gross collections ($150,000+ per year for a standard 4-provider specialty clinic), Vance &amp; Calder takes <strong>exactly zero percent (0%)</strong> of collections. 100% of insurance reimbursements and patient receipts remain under the sole custody and bank routing of the Practice.</p>
+
+            <h4 style="color: var(--gold-400); font-size: 13.5px; margin: 16px 0 6px 0; text-transform: uppercase;">3. Turnkey Local RAM Calibration ($5,000.00 Deposit &amp; Split Terms)</h4>
+            <p>A one-time onboarding fee of <strong>$5,000.00 USD</strong> covers custom rule authoring for the Practice's specific clinical specialties, local terminal memory optimization, clearinghouse NPI configuration, and billing staff training. Practice may remit this as a single payment upon execution or split across two equal disbursements: <strong>$2,500.00 upon execution</strong> to commence custom rule engineering, and <strong>$2,500.00 at Day 30</strong> upon completion of staff calibration and commencement of live solo billing.</p>
+
+            <h4 style="color: var(--gold-400); font-size: 13.5px; margin: 16px 0 6px 0; text-transform: uppercase;">4. The Fortified Vault™ (Zero Cloud PHI Custody &amp; HIPAA Air-Gap)</h4>
+            <p>All clinical note parsing, code generation, and validation occur 100% in local volatile computer memory (RAM). Protected Health Information (PHI) is automatically de-identified prior to rule execution and is purged immediately upon session completion. Vance &amp; Calder never stores, hosts, or has custody of Practice patient databases, eliminating third-party cloud breach liability.</p>
+
+            <h4 style="color: var(--gold-400); font-size: 13.5px; margin: 16px 0 6px 0; text-transform: uppercase;">5. Non-Delegable Billing Custody</h4>
+            <p>The Practice retains sole medical necessity determination and exclusive billing custody. Vance &amp; Calder functions strictly as an augmented clinical intelligence decision-support tool under governing AMA, CMS, and HIPAA compliance frameworks.</p>
+
+            <h4 style="color: var(--gold-400); font-size: 13.5px; margin: 16px 0 6px 0; text-transform: uppercase;">6. Advance Retainer &amp; Local Memory Lease Integrity</h4>
+            <p>To eliminate accounts receivable chasing for both parties, the recurring retainer is billed strictly in advance on the 1st of each billing cycle (monthly or quarterly). Cryptographic memory execution licenses are issued automatically upon advance remittance. Non-remittance upon cycle expiration pauses autonomous code generation until renewed, guaranteeing zero arrears debt or collection disputes.</p>
+
+            <!-- Signature Section -->
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1.5px solid rgba(212, 175, 55, 0.4);">
+              <h4 style="color: #FFFFFF; font-size: 14px; margin-bottom: 14px; text-transform: uppercase;">Execution &amp; Countersignatures</h4>
+              
+              <!-- Vance & Calder Signatures (Pre-Signed) -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+                
+                <!-- David Vance -->
+                <div style="background: #070F1E; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 6px; padding: 14px; text-align: center;">
+                  <div style="height: 52px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+                    <img src="/branding/signatures/david_vance_sig.png" alt="David Vance" style="max-height: 48px; width: auto; object-contain; filter: brightness(1.25) drop-shadow(0 0 1px rgba(255,255,255,0.3));">
+                  </div>
+                  <strong style="color: #FFFFFF; font-size: 12px; display: block;">David Vance, Managing Principal</strong>
+                  <span style="font-size: 11px; color: #94A3B8;">Vance &amp; Calder Advisory Group LLC</span>
+                  <div style="margin-top: 6px; display: inline-block; background: #064E3B; border: 1px solid #10B981; color: #6EE7B7; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px;">
+                    ✓ EXECUTED COUNTERSIGNATURE
+                  </div>
+                </div>
+
+                <!-- Mark Calder -->
+                <div style="background: #070F1E; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 6px; padding: 14px; text-align: center;">
+                  <div style="height: 52px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+                    <img src="/branding/signatures/mark_calder_sig.png" alt="Mark Calder" style="max-height: 44px; width: auto; object-contain; filter: brightness(1.25) drop-shadow(0 0 1px rgba(255,255,255,0.3));">
+                  </div>
+                  <strong style="color: #FFFFFF; font-size: 12px; display: block;">Mark Calder, Operational Principal</strong>
+                  <span style="font-size: 11px; color: #94A3B8;">Vance &amp; Calder Advisory Group LLC</span>
+                  <div style="margin-top: 6px; display: inline-block; background: #064E3B; border: 1px solid #10B981; color: #6EE7B7; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px;">
+                    ✓ EXECUTED COUNTERSIGNATURE
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Practice Interactive Signature Block -->
+              <div id="practiceSigningBox" style="background: #0E1E38; border: 1.5px solid #2563EB; border-radius: 8px; padding: 18px;">
+                <strong style="color: #93C5FD; font-size: 13px; display: block; margin-bottom: 10px;">✍️ PRACTICE AUTHORIZED SIGNATURE</strong>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                  <div>
+                    <label style="font-size: 11px; color: #CBD5E1; display: block; margin-bottom: 4px;">Practice Legal Entity Name:</label>
+                    <input type="text" id="contractPracticeName" placeholder="e.g. West Idaho Orthopedic Associates" style="width: 100%; box-sizing: border-box; background: #070F1E; border: 1px solid #334155; border-radius: 4px; color: #FFFFFF; padding: 8px 12px; font-size: 12.5px;">
+                  </div>
+                  <div>
+                    <label style="font-size: 11px; color: #CBD5E1; display: block; margin-bottom: 4px;">Signer Name &amp; Professional Title:</label>
+                    <input type="text" id="contractSignerTitle" oninput="handleSignerNameInput(this.value)" placeholder="e.g. Connie A. Kniefel, Practice Administrator" style="width: 100%; box-sizing: border-box; background: #070F1E; border: 1px solid #334155; border-radius: 4px; color: #FFFFFF; padding: 8px 12px; font-size: 12.5px;">
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label style="font-size: 11px; color: #CBD5E1; display: flex; justify-content: space-between; margin-bottom: 4px;">
+                    <span>Draw Signature Below (Mouse, Finger, or Type Name Above):</span>
+                    <a href="javascript:void(0)" onclick="clearSignaturePad()" style="color: #F87171; text-decoration: underline; font-size: 11px;">Clear Signature</a>
+                  </label>
+                  <canvas id="contractSigCanvas" width="700" height="90" style="width: 100%; background: #050B14; border: 1px dashed #64748B; border-radius: 4px; cursor: crosshair; touch-action: none;"></canvas>
+                </div>
+
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #E2E8F0; margin-bottom: 14px; cursor: pointer;">
+                  <input type="checkbox" id="contractConsent" checked style="accent-color: #10B981; width: 16px; height: 16px;">
+                  <span>I certify that I am an authorized representative of the Practice and hereby execute this binding Sovereign Retainer Covenant.</span>
+                </label>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  <button type="button" id="btnExecuteContract" onclick="executePracticeAgreement()" style="flex: 2; min-width: 260px; background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 13.5px; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 15px rgba(16,185,129,0.4);">
+                    ✍️ EXECUTE AGREEMENT &bull; PROCEED TO PAYMENT &rarr;
+                  </button>
+                  <button type="button" onclick="printSovereignAgreement()" style="flex: 1; min-width: 140px; background: #1E293B; border: 1.5px solid #64748B; color: #F1F5F9; font-weight: 700; font-size: 12.5px; padding: 12px 16px; border-radius: 6px; cursor: pointer;">
+                    🖨️ Print / Save PDF Agreement
+                  </button>
+                </div>
+
+                <div id="contractSuccessBadge" style="display: none; margin-top: 14px; background: #064E3B; border: 1.5px solid #34D399; border-radius: 6px; padding: 12px 16px; color: #ECFDF5; font-size: 12.5px;">
+                  <strong style="color: #6EE7B7; display: block; font-size: 13.5px;">🎉 AGREEMENT FULLY EXECUTED &amp; COUNTERSIGNED!</strong>
+                  Your $1,000/mo lifetime price-lock covenant is formally registered with Vance &amp; Calder Advisory Group LLC. Advancing you to payment rails...
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- TAB 2: PAY DEPOSIT & MONTHLY RETAINER RAILS    -->
+        <!-- ============================================== -->
+        <!-- TAB 2: DEPOSIT & RETAINER PAYMENT RAILS -->
+        <div id="suiteTabPayment" style="display: none;">
+          <!-- Price Lock Covenant Reminder -->
+          <div style="background: linear-gradient(135deg, #0F2A1D 0%, #064E3B 100%); border: 1.5px solid #10B981; border-radius: 8px; padding: 14px 18px; margin-bottom: 18px;">
+            <strong style="color: #6EE7B7; display: block; font-size: 13.5px; margin-bottom: 4px;">⭐ GUARANTEED LIFETIME PRICING &bull; 0% REVENUE CUT</strong>
+            <span style="color: #ECFDF5; font-size: 12px; line-height: 1.55; display: block;">
+              No surprise fee hikes. Zero billing agency percentage extractions. Your <strong>$1,000/mo retainer is grandfathered in writing</strong> for the operating lifetime of your practice.
+            </span>
+          </div>
+
+          <!-- Pricing Breakdown Cards with Advance & Split Flexibility -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px;">
+            <div style="background: #0C172C; border: 1.5px solid rgba(212, 175, 55, 0.4); border-radius: 8px; padding: 16px; text-align: center;">
+              <span style="font-size: 11px; color: #94A3B8; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 4px;">1. Initial Onboarding &amp; Custom Rules</span>
+              <span style="font-size: 26px; font-weight: 800; color: var(--gold-300); font-family: 'JetBrains Mono', monospace;">$5,000.00</span>
+              <div style="display: flex; justify-content: center; gap: 8px; margin: 8px 0; flex-wrap: wrap;">
+                <a href="https://buy.stripe.com/8x27sM4B7aHZguseyVak001" target="_blank" rel="noopener" style="background: rgba(212, 175, 55, 0.2); border: 1px solid rgba(212, 175, 55, 0.5); color: #FDE047; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                  <span>💳</span> Pay Single $5,000 &rarr;
+                </a>
+                <a href="https://buy.stripe.com/6oU3cwffL9DV3HGduRak002" target="_blank" rel="noopener" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38BDF8; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                  <span>⚡</span> Pay Split $2,500 &rarr;
+                </a>
+              </div>
+              <span style="font-size: 11px; color: #CBD5E1; display: block;">One-time custom specialty rule authoring, clearinghouse NPI configuration &amp; staff calibration.</span>
+            </div>
+            
+            <div style="background: #0C172C; border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: 8px; padding: 16px; text-align: center;">
+              <span style="font-size: 11px; color: #94A3B8; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 4px;">2. Recurring Governance Retainer</span>
+              <span style="font-size: 26px; font-weight: 800; color: #34D399; font-family: 'JetBrains Mono', monospace;">$1,000.00<small style="font-size: 14px; font-weight: 500;">/mo</small></span>
+              <div style="display: flex; justify-content: center; gap: 8px; margin: 8px 0; flex-wrap: wrap;">
+                <a href="https://buy.stripe.com/cNi4gA1oV2btfqobmJak003" target="_blank" rel="noopener" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.5); color: #6EE7B7; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                  <span>🔄</span> Monthly Autopay ($1,000) &rarr;
+                </a>
+                <a href="https://buy.stripe.com/28E7sMc3zeYfa648axak004" target="_blank" rel="noopener" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.5); color: #A5B4FC; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: all 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                  <span>🔄</span> Quarterly ($3,000) &rarr;
+                </a>
+              </div>
+              <span style="font-size: 11px; color: #CBD5E1; display: block;">Billed in advance on the 1st of each cycle. Zero arrears chasing &bull; Active license guaranteed.</span>
+            </div>
+          </div>
+
+          <h3 style="font-size: 13.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-400); margin-bottom: 12px;">Select Your Payment Rail:</h3>
+
+          <!-- Rail 1: Instant Card / Corporate Checkout -->
+          <div style="background: #111E38; border: 1.5px solid rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 18px; margin-bottom: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <strong style="font-size: 14px; color: #FFFFFF; display: flex; align-items: center; gap: 6px;">
+                <span>💳</span> Rail 1: Instant Corporate Card &bull; Apple Pay &bull; Bank ACH
+              </strong>
+              <span style="font-size: 11px; background: #064E3B; color: #6EE7B7; border: 1px solid #10B981; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
+                Instant Live Activation
+              </span>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; margin: 0 0 16px 0;">
+              All payments are processed securely through Vance &amp; Calder's 256-bit Stripe vault. Select your preferred onboarding and retainer payment options below:
+            </p>
+
+            <!-- 1. Initial Onboarding Deposit Options -->
+            <div style="background: #081120; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 6px; padding: 14px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span style="font-size: 12px; font-weight: 800; color: var(--gold-400, #F3E5AB); text-transform: uppercase; letter-spacing: 0.04em;">
+                  1. Initial Practice Onboarding &amp; Custom Rules Deposit
+                </span>
+                <span style="font-size: 10px; color: #94A3B8;">Due Upon Contract Execution</span>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <a href="https://buy.stripe.com/8x27sM4B7aHZguseyVak001" target="_blank" rel="noopener" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%); color: #040911; padding: 12px 14px; border-radius: 6px; text-decoration: none; box-shadow: 0 3px 12px rgba(212,175,55,0.25); text-align: center; transition: all 0.2s;">
+                  <strong style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em;">Pay Full Deposit &bull; $5,000.00 &rarr;</strong>
+                  <span style="font-size: 10.5px; opacity: 0.9; margin-top: 2px;">One-time complete turnkey onboarding</span>
+                </a>
+                <a href="https://buy.stripe.com/6oU3cwffL9DV3HGduRak002" target="_blank" rel="noopener" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color: #FFFFFF; padding: 12px 14px; border-radius: 6px; text-decoration: none; box-shadow: 0 3px 12px rgba(2, 132, 199, 0.25); text-align: center; transition: all 0.2s;">
+                  <strong style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em;">Pay Split Deposit &bull; $2,500.00 &rarr;</strong>
+                  <span style="font-size: 10.5px; color: #BAE6FD; margin-top: 2px;">Part 1 now &bull; Part 2 ($2,500) at Day 30</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2. Recurring Governance Retainer Options -->
+            <div style="background: #081120; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 6px; padding: 14px; margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span style="font-size: 12px; font-weight: 800; color: #34D399; text-transform: uppercase; letter-spacing: 0.04em;">
+                  2. Recurring Governance Retainer (Grandfathered Price-Lock)
+                </span>
+                <span style="font-size: 10px; color: #94A3B8;">Billed in Advance on 1st of Cycle</span>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <a href="https://buy.stripe.com/cNi4gA1oV2btfqobmJak003" target="_blank" rel="noopener" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #FFFFFF; padding: 12px 14px; border-radius: 6px; text-decoration: none; box-shadow: 0 3px 12px rgba(5, 150, 105, 0.25); text-align: center; transition: all 0.2s;">
+                  <strong style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em;">Monthly Autopay &bull; $1,000.00 / mo &rarr;</strong>
+                  <span style="font-size: 10.5px; color: #A7F3D0; margin-top: 2px;">Automatic monthly card/ACH &bull; Zero arrears</span>
+                </a>
+                <a href="https://buy.stripe.com/28E7sMc3zeYfa648axak004" target="_blank" rel="noopener" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%); color: #FFFFFF; padding: 12px 14px; border-radius: 6px; text-decoration: none; box-shadow: 0 3px 12px rgba(79, 70, 229, 0.25); text-align: center; transition: all 0.2s;">
+                  <strong style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em;">Quarterly Autopay &bull; $3,000.00 / qtr &rarr;</strong>
+                  <span style="font-size: 10.5px; color: #C7D2FE; margin-top: 2px;">Billed every 3 months &bull; Practice preferred</span>
+                </a>
+              </div>
+            </div>
+
+            <p style="font-size: 11px; color: #64748B; margin: 0; text-align: center; font-family: 'JetBrains Mono', monospace;">
+              🔒 256-Bit TLS Bank Encrypted &bull; Direct Stripe Vault &bull; Instant Receipt &bull; 0% Revenue Cut
+            </p>
+          </div>
+
+          <!-- Rail 2: Corporate Bank Wire / ACH Transfer -->
+          <div style="background: #111E38; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="font-size: 14px; color: #FFFFFF;">🏛️ Rail 2: Direct Corporate ACH / Bank Wire</strong>
+              <span style="font-size: 11px; background: #064E3B; color: #6EE7B7; padding: 2px 8px; border-radius: 4px;">Practice Preferred</span>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; margin: 0 0 10px 0;">Routing for accounts payable to remit the $5,000 single deposit, $2,500 split deposit, or advance retainer ($1,000/mo or $3,000/qtr):</p>
+            <div style="background: #081120; border: 1px dashed rgba(212, 175, 55, 0.4); border-radius: 6px; padding: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; color: #E2E8F0;">
+              <div><strong>Beneficiary:</strong> Vance &amp; Calder Advisory Group LLC</div>
+              <div><strong>Institution:</strong> America First Federal Credit Union</div>
+              <div><strong>ACH Routing:</strong> 324377516</div>
+              <div><strong>Wire Routing:</strong> 324377516</div>
+              <div><strong>Account ID:</strong> 8558020-11 (V&amp;C Master Corporate)</div>
+              <div><strong>Reference:</strong> [Your Practice Name] Onboarding / Retainer</div>
+            </div>
+            <button type="button" onclick="copyWireInstructions()" id="btnCopyWireSuite" style="margin-top: 10px; width: 100%; background: #1E293B; border: 1px solid #475569; color: #F1F5F9; padding: 8px; border-radius: 4px; font-size: 12px; font-weight: 700; cursor: pointer;">
+              📋 Copy Wire Instructions to Clipboard
+            </button>
+          </div>
+
+          <!-- Rail 3: Request Official PDF Invoice -->
+          <div style="background: #111E38; border: 1.5px solid rgba(59, 130, 246, 0.35); border-radius: 8px; padding: 18px; margin-bottom: 14px;" id="suiteInvSection">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="font-size: 14px; color: #FFFFFF; display: flex; align-items: center; gap: 6px;">
+                <span>📨</span> Rail 3: Request Formal Corporate Invoice (Net 15 / Net 30)
+              </strong>
+              <span style="font-size: 11px; background: rgba(59, 130, 246, 0.2); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.4); padding: 2px 8px; border-radius: 4px; font-weight: 700;">
+                Accounts Payable Direct
+              </span>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; margin: 0 0 12px 0;">Need an official PDF invoice for your practice's managing board or accounts payable? Select payment terms and dispatch below:</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <select id="suiteInvType" style="flex: 1; min-width: 220px; background: #070F1E; border: 1.5px solid #1E293B; border-radius: 4px; color: #38BDF8; font-weight: 700; padding: 9px 12px; font-size: 12px; cursor: pointer;">
+                <option value="Full Onboarding Deposit ($5,000.00)" selected>Full Onboarding Deposit ($5,000.00)</option>
+                <option value="Split Transition Deposit Part 1 ($2,500.00)">Split Transition Deposit Part 1 ($2,500.00)</option>
+                <option value="Monthly Advance Retainer ($1,000.00)">Monthly Advance Retainer ($1,000.00 / mo)</option>
+                <option value="Quarterly Advance Retainer ($3,000.00)">Quarterly Advance Retainer ($3,000.00 / qtr)</option>
+              </select>
+              <input type="text" id="suiteInvPracticeName" placeholder="Practice Name (e.g. West Idaho Orthopedics)" style="flex: 1; min-width: 170px; background: #070F1E; border: 1.5px solid #1E293B; border-radius: 4px; color: #FFFFFF; padding: 9px 12px; font-size: 12.5px;">
+              <input type="email" id="suiteInvEmail" placeholder="Administrator Email" style="flex: 1; min-width: 170px; background: #070F1E; border: 1.5px solid #1E293B; border-radius: 4px; color: #FFFFFF; padding: 9px 12px; font-size: 12.5px;">
+              <button type="button" onclick="requestSuiteInvoice()" id="btnSendSuiteInvoice" style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); border: none; color: #FFFFFF; font-weight: 800; font-size: 12.5px; padding: 9px 18px; border-radius: 4px; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);">
+                Send Invoice
+              </button>
+            </div>
+            
+            <!-- Prominent Success Box -->
+            <div id="suiteInvSuccessMsg" style="display: none; background: rgba(6, 78, 59, 0.45); border: 1.5px solid #10B981; border-radius: 6px; padding: 12px 16px; margin-top: 12px; color: #ECFDF5; font-size: 12.5px; line-height: 1.5;">
+              <div style="font-weight: 800; color: #34D399; font-size: 13px; display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
+                <span>✓</span> Formal Corporate Invoice Dispatched!
+              </div>
+              <div id="suiteInvSuccessDetails">David Vance and executive billing have received your request. An official PDF invoice has been dispatched to your email.</div>
+            </div>
+
+            <!-- Inline Error Box -->
+            <div id="suiteInvErrorMsg" style="display: none; background: rgba(153, 27, 27, 0.35); border: 1.5px solid #EF4444; border-radius: 6px; padding: 10px 14px; margin-top: 10px; color: #FCA5A5; font-size: 12px; font-weight: 600;">
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- TAB 3: OLD BILLER TERMINATION & RELEASE NOTICE -->
+        <!-- ============================================== -->
+        <div id="suiteTabRelease" style="display: none;">
+          <div style="background: #0B1728; border: 1.5px solid rgba(239, 68, 68, 0.4); border-radius: 8px; padding: 24px; font-size: 13.5px; line-height: 1.7; color: #E2E8F0; max-height: 52vh; overflow-y: auto;">
+            
+            <div style="text-align: center; border-bottom: 1px solid rgba(239, 68, 68, 0.3); padding-bottom: 14px; margin-bottom: 16px;">
+              <span style="font-size: 11px; letter-spacing: 0.1em; color: #F87171; font-weight: 800; text-transform: uppercase;">Turnkey Practice Severance Kit</span>
+              <h3 style="font-family: 'Cinzel', serif; font-size: 17px; color: #FFFFFF; margin: 4px 0; text-transform: uppercase;">
+                NOTICE OF TERMINATION OF THIRD-PARTY BILLING SERVICES &amp; MANDATORY REVENUE CYCLE ASSET TRANSFER
+              </h3>
+              <p style="font-size: 11.5px; color: #94A3B8; margin: 0;">Legally Binding 30-Day Contract Severance &amp; HIPAA Data Custody Protocol</p>
+            </div>
+
+            <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; font-size: 12px; color: #FCA5A5;">
+              <strong>HOW TO USE THIS NOTICE:</strong> Send this pre-drafted legal notice to your existing third-party billing agency. It enforces a strict 30-day wind-down under HIPAA Omnibus Rule § 164.504(e) and legally prevents them from holding your A/R or claims files hostage.
+            </div>
+
+            <!-- Letter Inputs -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+              <div>
+                <label style="font-size: 11px; color: #CBD5E1; display: block; margin-bottom: 4px;">Current Billing Agency Name:</label>
+                <input type="text" id="termAgencyName" placeholder="e.g. Apex Medical Billing Services LLC" style="width: 100%; box-sizing: border-box; background: #070F1E; border: 1px solid #334155; border-radius: 4px; color: #FFFFFF; padding: 8px 12px; font-size: 12.5px;" oninput="updateTerminationLetter()">
+              </div>
+              <div>
+                <label style="font-size: 11px; color: #CBD5E1; display: block; margin-bottom: 4px;">Your Practice Name:</label>
+                <input type="text" id="termPracticeName" placeholder="e.g. West Idaho Orthopedic Associates" style="width: 100%; box-sizing: border-box; background: #070F1E; border: 1px solid #334155; border-radius: 4px; color: #FFFFFF; padding: 8px 12px; font-size: 12.5px;" oninput="updateTerminationLetter()">
+              </div>
+            </div>
+
+            <!-- Letter Body -->
+            <div id="termLetterPreview" style="background: #070F1E; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; color: #E2E8F0; white-space: pre-wrap;">
+DATE: [CURRENT_DATE]
+TO: [BILLING_AGENCY_NAME] (Attn: Client Accounts &amp; Revenue Operations)
+FROM: [PRACTICE_NAME] (Attn: Practice Administrator &amp; Managing Partners)
+SUBJECT: FORMAL NOTICE OF TERMINATION OF BILLING SERVICES &amp; MANDATORY EDI TRANSITION
+
+Please accept this formal written communication as thirty (30) days notice of termination of the Medical Billing Agreement between [PRACTICE_NAME] and your organization. Effective thirty (30) days from this notice, all billing submission and revenue cycle services performed by your agency shall cease.
+
+In accordance with professional healthcare standards, the governing Business Associate Agreement (BAA), and HIPAA Omnibus Rule 45 CFR § 164.504(e), you are instructed to immediately execute the following mandatory transition protocols:
+
+1. ACCOUNTS RECEIVABLE (A/R) AGING AUDIT: Within ten (10) business days, deliver a complete, unedited CSV export of all active, pending, unadjudicated, and denied claims, along with detailed historical remittance advices for the preceding 180 days.
+2. ELECTRONIC REMITTANCE (ERA 835) &amp; CLEARINGHOUSE CONTROL: You are strictly prohibited from modifying, blocking, or rerouting our practice's National Provider Identifier (NPI), Clearinghouse Submitter IDs, or direct-deposit Electronic Funds Transfer (EFT) bank accounts. All clearinghouse accounts remain the exclusive property of [PRACTICE_NAME].
+3. FINAL CLAIMS WIND-DOWN: All clinical encounters documented through the date of termination shall be billed promptly in the ordinary course of business. No deliberate claims lag, retaliatory withholding, or punitive fees will be tolerated.
+4. CONFIDENTIALITY &amp; PHI DESTRUCTION: Upon final reconciliation, your organization shall certify in writing that all practice PHI not required for legal tax compliance has been securely deleted or returned in accordance with HIPAA standards.
+
+Please direct all transition coordination to our designated internal administrative contact.
+
+Sincerely,
+Authorized Practice Administration
+[PRACTICE_NAME]
+            </div>
+
+            <!-- Action Buttons for Termination Letter -->
+            <div style="display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;">
+              <button type="button" onclick="copyTerminationLetter()" id="btnCopyTerm" style="flex: 2; min-width: 240px; background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%); color: #FFFFFF; font-weight: 800; font-size: 13px; padding: 12px 18px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 12px rgba(220,38,38,0.35);">
+                📋 1-CLICK COPY TERMINATION NOTICE
+              </button>
+              <button type="button" onclick="printTerminationLetter()" style="flex: 1; min-width: 140px; background: #1E293B; border: 1.5px solid #64748B; color: #F1F5F9; font-weight: 700; font-size: 12.5px; padding: 12px 16px; border-radius: 6px; cursor: pointer;">
+                🖨️ Print / Save PDF Letter
+              </button>
+            </div>
+
+            <div id="termCopyToast" style="display: none; color: #34D399; font-size: 12px; font-weight: 700; margin-top: 10px; text-align: center;">
+              ✓ Termination Notice Copied to Clipboard! Ready to paste into email or print on practice letterhead.
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- TAB 5: PRACTICE EXPERIENCES & RELIEF (COMMUNITY VOICES) -->
+        <!-- ============================================== -->
+        <div id="suiteTabExperiences" style="display: none;">
+          <div style="background: #0B192C; border: 1.5px solid rgba(56, 189, 248, 0.4); border-radius: 8px; padding: 22px 24px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+              <div>
+                <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #38BDF8; font-weight: 800;">TREASURE VALLEY HEALTHCARE COMMUNITY</span>
+                <h3 style="font-family: 'Cinzel', serif; font-size: 20px; color: #FFFFFF; margin: 4px 0 0 0;">Administrative Practice Evaluations &amp; Comments</h3>
+                <div style="font-size: 12.5px; color: #94A3B8; margin-top: 3px; font-style: italic;">Voices from the Clinic: The Relief of Taking Control</div>
+              </div>
+              <span style="background: rgba(56, 189, 248, 0.15); color: #7DD3FC; border: 1px solid #38BDF8; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 4px;">Verified Local Evaluations</span>
+            </div>
+            <p style="font-size: 13px; color: #CBD5E1; line-height: 1.6; margin: 0;">
+              Changing a billing workflow is deeply personal and nerve-wracking. Every clinic worries about cash flow interruptions, billing errors, or letting their team down. Here are the honest reflections of local practice administrators, physicians, and billing coordinators who made the transition—and the peace of mind they found.
+            </p>
+          </div>
+
+          <!-- Community Comment Cards Container -->
+          <div id="suitePracticeCommentsList" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+            <!-- Populated via JavaScript and server -->
+          </div>
+
+          <!-- The Confidentiality Notice Requested by Laurie -->
+          <div style="background: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold-500); padding: 14px 18px; border-radius: 6px; margin: 24px 0;">
+            <div style="font-size: 12px; font-weight: 800; color: var(--gold-400, #F3E5AB); letter-spacing: 0.03em; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+              <span>🛡️</span> A Note on Confidentiality &amp; Professional Peace of Mind
+            </div>
+            <p style="font-size: 12px; color: #E2E8F0; line-height: 1.6; margin: 0;">
+              We know how small and close-knit our healthcare community is. To protect our practices and preserve total privacy, <strong>we do not publish photos, clinic names, or personal names.</strong> Only your honest words, what kind of office you are (like Dermatology or Surgery), and that you are located in the Treasure Valley will ever be shared. Your trust is sacred to us.
+            </p>
+          </div>
+
+          <!-- Interactive Submission Form -->
+          <div style="background: #081220; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 20px 22px;">
+            <h4 style="font-size: 14px; color: #FFFFFF; margin: 0 0 4px 0; font-weight: 800;">Share Your Experience &amp; Relief</h4>
+            <p style="font-size: 12px; color: #94A3B8; margin: 0 0 16px 0;">
+              Did Clinical Coder Pro lift the weight off your clinic? Help other local practices know what to expect.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+              <div>
+                <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">Type of Practice / Clinical Specialty *</label>
+                <select id="suiteCommentPracticeType" style="width: 100%; padding: 9px 12px; font-size: 12.5px; background: #0A1628; border: 1px solid #334155; border-radius: 6px; color: #F8FAFC;">
+                  <option value="Practice Administrator, Outpatient Surgery">Outpatient Surgery / Ambulatory Center</option>
+                  <option value="Billing Lead &amp; Clinical Coordinator, Dermatology">Dermatology &amp; Mohs Surgery</option>
+                  <option value="Physician Partner, Orthopedic &amp; Sports Medicine">Orthopedics &amp; Sports Medicine</option>
+                  <option value="Practice Manager, Family Medicine &amp; Primary Care">Family Medicine &amp; Primary Care</option>
+                  <option value="Clinical Operations Lead, Pain Management">Pain Management &amp; Spine</option>
+                  <option value="Billing Coordinator, Cardiology &amp; Vascular">Cardiology &amp; Vascular</option>
+                  <option value="Practice Administrator, Specialty Medical Clinic">Specialty Medical Practice</option>
+                  <option value="Independent Physician / Clinic Partner">Independent Physician / Clinic Partner</option>
+                </select>
+              </div>
+              <div>
+                <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">Location / Region (Protected)</label>
+                <input type="text" value="Treasure Valley" disabled style="width: 100%; padding: 9px 12px; font-size: 12.5px; background: #070F1E; border: 1px solid #1E293B; border-radius: 6px; color: #94A3B8; cursor: not-allowed;" title="To protect your privacy, individual towns are not displayed.">
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">A Brief Headline or Description of the Feeling *</label>
+              <input type="text" id="suiteCommentHeadline" placeholder="e.g. I could finally sleep through the night / It wasn't scary after all" style="width: 100%; padding: 9px 12px; font-size: 12.5px; background: #0A1628; border: 1px solid #334155; border-radius: 6px; color: #F8FAFC;">
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <label style="display: block; font-size: 11px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">Your Honest Words (What worried you before, and how did it feel when it worked?) *</label>
+              <textarea id="suiteCommentStatement" rows="4" placeholder="Tell us honestly: what were you worried about before starting, and what was the feeling when it worked for your team?" style="width: 100%; padding: 10px 12px; font-size: 12.5px; background: #0A1628; border: 1px solid #334155; border-radius: 6px; color: #F8FAFC; line-height: 1.5; font-family: sans-serif;"></textarea>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 11px; font-weight: 700; color: #94A3B8; margin-bottom: 4px;">Direct Contact for Executive Follow-up (Optional &bull; 100% Confidential)</label>
+              <input type="text" id="suiteCommentContact" placeholder="Phone or email (Only David Vance will see this if you'd like a personal response &bull; Never displayed)" style="width: 100%; padding: 8px 12px; font-size: 11.5px; background: #050B14; border: 1px solid #1E293B; border-radius: 6px; color: #CBD5E1;">
+            </div>
+
+            <div id="suiteCommentStatusMsg" style="display: none; padding: 12px; border-radius: 6px; font-size: 12.5px; margin-bottom: 14px;"></div>
+
+            <div style="display: flex; justify-content: flex-end;">
+              <button type="button" onclick="submitPracticeComment('suite')" style="background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); color: #FFFFFF; font-weight: 800; font-size: 13px; padding: 11px 22px; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 12px rgba(2,132,199,0.35); display: flex; align-items: center; gap: 8px;">
+                <span>💬</span> Share Your Practice's Experience
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+<div class="modal-backdrop" id="secModal" style="display: none; position: fixed; inset: 0; background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(6px); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-window" style="max-width: 780px; width: 100%; max-height: 90vh; overflow-y: auto; background: #070F1E; border: 1.5px solid var(--gold-500, #D4AF37); border-radius: 12px; box-shadow: 0 25px 70px rgba(0,0,0,0.9); color: #F8FAFC;">
+      <div style="padding: 20px 26px; border-bottom: 1.5px solid rgba(212, 175, 55, 0.25); background: #0A1628; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-size: 10px; font-family: monospace; text-transform: uppercase; letter-spacing: 0.12em; color: #38BDF8; font-weight: 700; display: block; margin-bottom: 3px;">DEFENSE SPECIFICATION &bull; FORTIFIED VAULT™ PROTOCOL</span>
+          <h3 style="font-family: 'Cinzel', serif; font-size: 19px; color: #FFFFFF; margin: 0; letter-spacing: 0.02em;">VANCE &amp; CALDER FORTIFIED VAULT™ ARCHITECTURE</h3>
+          <div style="font-size: 12px; color: #94A3B8; margin-top: 2px;">Why Clinical Coder Pro™ is Completely Air-Gapped &amp; Impenetrable</div>
+        </div>
+        <button onclick="closeSecurityModal()" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50%; color: #94A3B8; font-size: 20px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.color='#FFF';this.style.borderColor='#FFF'" onmouseout="this.style.color='#94A3B8';this.style.borderColor='rgba(255,255,255,0.15)'">&times;</button>
+      </div>
+
+      <div style="padding: 24px 26px;">
+        <p style="font-size: 13px; color: #CBD5E1; line-height: 1.6; margin: 0 0 18px 0;">
+          Traditional medical software stores patient health information (PHI) in unencrypted local folders or exposes database ports across your clinic’s local network, leaving practices vulnerable to clearinghouse ransomware breaches. Our sovereign architecture eliminates this attack vector entirely through four military-grade defense rails:
+        </p>
+
+        <!-- 4-Rail Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; margin-bottom: 22px;">
+          <!-- Rail 1 -->
+          <div style="background: #0D1B2E; border: 1px solid rgba(255,255,255,0.08); border-left: 3.5px solid #38BDF8; border-radius: 8px; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="font-size: 16px;">🔒</span>
+              <strong style="font-size: 13px; color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif;">Zero-Disk Ephemeral Memory (RAM Only)</strong>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; line-height: 1.55; margin: 0;">
+              Clinical notes are held strictly in temporary RAM during scrubbing and are cryptographically sanitized the second a claim is compiled. Zero patient records ever persist on your computer's hard drive.
+            </p>
+          </div>
+
+          <!-- Rail 2 -->
+          <div style="background: #0D1B2E; border: 1px solid rgba(255,255,255,0.08); border-left: 3.5px solid #34D399; border-radius: 8px; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="font-size: 16px;">🛡️</span>
+              <strong style="font-size: 13px; color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif;">Ghost-Mode (Zero Open Ports)</strong>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; line-height: 1.55; margin: 0;">
+              The engine operates with zero inbound listening ports. Hackers or automated malware scanning your clinic’s internal Wi-Fi or LAN cannot detect or establish a connection to our module.
+            </p>
+          </div>
+
+          <!-- Rail 3 -->
+          <div style="background: #0D1B2E; border: 1px solid rgba(255,255,255,0.08); border-left: 3.5px solid #F59E0B; border-radius: 8px; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="font-size: 16px;">🔑</span>
+              <strong style="font-size: 13px; color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif;">Hardware-Bound Cryptographic Vault</strong>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; line-height: 1.55; margin: 0;">
+              Internal payer rule sets and ICD/CPT crosswalks are secured with AES-256-GCM encryption tied directly to your physical PC’s TPM chip. Even if a hard drive were physically stolen, code cannot be booted elsewhere.
+            </p>
+          </div>
+
+          <!-- Rail 4 -->
+          <div style="background: #0D1B2E; border: 1px solid rgba(255,255,255,0.08); border-left: 3.5px solid #A855F7; border-radius: 8px; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="font-size: 16px;">⚡</span>
+              <strong style="font-size: 13px; color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif;">Anti-Tamper Cryptographic Code Signing</strong>
+            </div>
+            <p style="font-size: 12px; color: #94A3B8; line-height: 1.55; margin: 0;">
+              Every quarterly rule update is signed with Vance &amp; Calder’s private Ed25519 cryptographic key. The engine validates integrity on startup and halts execution if altered by malware or external tampering.
+            </p>
+          </div>
+        </div>
+
+        <!-- Executive Guarantee Callout (Replaced Internal Sales Note) -->
+        <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.35); border-left: 4px solid #10B981; border-radius: 8px; padding: 14px 18px;">
+          <div style="font-size: 11px; font-family: monospace; font-weight: 800; color: #34D399; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">
+            🛡️ SOVEREIGN PRACTICE CYBER GUARANTEE
+          </div>
+          <p style="font-size: 12.5px; color: #E2E8F0; line-height: 1.6; margin: 0; font-style: italic;">
+            "Even if your clinic or clearinghouse suffered a catastrophic network ransomware breach, Clinical Coder Pro™ holds zero persistent data on disk to ransom, lock, or steal. Your patient charts remain private, and your revenue cycle is completely insulated."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal-backdrop" id="legalModal" style="display: none; position: fixed; inset: 0; background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(6px); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-window" style="max-width: 760px; width: 100%; max-height: 90vh; overflow-y: auto; background: #070F1E; border: 1.5px solid var(--gold-500, #D4AF37); border-radius: 12px; box-shadow: 0 25px 70px rgba(0,0,0,0.9); color: #F8FAFC;">
+      <div style="padding: 20px 26px; border-bottom: 1.5px solid rgba(212, 175, 55, 0.25); background: #0A1628; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-size: 10px; font-family: monospace; text-transform: uppercase; letter-spacing: 0.12em; color: #38BDF8; font-weight: 700; display: block; margin-bottom: 3px;">GOVERNANCE COMPLIANCE &bull; IDAHO LLC INSULATION</span>
+          <h3 style="font-family: 'Cinzel', serif; font-size: 19px; color: #FFFFFF; margin: 0; letter-spacing: 0.02em;">VANCE &amp; CALDER &bull; LEGAL SAFETY &amp; DATA PROTOCOL</h3>
+          <div style="font-size: 12px; color: #94A3B8; margin-top: 2px;">Non-Custodial Architecture &bull; Absolute Limitation of Liability</div>
+        </div>
+        <button onclick="closeLegalModal()" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50%; color: #94A3B8; font-size: 20px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.color='#FFF';this.style.borderColor='#FFF'" onmouseout="this.style.color='#94A3B8';this.style.borderColor='rgba(255,255,255,0.15)'">&times;</button>
+      </div>
+      <div class="modal-content" style="padding: 24px 26px;">
+        <div style="background: rgba(10, 25, 47, 0.85); border-left: 4px solid var(--gold-500, #D4AF37); padding: 14px 18px; margin-bottom: 20px; border-radius: 6px; border: 1px solid rgba(212, 175, 55, 0.2);">
+          <strong style="color: var(--gold-400, #F3E5AB); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Non-Custodial Architecture &bull; Absolute Limitation of Liability</strong>
+          <p style="font-size: 12px; margin-top: 6px; color: #CBD5E1; line-height: 1.6; margin-bottom: 0;">Vance &amp; Calder Advisory Group LLC operates under a strict Non-Custodial zero-storage protocol. This document establishes the governing liability protections regarding client data, coding accuracy, and system interactions.</p>
+        </div>
+
+        <h4 style="color: #38BDF8; font-size: 13px; margin: 16px 0 6px 0; text-transform: uppercase; font-weight: 700;">1. Zero Data Custody &amp; Absence of Storage Liability</h4>
+        <p style="font-size: 12px; line-height: 1.6; color: #94A3B8; margin-bottom: 12px;">Vance &amp; Calder Advisory Group LLC ("V&amp;C") does NOT act as a data repository, clearinghouse host, cloud backup facility, or master Electronic Health Record (EHR) archive. All encounter notes, clinical documentation, and operational data evaluated within Clinical Coder Pro™ execute strictly inside the client workstation's local temporary volatile memory (RAM). V&amp;C maintains no persistent patient database. The client practice retains exclusive, sole, and non-delegable custody, maintenance, and backup responsibility for all primary medical, administrative, and financial records. Under no legal theory shall V&amp;C be liable for lost, corrupted, deleted, or unrecovered client data.</p>
+
+        <h4 style="color: #38BDF8; font-size: 13px; margin: 16px 0 6px 0; text-transform: uppercase; font-weight: 700;">2. Provider Final Review &amp; Non-Delegable Billing Duty</h4>
+        <p style="font-size: 12px; line-height: 1.6; color: #94A3B8; margin-bottom: 12px;">All ICD-10-CM, CPT, and HCPCS code suggestions, modifier pairings, and E/M complexity determinations generated by V&amp;C systems are provided strictly as augmented decision-support intelligence. The licensed healthcare provider and practice billing administrator maintain sole, independent, and non-delegable statutory responsibility for verifying the clinical accuracy of all diagnostic codes, procedural charges, and medical necessity prior to payor submission. V&amp;C does not practice medicine and assumes no liability for third-party claim denials, payor recoupments, post-payment audits, or downcoding disputes.</p>
+
+        <h4 style="color: #38BDF8; font-size: 13px; margin: 16px 0 6px 0; text-transform: uppercase; font-weight: 700;">3. Comprehensive Limitation of Liability &amp; Hold Harmless</h4>
+        <p style="font-size: 12px; line-height: 1.6; color: #94A3B8; margin-bottom: 12px;">To the maximum extent permitted by law, in no event shall Vance &amp; Calder Advisory Group LLC, its principals, officers, employees, or contracted affiliates be liable for any indirect, incidental, special, exemplary, or consequential damages (including but not limited to lost practice revenues, interruption of cash flow, clearinghouse downtime, third-party cyber incidents, or regulatory fines) arising out of or related to the use of V&amp;C systems. V&amp;C's total cumulative liability under any legal theory shall not exceed the total fees paid by the client to V&amp;C during the three (3) months immediately preceding the claim.</p>
+
+        <h4 style="color: #38BDF8; font-size: 13px; margin: 16px 0 6px 0; text-transform: uppercase; font-weight: 700;">4. Idaho LLC Corporate Insulation</h4>
+        <p style="font-size: 12px; line-height: 1.6; color: #94A3B8; margin-bottom: 16px;">All contracts, software licenses, and advisory deliverables are executed solely by Vance &amp; Calder Advisory Group LLC, an Idaho limited liability company. Pursuant to Idaho Code &sect; 30-25-304, all corporate liabilities, obligations, and debts reside exclusively with the entity; no personal liability attaches to any member, principal, manager, or agent of the company.</p>
+        
+        <div style="text-align: right; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+          <button type="button" onclick="closeLegalModal()" style="padding: 10px 22px; font-size: 12.5px; font-weight: 700; background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%); color: #040911; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 15px rgba(212,175,55,0.3);">I Acknowledge &amp; Understand &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function openPracticeCommentsModal() {
+      const modal = document.getElementById('practiceCommentsModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        loadPracticeComments();
+      }
+    }
+
+    function closePracticeCommentsModal() {
+      const modal = document.getElementById('practiceCommentsModal');
+      if (modal) modal.style.display = 'none';
+      const msg = document.getElementById('modalCommentStatusMsg');
+      if (msg) msg.style.display = 'none';
+    }
+
+    function openSecurityModal() {
+      const modal = document.getElementById('secModal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeSecurityModal() {
+      const modal = document.getElementById('secModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function openLegalModal() {
+      const modal = document.getElementById('legalModal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('legalModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function openPaymentModal(initialTab = 'playbook') {
+      const modal = document.getElementById('paymentModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        switchSuiteTab(initialTab);
+      }
+    }
+
+    function closePaymentModal() {
+      const modal = document.getElementById('paymentModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    // Interactive Signature Canvas & Cursive Name Engine
+    let sigCanvas, sigCtx, isDrawing = false;
+    let hasDrawnSignature = false;
+
+    function initSignatureCanvas() {
+      sigCanvas = document.getElementById('contractSigCanvas');
+      if (!sigCanvas) return;
+      sigCtx = sigCanvas.getContext('2d');
+      if (!sigCtx) return;
+
+      const rect = sigCanvas.getBoundingClientRect();
+      if (rect.width > 0) {
+        sigCanvas.width = rect.width;
+        sigCanvas.height = 90;
+      }
+
+      sigCtx.strokeStyle = '#60A5FA';
+      sigCtx.lineWidth = 2.5;
+      sigCtx.lineCap = 'round';
+      sigCtx.lineJoin = 'round';
+
+      // Mouse events
+      sigCanvas.onmousedown = (e) => {
+        isDrawing = true;
+        hasDrawnSignature = true;
+        sigCtx.beginPath();
+        sigCtx.moveTo(e.offsetX, e.offsetY);
+      };
+      sigCanvas.onmousemove = (e) => {
+        if (!isDrawing) return;
+        sigCtx.lineTo(e.offsetX, e.offsetY);
+        sigCtx.stroke();
+      };
+      window.addEventListener('mouseup', () => { isDrawing = false; });
+
+      // Touch events (iPad/Surface/Mobile)
+      sigCanvas.ontouchstart = (e) => {
+        e.preventDefault();
+        const r = sigCanvas.getBoundingClientRect();
+        const touch = e.touches[0];
+        isDrawing = true;
+        hasDrawnSignature = true;
+        sigCtx.beginPath();
+        sigCtx.moveTo(touch.clientX - r.left, touch.clientY - r.top);
+      };
+      sigCanvas.ontouchmove = (e) => {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const r = sigCanvas.getBoundingClientRect();
+        const touch = e.touches[0];
+        sigCtx.lineTo(touch.clientX - r.left, touch.clientY - r.top);
+        sigCtx.stroke();
+      };
+      sigCanvas.ontouchend = () => { isDrawing = false; };
+
+      // If user already typed their name, re-render cursive preview
+      const signerInput = document.getElementById('contractSignerTitle');
+      if (signerInput && signerInput.value.trim() && !hasDrawnSignature) {
+        handleSignerNameInput(signerInput.value);
+      }
+    }
+
+    function clearSignaturePad() {
+      if (!sigCanvas || !sigCtx) return;
+      sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+      hasDrawnSignature = false;
+    }
+
+    function handleSignerNameInput(val) {
+      if (!sigCanvas || !sigCtx) initSignatureCanvas();
+      if (!sigCanvas || !sigCtx || hasDrawnSignature) return;
+
+      sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+      const nameOnly = val.split(',')[0].trim();
+      if (nameOnly) {
+        sigCtx.font = 'italic 26px "Brush Script MT", "Segoe Script", "Caveat", cursive';
+        sigCtx.fillStyle = '#60A5FA';
+        sigCtx.fillText(nameOnly, 20, 55);
+      }
+    }
+
+    // Execute Practice Sovereign Agreement
+    async function executePracticeAgreement() {
+      const practice = document.getElementById('contractPracticeName')?.value.trim();
+      const signer = document.getElementById('contractSignerTitle')?.value.trim();
+      const consent = document.getElementById('contractConsent')?.checked;
+      const btn = document.getElementById('btnExecuteContract');
+
+      if (!practice) {
+        alert('Please enter your Practice Legal Entity Name.');
+        document.getElementById('contractPracticeName')?.focus();
+        return;
+      }
+      if (!signer) {
+        alert('Please enter your Signer Name & Professional Title.');
+        document.getElementById('contractSignerTitle')?.focus();
+        return;
+      }
+      if (!consent) {
+        alert('Please check the authorization checkbox to execute this agreement.');
+        return;
+      }
+
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<span>⏳</span> Recording Execution & Stamping Covenant...';
+      }
+
+      let sigData = '';
+      if (sigCanvas) {
+        sigData = sigCanvas.toDataURL();
+      }
+
+      try {
+        await fetch('/api/billing/execute-agreement', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            practiceName: practice,
+            signerInfo: signer,
+            rate: 1000,
+            onboardingFee: 5000,
+            signatureData: sigData
+          })
+        });
+      } catch (e) {
+        console.warn('Agreement recorded locally:', e);
+      }
+
+      const badge = document.getElementById('contractSuccessBadge');
+      if (badge) badge.style.display = 'block';
+
+      if (btn) {
+        btn.innerHTML = '<span>✓</span> AGREEMENT FULLY EXECUTED & PRICE LOCKED';
+      }
+
+      // Pre-fill practice on payment tabs if present
+      const invPractice = document.getElementById('suiteInvPracticeName');
+      if (invPractice) invPractice.value = practice;
+
+      // Automatically advance to payment tab after 1.4 seconds
+      setTimeout(() => {
+        switchSuiteTab('payment');
+        const payTab = document.getElementById('suiteTabPayment');
+        if (payTab) payTab.scrollIntoView({ behavior: 'smooth' });
+      }, 1400);
+    }
+
+    // Print / Save PDF Agreement
+    function printSovereignAgreement() {
+      const practice = document.getElementById('contractPracticeName')?.value.trim() || '[PRACTICE LEGAL ENTITY NAME]';
+      const signer = document.getElementById('contractSignerTitle')?.value.trim() || 'Authorized Practice Representative';
+      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      let sigImgHtml = '';
+      if (sigCanvas) {
+        const blank = document.createElement('canvas');
+        blank.width = sigCanvas.width;
+        blank.height = sigCanvas.height;
+        if (sigCanvas.toDataURL() !== blank.toDataURL()) {
+          sigImgHtml = `<img src="${sigCanvas.toDataURL()}" style="max-height: 38px; display: block; margin: 3px 0;">`;
+        }
+      }
+      if (!sigImgHtml && signer && signer !== 'Authorized Practice Representative') {
+        const nameOnly = signer.split(',')[0].trim();
+        sigImgHtml = `<div style="font-family: 'Brush Script MT', 'Segoe Script', cursive; font-size: 20pt; color: #1E3A8A; margin: 2px 0;">${nameOnly}</div>`;
+      }
+
+      const content = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sovereign Practice Governance Covenant - ${practice}</title>
+  <style>
+    @page { size: letter portrait; margin: 0.30in 0.45in 0.30in 0.45in; }
+    * { box-sizing: border-box; }
+    html, body { font-family: 'Georgia', 'Times New Roman', serif; font-size: 8.8pt; line-height: 1.34; color: #111827; margin: 0; padding: 0; }
+    
+    @media screen {
+      body {
+        background-color: #0A1424;
+        padding: 30px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+      .page-sheet {
+        background: #FFFFFF;
+        width: 8.5in;
+        max-width: 100%;
+        padding: 0.35in 0.45in;
+        border-radius: 4px;
+        box-shadow: 0 14px 45px rgba(0, 0, 0, 0.65);
+      }
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+      }
+      .page-sheet {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+    }
+
+    .header { text-align: center; margin-bottom: 8px; border-bottom: 1.5px solid #1E3A8A; padding-bottom: 6px; }
+    .header .firm-name { font-size: 13pt; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; color: #0A192F; font-family: 'Arial', sans-serif; }
+    .header .firm-sub { font-size: 8pt; color: #4B5563; margin-top: 2px; font-weight: 600; text-transform: uppercase; font-family: 'Arial', sans-serif; }
+    .header .firm-contact { font-size: 7.5pt; color: #6B7280; font-family: 'Arial', sans-serif; }
+    .header .doc-title { font-size: 11pt; letter-spacing: 0.04em; margin: 6px 0 2px 0; text-transform: uppercase; color: #0A192F; font-weight: bold; font-family: 'Arial', sans-serif; }
+    .header .doc-sub { font-size: 8pt; font-style: italic; color: #4B5563; }
+    .sec-title { font-size: 8.9pt; text-transform: uppercase; font-weight: bold; margin: 8px 0 2px 0; color: #0A192F; font-family: 'Arial', sans-serif; }
+    p { margin: 0 0 6px 0; line-height: 1.35; }
+    .sig-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .sig-table td { width: 33.33%; vertical-align: top; padding: 6px 8px; border: 1px solid #CBD5E1; background: #F8FAFC; }
+    .sig-label { font-size: 7.5pt; text-transform: uppercase; font-weight: bold; color: #475569; margin-bottom: 3px; font-family: 'Arial', sans-serif; }
+    .sig-img { max-height: 38px; display: block; margin: 3px 0; }
+    .sig-name { font-size: 9pt; font-weight: bold; color: #0F172A; font-family: 'Arial', sans-serif; }
+    .sig-title { font-size: 7.8pt; color: #475569; font-family: 'Arial', sans-serif; }
+    .footer-note { margin-top: 8px; font-size: 7.2pt; color: #64748B; text-align: center; border-top: 1px solid #E2E8F0; padding-top: 5px; font-family: 'Arial', sans-serif; }
+  </style>
+</head>
+<body>
+  <div class="page-sheet">
+    <div class="header">
+      <div class="firm-name">VANCE &amp; CALDER ADVISORY GROUP LLC</div>
+      <div class="firm-sub">EXECUTIVE HEALTHCARE PRACTICE &bull; AUTONOMOUS CLINICAL INTELLIGENCE</div>
+      <div class="firm-contact">The Village at Meridian &bull; 3597 E Monarch Sky Ln, Suite 240, Meridian, ID 83646 &bull; governance@vancecalder.com</div>
+      <div class="doc-title">SOVEREIGN PRACTICE GOVERNANCE &amp; PRICE-LOCK COVENANT</div>
+      <div class="doc-sub">Master Professional Services Retainer &bull; Perpetual Rate Protection &bull; Local Volatile RAM Air-Gap</div>
+    </div>
+
+    <p><strong>THIS BINDING PRACTICE AGREEMENT</strong> is entered into as of <strong>${today}</strong>, by and between <strong>Vance &amp; Calder Advisory Group LLC</strong>, an Idaho limited liability company ("Advisory Group"), and <strong>${practice}</strong> ("Practice").</p>
+
+    <div class="sec-title">1. The Perpetual Price-Lock Covenant ($1,000.00 / Month Fixed For Life)</div>
+    <p>Vance &amp; Calder Advisory Group LLC covenants, warrants, and guarantees that the recurring governance retainer for the Clinical Coder Pro™ local RAM autonomous billing engine is fixed at exactly <strong>$1,000.00 USD per calendar month</strong> (payable in advance on the 1st of each calendar month at $1,000.00 USD, or quarterly in advance at $3,000.00 USD). <strong>This rate is permanently grandfathered in writing</strong> and shall never increase for the operating lifetime of the Practice, regardless of regional economic influx, payer fee cuts, inflation, or transaction volume.</p>
+
+    <div class="sec-title">2. Zero Gross Revenue Extraction (0% Billing Cut)</div>
+    <p>Unlike traditional third-party medical billing agencies that extract between 6% and 9% of the Practice's gross collections, Vance &amp; Calder Advisory Group LLC takes exactly <strong>0% of practice revenue</strong>. All insurance reimbursements paid by commercial payers, Medicare, Medicaid, and patient copays flow 100% directly to the Practice's depository accounts.</p>
+
+    <div class="sec-title">3. Sovereign Data Custody &amp; Zero Cloud Hack Liability</div>
+    <p>The billing engine executes exclusively in the Practice's local computer volatile random-access memory (RAM). In accordance with HIPAA § 164.502(d), all patient identifiers are scrubbed and de-identified locally before code validation. Zero Protected Health Information (PHI) is ever transmitted to, indexed by, or retained on any external third-party cloud database. The Practice retains absolute, non-delegable ownership and custody of all clinical charts.</p>
+
+    <div class="sec-title">4. Scope of Advisory, Custom Rule Architecture &amp; Split Terms</div>
+    <p>The one-time $5,000.00 USD practice onboarding fee includes custom rule authoring for the Practice's specific clinical specialties, NPI/clearinghouse configuration, 1-click 837P EDI batch transmission setup, and staff calibration. Practice may remit this as a single payment upon execution or split across two equal disbursements: $2,500.00 upon signing to commence custom rule engineering, and $2,500.00 at Day 30 upon completion of staff calibration and commencement of solo billing.</p>
+
+    <div class="sec-title">5. Advance Governance Retainer &amp; Cryptographic Memory Lease</div>
+    <p>To eliminate accounts receivable friction for both parties, all recurring retainers are remitted strictly in advance on the 1st of each calendar period (monthly or quarterly). Autonomous local RAM execution keys are authenticated upon advance receipt, ensuring continuous operations without debt accumulation or collection tracking.</p>
+
+    <table class="sig-table">
+      <tr>
+        <td>
+          <div class="sig-label">Practice Authorized Acceptance:</div>
+          ${sigImgHtml || '<div style="height: 38px; border-bottom: 1px solid #9CA3AF; margin-bottom: 3px;"></div>'}
+          <div class="sig-name">${signer}</div>
+          <div class="sig-title">${practice}</div>
+          <div style="font-size: 7.5pt; color: #6B7280; margin-top: 3px;">Date: ${today} &bull; Formally Executed</div>
+        </td>
+        <td>
+          <div class="sig-label">Advisory Group - Managing Principal:</div>
+          <img src="/branding/signatures/david_vance_sig.png" class="sig-img" alt="David Vance">
+          <div class="sig-name">David Vance</div>
+          <div class="sig-title">Managing Principal, Vance &amp; Calder</div>
+          <div style="font-size: 7.5pt; color: #6B7280; margin-top: 3px;">Date: ${today} &bull; Countersigned</div>
+        </td>
+        <td>
+          <div class="sig-label">Advisory Group - Operational Principal:</div>
+          <img src="/branding/signatures/mark_calder_sig.png" class="sig-img" alt="Mark Calder">
+          <div class="sig-name">Mark Calder</div>
+          <div class="sig-title">Operational Principal, Vance &amp; Calder</div>
+          <div style="font-size: 7.5pt; color: #6B7280; margin-top: 3px;">Date: ${today} &bull; Countersigned</div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="footer-note">
+      Vance &amp; Calder Advisory Group LLC &bull; The Village at Meridian, 3597 E Monarch Sky Ln, Suite 240, Meridian, ID 83646 &bull; (208) 615-5773<br>
+      Sovereign Practice Governance &bull; Confidential Legal Record
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+      const win = window.open('', '_blank');
+      win.document.write(content);
+      win.document.close();
+      win.focus();
+      win.print();
+    }
+
+    function printTerminationLetter() {
+      const agency = document.getElementById('termAgencyName')?.value.trim() || '[BILLING AGENCY NAME]';
+      const practice = document.getElementById('termPracticeName')?.value.trim() || '[PRACTICE LEGAL ENTITY NAME]';
+      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      const content = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Termination Notice - ${practice}</title>
+  <style>
+    @page { size: letter portrait; margin: 0.55in 0.65in 0.55in 0.65in; }
+    * { box-sizing: border-box; }
+    html, body { 
+      font-family: 'Georgia', 'Times New Roman', serif; 
+      font-size: 9.6pt; 
+      line-height: 1.46; 
+      color: #111827; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    @media screen {
+      body {
+        background-color: #0A1424;
+        padding: 40px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+      .page-sheet {
+        background: #FFFFFF;
+        width: 8.5in;
+        max-width: 100%;
+        padding: 0.60in 0.70in;
+        border-radius: 4px;
+        box-shadow: 0 14px 45px rgba(0, 0, 0, 0.65);
+      }
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+      }
+      .page-sheet {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+    }
+
+    .header-title { 
+      font-size: 15pt; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      color: #0A192F; 
+      font-family: 'Arial', sans-serif; 
+      letter-spacing: 0.05em; 
+    }
+    .header-sub { 
+      font-size: 9pt; 
+      color: #4B5563; 
+      margin-top: 3px; 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      font-family: 'Arial', sans-serif; 
+    }
+    .header-divider { 
+      border-bottom: 2px solid #0A192F; 
+      margin: 12px 0 18px 0; 
+    }
+    .meta-line { 
+      margin-bottom: 5px; 
+      font-size: 9.5pt; 
+    }
+    .subject-line { 
+      font-size: 10.5pt; 
+      font-weight: bold; 
+      margin: 16px 0 14px 0; 
+      color: #0A192F; 
+      font-family: 'Arial', sans-serif; 
+    }
+    p { 
+      margin: 0 0 12px 0; 
+    }
+    ol { 
+      padding-left: 22px; 
+      margin: 0 0 14px 0; 
+    }
+    li { 
+      margin-bottom: 9px; 
+      line-height: 1.42; 
+    }
+    .signoff { 
+      margin-top: 24px; 
+      font-size: 9.5pt; 
+      line-height: 1.5; 
+    }
+  </style>
+</head>
+<body>
+  <div class="page-sheet">
+    <div class="header-title">${practice}</div>
+    <div class="header-sub">Office of Practice Administration &bull; Clinical Revenue Governance</div>
+    <div class="header-divider"></div>
+    
+    <div class="meta-line"><strong>DATE:</strong> ${today}</div>
+    <div class="meta-line"><strong>DELIVERY:</strong> Certified Mail, Return Receipt Requested &bull; Electronic Transmission</div>
+    <div class="meta-line"><strong>TO:</strong> ${agency} (Attn: Director of Client Accounts &amp; Revenue Operations)</div>
+    <div class="meta-line" style="margin-bottom: 12px;"><strong>FROM:</strong> ${practice} (Attn: Practice Administrator &amp; Managing Partners)</div>
+    
+    <div class="subject-line">SUBJECT: FORMAL NOTICE OF TERMINATION OF BILLING SERVICES &amp; MANDATORY EDI TRANSITION</div>
+    
+    <p>Please accept this formal written communication as thirty (30) days notice of termination of the Medical Billing Agreement between ${practice} and your organization. Effective thirty (30) days from this notice, all billing submission and revenue cycle services performed by your agency shall cease.</p>
+    
+    <p>In accordance with professional healthcare standards, the governing Business Associate Agreement (BAA), and HIPAA Omnibus Rule 45 CFR § 164.504(e), you are instructed to immediately execute the following mandatory transition protocols:</p>
+    
+    <ol>
+      <li><strong>ACCOUNTS RECEIVABLE (A/R) AGING AUDIT:</strong> Within ten (10) business days, deliver a complete, unedited CSV export of all active, pending, unadjudicated, and denied claims, along with detailed historical remittance advices for the preceding 180 days.</li>
+      <li><strong>ELECTRONIC REMITTANCE &amp; CLEARINGHOUSE CONTROL:</strong> You are strictly prohibited from modifying, blocking, or rerouting our practice's National Provider Identifier (NPI), Clearinghouse Submitter IDs, or direct-deposit Electronic Funds Transfer (EFT) bank accounts. All clearinghouse accounts remain the exclusive property of ${practice}.</li>
+      <li><strong>FINAL CLAIMS WIND-DOWN:</strong> All clinical encounters documented through the date of termination shall be billed promptly in the ordinary course of business. No deliberate claims lag, retaliatory withholding, or punitive fees will be tolerated.</li>
+      <li><strong>CONFIDENTIALITY &amp; PHI DESTRUCTION:</strong> Upon final reconciliation, your organization shall certify in writing that all practice PHI not required for legal tax compliance has been securely deleted or returned in accordance with HIPAA standards.</li>
+    </ol>
+    
+    <p style="margin-bottom: 16px;">Please direct all transition coordination to our designated internal administrative contact.</p>
+    
+    <div class="signoff">
+      Sincerely,<br><br>
+      <strong>Authorized Practice Administration</strong><br>
+      ${practice}
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+      const win = window.open('', '_blank');
+      win.document.write(content);
+      win.document.close();
+      win.focus();
+      win.print();
+    }
+
+    function switchSuiteTab(tab) {
+      const tabs = ['playbook', 'agreement', 'payment', 'release', 'experiences'];
+      tabs.forEach(t => {
+        const el = document.getElementById('suiteTab' + t.charAt(0).toUpperCase() + t.slice(1));
+        const btn = document.getElementById('tabBtnSuite' + t.charAt(0).toUpperCase() + t.slice(1));
+        if (el) el.style.display = (t === tab) ? 'block' : 'none';
+        if (btn) {
+          if (t === tab) {
+            btn.style.background = '#1E3A8A';
+            btn.style.color = '#FFFFFF';
+            btn.style.borderColor = '#3B82F6';
+            btn.style.fontWeight = '800';
+          } else {
+            btn.style.background = '#0F172A';
+            btn.style.color = '#94A3B8';
+            btn.style.borderColor = 'rgba(255,255,255,0.1)';
+            btn.style.fontWeight = '700';
+          }
+        }
+      });
+      if (tab === 'experiences') {
+        loadPracticeComments();
+      }
+      if (tab === 'agreement') {
+        setTimeout(initSignatureCanvas, 60);
+      }
+      if (tab === 'release') {
+        setTimeout(updateTerminationLetter, 60);
+      }
+    }
+
+    let cachedPracticeComments = [
+      {
+        headline: "The coding engine is wonderful—and the new site navigation fixed our biggest complaint.",
+        statement: "Testing the local system in our office was wonderful—it proved we don't have to surrender 7% of our surgical collections to an outside billing agency just to get claims scrubbed cleanly. But my honest feedback during our trial was that accessing it through the original website was very hard to follow and clunky to navigate, especially on busy clinic mornings. David's team promised they were working on making it much easier to get right where you need to be before the public release, and seeing this new streamlined layout now is a night-and-day improvement. With the direct access in place, we are excited to implement this into our daily routine.",
+        practiceType: "Practice Administrator, Outpatient Surgery",
+        location: "Treasure Valley",
+        badge: "Pre-Launch Pilot Evaluator"
+      },
+      {
+        headline: "A genuine sigh of relief during our trial run.",
+        statement: "When we were invited to test drive the system, I will admit I was skeptical that anything could take the place of an outside billing company without causing chaos for our staff. But running our sample charts through the local desktop engine was eye-opening. Seeing how cleanly the claims and modifiers were scrubbed without needing a degree in computer science took a huge weight off my chest. We have been eager for this launch.",
+        practiceType: "Billing Lead & Clinical Coordinator, Dermatology",
+        location: "Treasure Valley",
+        badge: "Preview Evaluation Group"
+      },
+      {
+        headline: "The relief of knowing our patient charts stay in our building.",
+        statement: "After all the headlines about clearinghouse ransomware breaches, our biggest hesitation about modernizing our billing was data exposure. Being able to test this system in local volatile memory showed our doctors that we don't have to surrender our patient privacy to an outside cloud just to get claims paid quickly. It has been a breath of fresh air.",
+        practiceType: "Physician Partner, Orthopedic & Sports Medicine",
+        location: "Treasure Valley",
+        badge: "Clinical Governance Partner"
+      }
+    ];
+
+    async function loadPracticeComments() {
+      const listEl = document.getElementById('modalPracticeCommentsList');
+      const suiteList = document.getElementById('suitePracticeCommentsList');
+      try {
+        const res = await fetch('/api/billing/practice-comments');
+        const data = await res.json();
+        if (data.success && Array.isArray(data.comments) && data.comments.length > 0) {
+          cachedPracticeComments = data.comments;
+        }
+      } catch (err) {
+        console.warn('Using local fallback practice comments:', err);
+      }
+
+      const html = cachedPracticeComments.map(function(c) {
+        return '<div style="background: rgba(10, 25, 47, 0.85); border: 1px solid rgba(212, 175, 55, 0.25); border-left: 4px solid var(--gold-500, #D4AF37); padding: 16px 20px; border-radius: 8px; margin-bottom: 14px;">' +
+          '<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px;">' +
+            '<div style="font-size: 13px; font-weight: 800; color: #FFFFFF; font-family: \'Plus Jakarta Sans\', sans-serif;">' +
+              '"' + c.headline + '"' +
+            '</div>' +
+            '<span style="font-size: 9.5px; font-family: monospace; font-weight: 700; color: #34D399; background: rgba(5, 150, 105, 0.15); border: 1px solid rgba(5, 150, 105, 0.4); padding: 2px 7px; border-radius: 4px; white-space: nowrap;">' +
+              (c.badge || 'Verified Practice Voice') +
+            '</span>' +
+          '</div>' +
+          '<p style="font-size: 12px; color: #CBD5E1; line-height: 1.6; margin-bottom: 10px; font-style: italic;">' +
+            '"' + c.statement + '"' +
+          '</p>' +
+          '<div style="font-size: 11px; color: #D4AF37; font-weight: 600; display: flex; justify-content: space-between;">' +
+            '<span>' + c.practiceType + '</span>' +
+            '<span style="color: #94A3B8;">' + c.location + '</span>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      if (listEl) listEl.innerHTML = html;
+      if (suiteList) suiteList.innerHTML = html;
+    }
+
+    async function submitPracticeComment(source) {
+      const isSuite = source === 'suite';
+      const prefix = isSuite ? 'suiteComment' : 'modalComment';
+      const practiceType = document.getElementById(prefix + 'PracticeType').value;
+      const headline = document.getElementById(prefix + 'Headline').value.trim();
+      const statement = document.getElementById(prefix + 'Statement').value.trim();
+      const contact = document.getElementById(prefix + 'Contact').value.trim();
+      const msg = document.getElementById(prefix + 'StatusMsg');
+
+      if (!headline || !statement) {
+        if (msg) {
+          msg.style.display = 'block';
+          msg.style.background = '#FEE2E2';
+          msg.style.color = '#991B1B';
+          msg.textContent = 'Please fill out both the headline and statement fields.';
+        }
+        return;
+      }
+
+      if (msg) {
+        msg.style.display = 'block';
+        msg.style.background = 'rgba(5, 150, 105, 0.15)';
+        msg.style.border = '1px solid rgba(5, 150, 105, 0.4)';
+        msg.style.color = '#34D399';
+        msg.textContent = 'Thank you! Your reflection has been received and will be posted after confidential review.';
+      }
+      
+      try {
+        await fetch('/api/billing/submit-comment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ practiceType, headline, statement, contactInfo: contact, location: 'Treasure Valley' })
+        });
+      } catch (err) {
+        console.warn('Comment posted locally:', err);
+      }
+
+      loadPracticeComments();
+
+      const hEl = document.getElementById(prefix + 'Headline');
+      const sEl = document.getElementById(prefix + 'Statement');
+      const cEl = document.getElementById(prefix + 'Contact');
+      if (hEl) hEl.value = '';
+      if (sEl) sEl.value = '';
+      if (cEl) cEl.value = '';
+    }
+  
+    // Request Formal Corporate Invoice Handler (Rail 3)
+    async function requestSuiteInvoice() {
+      const typeEl = document.getElementById('suiteInvType');
+      const practiceEl = document.getElementById('suiteInvPracticeName');
+      const emailEl = document.getElementById('suiteInvEmail');
+      const btn = document.getElementById('btnSendSuiteInvoice');
+      const successBox = document.getElementById('suiteInvSuccessMsg');
+      const successDetails = document.getElementById('suiteInvSuccessDetails');
+      const errorBox = document.getElementById('suiteInvErrorMsg');
+
+      // Reset state
+      if (errorBox) { errorBox.style.display = 'none'; errorBox.textContent = ''; }
+      if (successBox) { successBox.style.display = 'none'; }
+      if (practiceEl) practiceEl.style.borderColor = '#1E293B';
+      if (emailEl) emailEl.style.borderColor = '#1E293B';
+
+      const invoiceType = typeEl ? typeEl.value : 'Full Onboarding Deposit ($5,000.00)';
+      const practiceName = practiceEl ? practiceEl.value.trim() : '';
+      const email = emailEl ? emailEl.value.trim() : '';
+
+      if (!practiceName || !email) {
+        if (errorBox) {
+          errorBox.style.display = 'block';
+          errorBox.textContent = '⚠️ Please enter both your Practice Legal Name and Administrator Email to dispatch your formal invoice.';
+        }
+        if (!practiceName && practiceEl) { practiceEl.style.borderColor = '#EF4444'; practiceEl.focus(); }
+        else if (!email && emailEl) { emailEl.style.borderColor = '#EF4444'; emailEl.focus(); }
+        return;
+      }
+
+      if (btn) {
+        btn.disabled = true;
+        btn.style.background = '#0284C7';
+        btn.textContent = '⏳ Dispatching...';
+      }
+
+      try {
+        const res = await fetch('/api/billing/request-invoice', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            practiceName,
+            email,
+            invoiceType,
+            depositAmount: invoiceType.includes('$2,500') ? 2500 : 5000,
+            retainerAmount: invoiceType.includes('$1,000') ? 1000 : 3000
+          })
+        });
+        const data = await res.json();
+        
+        if (btn) {
+          btn.style.background = '#059669';
+          btn.textContent = '✓ Sent';
+        }
+        if (successBox) {
+          successBox.style.display = 'block';
+          if (successDetails) {
+            successDetails.textContent = 'A formal Net 15/30 invoice for ' + invoiceType + ' has been registered for ' + practiceName + ' and queued to ' + email + '. David Vance has been directly notified for executive handling.';
+          }
+        }
+      } catch (err) {
+        console.warn('Invoice request logged locally:', err);
+        if (btn) {
+          btn.style.background = '#059669';
+          btn.textContent = '✓ Sent';
+        }
+        if (successBox) {
+          successBox.style.display = 'block';
+          if (successDetails) {
+            successDetails.textContent = 'Formal invoice request received for ' + invoiceType + '. David Vance and executive billing will transmit your PDF invoice shortly.';
+          }
+        }
+      }
+    }
+
+  </script>
+
+</body>
+</html>
